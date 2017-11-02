@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: HairDiffuse
+  m_Shader: {fileID: 4800000, guid: e4784c522ef440d46b95f91a45ba69a4, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP _USEMETALLICMAP_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 045e0dbae3cc17440b615418b2422ae0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _KKFlowMap:
+        m_Texture: {fileID: 2800000, guid: d4b77a55bf0f99d45af89fd601b45224, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 705179dce10150e4ebdf70bef2e8211d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: f7fd7ca88e3c14a43ad59442812dff04, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 045e0dbae3cc17440b615418b2422ae0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: a1eb83450693b3a458acd406ef595074, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutout: 0.25
+    - _BumpScale: 1
+    - _Cull: 0
+    - _CullMode: 0
+    - _Cutoff: 0.133
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Emission: 0.2
+    - _EmissionScaleUI: 0
+    - _GlossMapScale: 0.561
+    - _Glossiness: 0.563
+    - _GlossyReflections: 1
+    - _KKPrimaryRootShift: 0.72
+    - _KKPrimarySpecularExponent: 192
+    - _KKReflectionGrayScale: 7.7
+    - _KKReflectionSmoothness: 0.298
+    - _KKSecondaryRootShift: -0.12
+    - _KKSecondarySpecularExponent: 62
+    - _Metallic: 0
+    - _Mode: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _PlaneReflectionBumpClamp: 0.05
+    - _PlaneReflectionBumpScale: 0.4
+    - _Shininess: 0.078125
+    - _Smoothness: 0.864
+    - _SmoothnessInAlbedo: 0
+    - _SmoothnessTextureChannel: 0
+    - _SmoothnessTweak1: 1
+    - _SmoothnessTweak2: 0
+    - _Specular: 0.37
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _UseMetallicMap: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 0.8378296, b: 0.71323526, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _KKPrimarySpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _KKSecondarySpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _KKSpecularMixDirectFactors: {r: 0.15, g: 0.1, b: 0.05, a: 0}
+    - _KKSpecularMixIndirectFactors: {r: 0.75, g: 0.6, b: 0.15, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularMapColorTweak: {r: 1, g: 0.6520283, b: 0.46323526, a: 1}

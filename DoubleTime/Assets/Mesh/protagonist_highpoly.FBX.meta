@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: fc9d5037a62c11040958044633ac3393
+timeCreated: 1502737871
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Extract1
+    100002: Extract11
+    100004: Extract12
+    100006: Extract14
+    100008: Extract16
+    100010: Extract16_01
+    100012: Extract18
+    100014: Extract19
+    100016: extract1_copy1
+    100018: Extract2
+    100020: Extract20
+    100022: Extract21
+    100024: Extract22
+    100026: Extract23
+    100028: Extract24
+    100030: Extract26
+    100032: Extract28
+    100034: Extract3
+    100036: Extract31
+    100038: extract31_copy1
+    100040: Extract37
+    100042: Extract38
+    100044: Extract4
+    100046: Extract41
+    100048: extract4_copy1
+    100050: Extract7
+    100052: Extract8
+    100054: Nickz_humanMaleAverage1
+    100056: PM3D_Sphere3D
+    100058: //RootNode
+    400000: Extract1
+    400002: Extract11
+    400004: Extract12
+    400006: Extract14
+    400008: Extract16
+    400010: Extract16_01
+    400012: Extract18
+    400014: Extract19
+    400016: extract1_copy1
+    400018: Extract2
+    400020: Extract20
+    400022: Extract21
+    400024: Extract22
+    400026: Extract23
+    400028: Extract24
+    400030: Extract26
+    400032: Extract28
+    400034: Extract3
+    400036: Extract31
+    400038: extract31_copy1
+    400040: Extract37
+    400042: Extract38
+    400044: Extract4
+    400046: Extract41
+    400048: extract4_copy1
+    400050: Extract7
+    400052: Extract8
+    400054: Nickz_humanMaleAverage1
+    400056: PM3D_Sphere3D
+    400058: //RootNode
+    2300000: Extract1
+    2300002: Extract11
+    2300004: Extract12
+    2300006: Extract14
+    2300008: Extract16
+    2300010: Extract16_01
+    2300012: Extract18
+    2300014: Extract19
+    2300016: extract1_copy1
+    2300018: Extract2
+    2300020: Extract20
+    2300022: Extract21
+    2300024: Extract22
+    2300026: Extract23
+    2300028: Extract24
+    2300030: Extract26
+    2300032: Extract28
+    2300034: Extract3
+    2300036: Extract31
+    2300038: extract31_copy1
+    2300040: Extract37
+    2300042: Extract38
+    2300044: Extract4
+    2300046: Extract41
+    2300048: extract4_copy1
+    2300050: Extract7
+    2300052: Extract8
+    2300054: Nickz_humanMaleAverage1
+    2300056: PM3D_Sphere3D
+    3300000: Extract1
+    3300002: Extract11
+    3300004: Extract12
+    3300006: Extract14
+    3300008: Extract16
+    3300010: Extract16_01
+    3300012: Extract18
+    3300014: Extract19
+    3300016: extract1_copy1
+    3300018: Extract2
+    3300020: Extract20
+    3300022: Extract21
+    3300024: Extract22
+    3300026: Extract23
+    3300028: Extract24
+    3300030: Extract26
+    3300032: Extract28
+    3300034: Extract3
+    3300036: Extract31
+    3300038: extract31_copy1
+    3300040: Extract37
+    3300042: Extract38
+    3300044: Extract4
+    3300046: Extract41
+    3300048: extract4_copy1
+    3300050: Extract7
+    3300052: Extract8
+    3300054: Nickz_humanMaleAverage1
+    3300056: PM3D_Sphere3D
+    4300000: Extract22
+    4300002: Extract31
+    4300004: extract31_copy1
+    4300006: Extract41
+    4300008: Extract38
+    4300010: Extract37
+    4300012: Extract26
+    4300014: Extract24
+    4300016: Extract23
+    4300018: Nickz_humanMaleAverage1
+    4300020: PM3D_Sphere3D
+    4300022: Extract4
+    4300024: Extract2
+    4300026: Extract1
+    4300028: Extract21
+    4300030: Extract16
+    4300032: Extract12
+    4300034: Extract8
+    4300036: Extract19
+    4300038: Extract7
+    4300040: Extract20
+    4300042: Extract28
+    4300044: Extract18
+    4300046: Extract16_01
+    4300048: extract4_copy1
+    4300050: extract1_copy1
+    4300052: Extract3
+    4300054: Extract11
+    4300056: Extract14
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

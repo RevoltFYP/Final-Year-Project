@@ -2306,8 +2306,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 3
-  speedRampTime: 2
   patrolSpeed: 3
+  waitTime: 0
+  lookSpeed: 3
   wayPoints: []
   lookAtPlayer: 1
   aggroSpeed: 7
@@ -2336,7 +2337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 55
-  currentHealth: 0
+  currentHealth: 55
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1

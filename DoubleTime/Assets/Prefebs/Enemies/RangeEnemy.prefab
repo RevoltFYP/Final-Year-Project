@@ -1765,8 +1765,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800027596413486}
-  m_LocalRotation: {x: -0, y: 0.0070732827, z: -0, w: -0.999975}
-  m_LocalPosition: {x: 10.540028, y: -40.53, z: 11}
+  m_LocalRotation: {x: 0.0007816492, y: 0.8743072, z: 0.0014080002, w: -0.48537028}
+  m_LocalPosition: {x: -8.043606, y: 4.54, z: -55.237915}
   m_LocalScale: {x: 1.0000012, y: 1, z: 1.0000012}
   m_Children:
   - {fileID: 4697136723811550}
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 60
-  currentHealth: 0
+  currentHealth: 60
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1
@@ -2314,8 +2314,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 3
-  speedRampTime: 2
   patrolSpeed: 3
+  waitTime: 0
+  lookSpeed: 3
   wayPoints: []
   lookAtPlayer: 1
   aggroSpeed: 3

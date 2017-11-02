@@ -48,7 +48,7 @@ public class EnemyZone : MonoBehaviour {
 
         for (int i = 0; i < enemies.Count; i++)
         {
-            if(enemies[i] == null || !enemies[i].activeSelf)
+            if(enemies[i] == null)
             {
                 enemies.Remove(enemies[i]);
             }
@@ -78,4 +78,6 @@ public class EnemyZone : MonoBehaviour {
             }
         }
     }
+
+
 }

@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1127738346044064
 GameObject:
   m_ObjectHideFlags: 1
@@ -2047,8 +2047,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118339076086662}
-  m_LocalRotation: {x: -0, y: -0.3362525, z: -0, w: 0.9417719}
-  m_LocalPosition: {x: -14.74, y: 0.99, z: -56.93}
+  m_LocalRotation: {x: 0.0007816492, y: 0.8743072, z: 0.0014080002, w: -0.48537028}
+  m_LocalPosition: {x: 1.4195751, y: 2.27, z: 1.3576255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4155970063204776}
@@ -2235,8 +2235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 3
-  speedRampTime: 2
   patrolSpeed: 3
+  waitTime: 0
+  lookSpeed: 3
   wayPoints: []
   lookAtPlayer: 1
   aggroSpeed: 7
@@ -2253,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 40
-  currentHealth: 0
+  currentHealth: 40
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1

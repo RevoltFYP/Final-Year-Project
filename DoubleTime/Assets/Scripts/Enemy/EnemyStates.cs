@@ -43,7 +43,7 @@ public class EnemyStates : MonoBehaviour {
         startPos = transform.position;
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
-        //internalWaitTimer = waitTime;
+        internalWaitTimer = waitTime;
     }
 
     private void Update()
@@ -51,7 +51,7 @@ public class EnemyStates : MonoBehaviour {
         // Controls States //
         if (!enemyHealth.isDead)
         {
-            Debug.Log(internalWaitTimer);
+            //Debug.Log(internalWaitTimer);
             switch (state)
             {
                 case State.NONE:

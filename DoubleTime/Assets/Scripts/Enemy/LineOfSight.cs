@@ -48,7 +48,7 @@ public class LineOfSight : MonoBehaviour {
                     enemyState.CancelInvoke("ToPatrol"); 
                 }
 
-                enemyState.ToAggro(hit.collider.gameObject.transform);
+                enemyState.state = EnemyStates.State.AGGRO;
             }
         }
         // Right Ray //
@@ -66,7 +66,7 @@ public class LineOfSight : MonoBehaviour {
                     enemyState.CancelInvoke("ToPatrol");
                 }
 
-                enemyState.ToAggro(hit.collider.gameObject.transform);
+                enemyState.state = EnemyStates.State.AGGRO;
             }
         }
         // Left Ray //
@@ -84,7 +84,7 @@ public class LineOfSight : MonoBehaviour {
                     enemyState.CancelInvoke("ToPatrol");
                 }
 
-                enemyState.ToAggro(hit.collider.gameObject.transform);
+                enemyState.state = EnemyStates.State.AGGRO;
             }
         }
 

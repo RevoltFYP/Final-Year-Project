@@ -2266,7 +2266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: {fileID: 114496206123645744}
-  deAggroTime: 5
 --- !u!114 &114187883627271000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2313,6 +2312,7 @@ MonoBehaviour:
   lookAtPlayer: 1
   aggroSpeed: 7
   rotateSpeed: 1
+  deAggroTime: 5
 --- !u!114 &114551247155937226
 MonoBehaviour:
   m_ObjectHideFlags: 1

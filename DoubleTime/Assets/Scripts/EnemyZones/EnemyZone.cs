@@ -74,7 +74,7 @@ public class EnemyZone : MonoBehaviour {
         {
             if(enemy != null)
             {
-                enemy.GetComponent<EnemyStates>().ToAggro(target.transform);
+                enemy.GetComponent<EnemyStates>().state = EnemyStates.State.AGGRO;
             }
         }
     }

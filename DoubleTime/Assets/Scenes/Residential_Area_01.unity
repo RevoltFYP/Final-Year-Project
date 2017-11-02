@@ -11036,7 +11036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 66841740}
   checktag: Wall
-  transparentShader: {fileID: 31, guid: 0000000000000000f000000000000000, type: 0}
+  transparentShader: {fileID: 31, guid: 0000000000000000f000000000000000, type: 3}
   chosenAlpha: 0.2
 --- !u!124 &362985361
 Behaviour:

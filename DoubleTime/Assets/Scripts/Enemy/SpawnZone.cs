@@ -51,11 +51,6 @@ public class SpawnZone : MonoBehaviour {
         InvokeRepeating("CheckActiveEnemies", 4.0f, 4.0f);
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
     public void SpawnEnemy()
     {
         //Debug.Log("Spawn");

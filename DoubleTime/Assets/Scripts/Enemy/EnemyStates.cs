@@ -31,7 +31,10 @@ public class EnemyStates : MonoBehaviour {
     public float aggroSpeed;
     public float rotateSpeed;
 
-    public Transform player { get; set; }
+    [Header("DeAggro Properties")]
+    public float deAggroTime;
+
+    private Transform player;
     private EnemyHealth enemyHealth;
     private float velocity;
     public NavMeshAgent nav { get; set; }
@@ -44,6 +47,8 @@ public class EnemyStates : MonoBehaviour {
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
         internalWaitTimer = waitTime;
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
@@ -169,17 +174,6 @@ public class EnemyStates : MonoBehaviour {
         {
             nav.isStopped = stop;
         }
-    }
-
-    public void ToPatrol()
-    {
-        state = EnemyStates.State.PATROL;
-    }
-
-    public void ToAggro(Transform targetTransform)
-    {
-        player = targetTransform;
-        state = EnemyStates.State.AGGRO;
     }
 
 }

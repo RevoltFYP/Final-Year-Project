@@ -64,6 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766c1931e311f9146b297c53fd327ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyThreshold: 0
+  spawnRate: 4
+  spawnPoints: []
+  spawnMin: 1
+  spawnMax: 5
   meleeEnemy: 0
   rangeEnemy: 0
   chargingEnemy: 0
@@ -76,3 +81,4 @@ MonoBehaviour:
     type: 2}
   shieldEnemyObj: {fileID: 1912437989910784, guid: cb22dbf0538809a4ba59b54734dcb077,
     type: 2}
+  enemyZone: {fileID: 0}

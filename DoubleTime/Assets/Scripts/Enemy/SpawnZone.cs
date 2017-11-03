@@ -5,20 +5,29 @@ using UnityEngine.AI;
 
 public class SpawnZone : MonoBehaviour {
 
-    [Header("Enemy Threshold to Spawn")]
+    [Header("Spawn Settings")]
     public int enemyThreshold;
+    public float spawnRate = 4.0f;
 
-    [Header("Total Amount")]
+    [Header("Spawn Points")]
+    public List<GameObject> spawnPoints = new List<GameObject>();
+    private int minIndex;
+    private int maxIndex;
+    private GameObject chosenSpawn;
+
+    [Header("Spawn Amount")]
     public int spawnMin = 1;
     public int spawnMax = 5;
-    public Vector3 size;
     private Vector3 centre;
+    private GameObject player;
+    private int activeEnemies;
 
     [Header("Total Amount")]
     public int meleeEnemy;
     public int rangeEnemy;
     public int chargingEnemy;
     public int shieldEnemy;
+    private List<GameObject> enemyList = new List<GameObject>();
 
     [Header("Game Objects References")]
     public GameObject meleeEnemyObj;
@@ -26,42 +35,73 @@ public class SpawnZone : MonoBehaviour {
     public GameObject chargerEnemyObj;
     public GameObject shieldEnemyObj;
 
-    [Header("Game Objects")]
+    [Header("Corresponding Enemy Zone")]
     public EnemyZone enemyZone;
 
-    private List<GameObject> enemyList = new List<GameObject>();
-    private GameObject player;
-    private int activeEnemies;
 
     // Use this for initialization
     void Awake () {
 
-        centre = GetComponent<Renderer>().bounds.center;
-        GetComponent<Renderer>().enabled = false;
+        // Hide all renderers of spawn points
+        foreach(GameObject spawnPoint in spawnPoints)
+        {
+            if (spawnPoint.GetComponent<Renderer>().enabled)
+            {
+                spawnPoint.GetComponent<Renderer>().enabled = false;
+            }
+        }
+
+        minIndex = 0;
+        maxIndex = spawnPoints.Count - 1;
 
         player = GameObject.FindGameObjectWithTag("Player");
 
+        // Pool enemies
         AddEnemyToList(meleeEnemy, meleeEnemyObj);
         AddEnemyToList(rangeEnemy, rangeEnemyObj);
         AddEnemyToList(chargingEnemy, chargerEnemyObj);
         AddEnemyToList(shieldEnemy, shieldEnemyObj);
 
+        // Randomize list of enemies to spawn
         ShuffleList();
 
-        InvokeRepeating("CheckActiveEnemies", 4.0f, 4.0f);
+        // Check for spawning every 
+        InvokeRepeating("CheckActiveEnemies", spawnRate, spawnRate);
     }
 
+    public void PickSpawnPoint()
+    {
+        // More than 1 spawn point
+        if(spawnPoints.Count > 1)
+        {
+            // Randomize spawn point
+            int pickIndex = Random.Range(minIndex, maxIndex);
+            chosenSpawn = spawnPoints[pickIndex];
+        }
+        else
+        {
+            // Pick the only spawn point
+            chosenSpawn = spawnPoints[minIndex];
+        }
+    }
+
+    // Spawns enemy within a random pos in spawn point
     public void SpawnEnemy()
     {
         //Debug.Log("Spawn");
         //Debug.Log("EnemyList Count: " + enemyList.Count);
 
+        centre = chosenSpawn.GetComponent<Renderer>().bounds.center;
+        Vector3 size = chosenSpawn.transform.localScale;
+        chosenSpawn = null;
+
         // Get random amount
         int spawnAmount = Random.Range(spawnMin, spawnMax);
-        Debug.Log("SpawnAmount: " + spawnAmount);
+        //Debug.Log("SpawnAmount: " + spawnAmount);
 
         for (int i = 0; i < spawnAmount; i ++)
         {
+            // Spawn if amount to spawn does not exceed max amount of enemies pooled
             if(spawnAmount < enemyList.Count)
             {
                 if (enemyList[i] != null)
@@ -75,14 +115,14 @@ public class SpawnZone : MonoBehaviour {
 
                     // Set active spawn target
                     enemyList[i].SetActive(true);
-                    Debug.Log("SpawnTarget Status: " + enemyList[i].activeSelf);
+                   // Debug.Log("SpawnTarget Status: " + enemyList[i].activeSelf);
 
                     // Set Aggro State
                     enemyList[i].GetComponent<EnemyStates>().state = EnemyStates.State.AGGRO;
 
                     // Remove from list
                     enemyList.Remove(enemyList[i]);
-                    Debug.Log(enemyList.Count);
+                    //Debug.Log(enemyList.Count);
                 }
 
                 // Re-shuffle list
@@ -90,12 +130,14 @@ public class SpawnZone : MonoBehaviour {
             }
             else
             {
+                // Re-run until spawn amount is less than max amount 
                 SpawnEnemy();
             }
 
         }
     }
 
+    // Pool enemies to spawn
     public void AddEnemyToList(int amount, GameObject enemy)
     {
         // If there is any enemies to add
@@ -119,6 +161,7 @@ public class SpawnZone : MonoBehaviour {
         }
     }
 
+    // Shuffle List to have random spawning
     public void ShuffleList()
     {
         for(int i = 0; i < enemyList.Count; i++)
@@ -144,10 +187,14 @@ public class SpawnZone : MonoBehaviour {
                 activeEnemies++;
             }
         }
-        Debug.Log("Active Enemies: " + activeEnemies);
+        //Debug.Log("Active Enemies: " + activeEnemies);
 
         if (activeEnemies <= enemyThreshold)
         {
+            // Picks which spawnpoint among the list to spawn
+            PickSpawnPoint();
+
+            // Spawn enemy at point
             SpawnEnemy();
         }
 

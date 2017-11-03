@@ -43,6 +43,14 @@ public class EnemyStates : MonoBehaviour {
 
     void Awake ()
     {
+        foreach(GameObject wayPoint in wayPoints)
+        {
+            if (wayPoint.GetComponent<Renderer>().enabled)
+            {
+                wayPoint.GetComponent<Renderer>().enabled = false;
+            }
+        }
+
         startPos = transform.position;
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
@@ -91,7 +99,7 @@ public class EnemyStates : MonoBehaviour {
                 }
 
                 // too far away from waypoint
-                if (Vector3.Distance(transform.position, wayPoints[wayPointCounter].transform.position) > 1)
+                if (Vector3.Distance(transform.position, wayPoints[wayPointCounter].transform.position) > 2)
                 {
                     nav.SetDestination(wayPoints[wayPointCounter].transform.position); // go to waypoint
 
@@ -110,15 +118,13 @@ public class EnemyStates : MonoBehaviour {
                 // Reset way point counter
                 else if (Vector3.Distance(transform.position, wayPoints[wayPointCounter].transform.position) <= 1)
                 {
+                    // Goes to next way point
+                    wayPointCounter += 1;
+
                     // reset waypoint back to beginning (loop patrol)
                     if (wayPointCounter >= wayPoints.Length)
                     {
                         wayPointCounter = 0;
-                    }
-                    else
-                    {
-                        // Goes to next way point
-                        wayPointCounter += 1;
                     }
                 }
             }

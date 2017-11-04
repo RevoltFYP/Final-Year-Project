@@ -871,8 +871,8 @@ GameObject:
   - component: {fileID: 195081475548257284}
   - component: {fileID: 114737893163543058}
   - component: {fileID: 114723437707670604}
-  - component: {fileID: 114826799131291666}
   - component: {fileID: 114873569152328850}
+  - component: {fileID: 114618218626083580}
   m_Layer: 9
   m_Name: RangeEnemy
   m_TagString: RangeEnemy
@@ -986,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1912791547111342
 GameObject:
   m_ObjectHideFlags: 1
@@ -2204,10 +2204,10 @@ Rigidbody:
   m_GameObject: {fileID: 1800027596413486}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: Infinity
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
@@ -2239,7 +2239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9970a0eee8262468b56fbeddb7501f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: {fileID: 114826799131291666}
 --- !u!114 &114228575613173322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2266,11 +2265,35 @@ MonoBehaviour:
   projectile: {fileID: 1370475600220950, guid: 3b3428c6ba4914f419b11d62bbeb52e3, type: 2}
   firePoint: {fileID: 1247772124587592}
   enemyHealth: {fileID: 114737893163543058}
-  enemyStates: {fileID: 114826799131291666}
   damage: 5
-  initialDelayTime: 0
   timeBetweenBullet: 1
   projectileForceMultiplyer: 30
+--- !u!114 &114618218626083580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800027596413486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e217d8b56d442438e4db2307495dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 3
+  patrolSpeed: 3
+  waitTime: 0
+  lookSpeed: 3
+  wayPoints: []
+  moveArea: 0
+  randomMinTime: 0
+  randomMaxTime: 0
+  aggroZone: {fileID: 0}
+  lookAtPlayer: 1
+  aggroSpeed: 3
+  rotateSpeed: 5
+  deAggroTime: 5
+  distance: 5
+  rePosTime: 3
 --- !u!114 &114723437707670604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2301,26 +2324,6 @@ MonoBehaviour:
   scoreValue: 10
   spawnAmmo: 1
   spawnScrap: 1
---- !u!114 &114826799131291666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1800027596413486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c033660f5435844fb7bffc8c4e1afdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 3
-  patrolSpeed: 3
-  waitTime: 0
-  lookSpeed: 3
-  wayPoints: []
-  lookAtPlayer: 1
-  aggroSpeed: 3
-  rotateSpeed: 1
-  deAggroTime: 5
 --- !u!114 &114873569152328850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2474,7 +2477,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1800027596413486}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
+  m_Radius: 0.5
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
@@ -2486,4 +2489,4 @@ NavMeshAgent:
   m_Height: 2.7
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 2

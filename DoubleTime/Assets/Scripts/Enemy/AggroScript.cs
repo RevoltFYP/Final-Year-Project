@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class AggroScript : MonoBehaviour {
 
-    public EnemyStates enemyState;
+    private EnemyStates enemyStates;
+
+    private float internalTimer;
 
     private void Awake()
     {
-        enemyState = transform.parent.GetComponent<EnemyStates>();
+        enemyStates = transform.parent.GetComponent<EnemyStates>();
     }
 
-    protected virtual void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -25,7 +27,7 @@ public class AggroScript : MonoBehaviour {
                 CancelInvoke("GoToDeAggro"); 
             }
 
-            enemyState.state = EnemyStates.State.AGGRO;
+            enemyStates.state = EnemyStates.State.AGGRO;
         }
     }
 
@@ -33,13 +35,13 @@ public class AggroScript : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            Invoke("GoToDeAggro", enemyState.deAggroTime); // reverts back to patrol if player leaves aggro radius for deAggroTime
+            Invoke("GoToDeAggro", enemyStates.deAggroTime); // reverts back to original pos if player leaves aggro radius for deAggroTime
         }
     }
 
     protected virtual void GoToDeAggro()
     {
         //Debug.Log("De Aggro");
-        enemyState.state = EnemyStates.State.DEAGGRO;
+        //enemyStates.state = EnemyStates.State.DEAGGRO;
     }
 }

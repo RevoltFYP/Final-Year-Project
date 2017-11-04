@@ -10,7 +10,9 @@ public class EnemyStates : MonoBehaviour {
         PATROL,
         AGGRO,
         DEAGGRO,
-        NONE
+        NONE,
+        RANDOMPATROL,
+        REPOSITION
     }
 
     public State state;
@@ -25,6 +27,14 @@ public class EnemyStates : MonoBehaviour {
     private Quaternion targetRot;
     private float internalWaitTimer;
 
+    [Header("Random Patrol Properties")]
+    public float moveArea;
+    private Vector3 newPos;
+    public float randomMinTime;
+    public float randomMaxTime;
+    public GameObject aggroZone;
+    private float randomTime = 0;
+
     [Header("Aggro Properties")]
     // Variables for Aggro
     public bool lookAtPlayer;
@@ -34,7 +44,14 @@ public class EnemyStates : MonoBehaviour {
     [Header("DeAggro Properties")]
     public float deAggroTime;
 
-    private Transform player;
+    [Header("Reposition Settings")]
+    public float distance = 5.0f;
+    public float rePosTime = 3.0f;
+    public bool posFound { get; set; }
+    private Vector3 nextPos;
+    private int pickPos;
+
+    public Transform player { get; set; }
     private EnemyHealth enemyHealth;
     private float velocity;
     public NavMeshAgent nav { get; set; }
@@ -64,7 +81,7 @@ public class EnemyStates : MonoBehaviour {
         // Controls States //
         if (!enemyHealth.isDead)
         {
-            //Debug.Log(internalWaitTimer);
+            //Debug.Log(state);
             switch (state)
             {
                 case State.NONE:
@@ -79,13 +96,52 @@ public class EnemyStates : MonoBehaviour {
                 case State.DEAGGRO:
                     DeAggro();
                     break;
+                case State.RANDOMPATROL:
+                    RandomPatrol();
+                    break;
+                case State.REPOSITION:
+                    RePosition();
+                    break;
+            }
+        }
+    }
+
+    //Random Patrol State //
+    public void RandomPatrol()
+    {
+        nav.updateRotation = true;
+
+        if (randomTime == 0)
+        {
+           randomTime = Random.Range(randomMinTime, randomMaxTime);
+        }
+        else
+        {
+            //Debug.Log(randomTime);
+            internalWaitTimer += Time.deltaTime;
+
+            if (internalWaitTimer > randomTime)
+            {
+                Vector3 randomPos = aggroZone.transform.position + Random.insideUnitSphere * moveArea;
+                newPos = new Vector3(randomPos.x, transform.position.y, randomPos.z);
+
+                NavMeshHit hit;
+                NavMesh.SamplePosition(newPos, out hit, moveArea, NavMesh.AllAreas);
+                Vector3 finalPos = hit.position;
+
+                nav.SetDestination(finalPos);
+
+                internalWaitTimer = 0;
+                randomTime = 0;
             }
         }
     }
 
     // Patrol State //
-    protected void Patrol()
+    public void Patrol()
     {
+        nav.updateRotation = true;
+
         internalWaitTimer += Time.deltaTime;
 
         if (internalWaitTimer >= waitTime)
@@ -133,7 +189,7 @@ public class EnemyStates : MonoBehaviour {
     }
 
     // Null State
-    private void None()
+    public void None()
     {
         return;
     }
@@ -143,7 +199,8 @@ public class EnemyStates : MonoBehaviour {
     {
         if (lookAtPlayer)
         {
-            //transform.LookAt(player.position);
+            nav.updateRotation = false;
+
             float step = rotateSpeed * Time.deltaTime;
             Vector3 targetDir = player.transform.position - transform.position;
             Vector3 lookDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
@@ -157,13 +214,73 @@ public class EnemyStates : MonoBehaviour {
         nav.SetDestination(player.position);
     }
 
-    private void DeAggro()
+    public void DeAggro()
     {
+        nav.updateRotation = true;
+
         nav.SetDestination(startPos);
 
         if(Vector3.Distance(transform.position, startPos) <= 1)
         {
             state = EnemyStates.State.NONE;
+        }
+    }
+
+    public void RePosition()
+    {
+        //Debug.Log("Repositioning");
+        if (!posFound)
+        {
+            if(Vector3.Distance(transform.position,player.position) <= 10.0f)
+            {
+                pickPos = Random.Range(1, 3);
+
+                Debug.Log(pickPos);
+
+                if (pickPos == 1)
+                {
+                    nextPos = transform.position + transform.right * distance;
+                }
+                else
+                {
+                    nextPos = transform.position - transform.right * distance;
+                }
+            }
+            else
+            {
+                nextPos = transform.position + transform.forward * distance;
+            }
+            posFound = true;
+        }
+        else
+        {
+            //Debug.Log(posFound);
+
+            NavMeshHit hit;
+            NavMesh.SamplePosition(nextPos, out hit, distance, NavMesh.AllAreas);
+            Vector3 finalPos = hit.position;
+
+            //Debug.Log(Vector3.Distance(transform.position, hit.position));
+
+            if(Vector3.Distance(transform.position, hit.position) > distance + 1.0f)
+            {
+                Debug.Log("Invalid Pos");
+
+                // Find another pos
+                posFound = false;
+            }
+            else
+            {
+                Debug.Log("Moving");
+                nav.SetDestination(hit.position);
+
+                if (Vector3.Distance(transform.position, nav.destination) <= 2.0f)
+                {
+                    //state = EnemyStates.State.AGGRO;
+                    posFound = false;
+                }
+
+            }
         }
     }
 
@@ -181,5 +298,4 @@ public class EnemyStates : MonoBehaviour {
             nav.isStopped = stop;
         }
     }
-
 }

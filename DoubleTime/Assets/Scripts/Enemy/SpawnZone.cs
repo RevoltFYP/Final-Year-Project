@@ -52,7 +52,7 @@ public class SpawnZone : MonoBehaviour {
         }
 
         minIndex = 0;
-        maxIndex = spawnPoints.Count - 1;
+        maxIndex = spawnPoints.Count + 1;
 
         player = GameObject.FindGameObjectWithTag("Player");
 

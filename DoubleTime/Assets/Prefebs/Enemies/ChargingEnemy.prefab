@@ -158,10 +158,10 @@ Rigidbody:
   m_GameObject: {fileID: 1118339076086662}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 4
+  m_Drag: Infinity
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
@@ -176,7 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9970a0eee8262468b56fbeddb7501f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: {fileID: 114240859762011146}
 --- !u!114 &114240859762011146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,10 +192,16 @@ MonoBehaviour:
   waitTime: 0
   lookSpeed: 3
   wayPoints: []
+  moveArea: 0
+  randomMinTime: 0
+  randomMaxTime: 0
+  aggroZone: {fileID: 0}
   lookAtPlayer: 1
   aggroSpeed: 5
-  rotateSpeed: 1
+  rotateSpeed: 5
   deAggroTime: 5
+  distance: 5
+  rePosTime: 3
 --- !u!114 &114436038533241360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,4 +332,4 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 2

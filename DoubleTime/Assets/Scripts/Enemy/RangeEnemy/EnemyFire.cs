@@ -7,46 +7,32 @@ public class EnemyFire : MonoBehaviour {
     public GameObject projectile;
     public GameObject firePoint;
     public EnemyHealth enemyHealth;
-    public EnemyStates enemyStates;
     public int damage = 5;
+    private EnemyStates enemyStates;
 
     [Header("Projectile Stats")]
-    public float initialDelayTime;
     public float timeBetweenBullet = 0.5f;
     public int projectileForceMultiplyer = 100;
 
     private float timer;
+    private float posTimer;
 
-    private void OnTriggerEnter(Collider other)
+    private void Awake()
     {
-        if(other.gameObject.tag == "Player")
-        {
-            enemyStates.StopAgent(true);
-        }
+        enemyStates = transform.parent.GetComponent<EnemyStates>();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if(other.gameObject.tag == "Player")
+        if (!enemyHealth.isDead && enemyStates.state == EnemyStates.State.AGGRO)
         {
-            if (!enemyHealth.isDead)
+            timer += Time.deltaTime;
+
+            if (timer >= timeBetweenBullet)
             {
-                timer += Time.deltaTime;
-
-                if (timer >= timeBetweenBullet)
-                {
-                    Fire();
-                    timer = 0;
-                }
+                Fire();
+                timer = 0;
             }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            enemyStates.StopAgent(false);
         }
     }
 
@@ -56,7 +42,5 @@ public class EnemyFire : MonoBehaviour {
         GameObject projectileFired = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
 
         projectileFired.GetComponent<ProjectileBase>().projectileDamage = damage;
-
-        //Invoke("Fire", timeBetweenBullet);
     }
 }

@@ -192,6 +192,7 @@ MonoBehaviour:
   waitTime: 0
   lookSpeed: 3
   wayPoints: []
+  displayMoveArea: 0
   moveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
@@ -200,8 +201,6 @@ MonoBehaviour:
   aggroSpeed: 5
   rotateSpeed: 5
   deAggroTime: 5
-  distance: 5
-  rePosTime: 3
 --- !u!114 &114436038533241360
 MonoBehaviour:
   m_ObjectHideFlags: 1

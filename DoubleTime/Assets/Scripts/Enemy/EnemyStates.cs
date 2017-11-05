@@ -11,8 +11,7 @@ public class EnemyStates : MonoBehaviour {
         AGGRO,
         DEAGGRO,
         NONE,
-        RANDOMPATROL,
-        REPOSITION
+        RANDOMPATROL
     }
 
     public State state;
@@ -28,8 +27,8 @@ public class EnemyStates : MonoBehaviour {
     private float internalWaitTimer;
 
     [Header("Random Patrol Properties")]
+    public bool displayMoveArea;
     public float moveArea;
-    private Vector3 newPos;
     public float randomMinTime;
     public float randomMaxTime;
     public GameObject aggroZone;
@@ -43,13 +42,6 @@ public class EnemyStates : MonoBehaviour {
 
     [Header("DeAggro Properties")]
     public float deAggroTime;
-
-    [Header("Reposition Settings")]
-    public float distance = 5.0f;
-    public float rePosTime = 3.0f;
-    public bool posFound { get; set; }
-    private Vector3 nextPos;
-    private int pickPos;
 
     public Transform player { get; set; }
     private EnemyHealth enemyHealth;
@@ -99,10 +91,16 @@ public class EnemyStates : MonoBehaviour {
                 case State.RANDOMPATROL:
                     RandomPatrol();
                     break;
-                case State.REPOSITION:
-                    RePosition();
-                    break;
             }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (displayMoveArea)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(aggroZone.transform.position + Random.insideUnitSphere, moveArea);
         }
     }
 
@@ -123,13 +121,13 @@ public class EnemyStates : MonoBehaviour {
             if (internalWaitTimer > randomTime)
             {
                 Vector3 randomPos = aggroZone.transform.position + Random.insideUnitSphere * moveArea;
-                newPos = new Vector3(randomPos.x, transform.position.y, randomPos.z);
+                Vector3 newPos = new Vector3(randomPos.x, transform.position.y, randomPos.z);
 
                 NavMeshHit hit;
                 NavMesh.SamplePosition(newPos, out hit, moveArea, NavMesh.AllAreas);
                 Vector3 finalPos = hit.position;
 
-                nav.SetDestination(finalPos);
+                nav.SetDestination(newPos);
 
                 internalWaitTimer = 0;
                 randomTime = 0;
@@ -226,63 +224,6 @@ public class EnemyStates : MonoBehaviour {
         }
     }
 
-    public void RePosition()
-    {
-        //Debug.Log("Repositioning");
-        if (!posFound)
-        {
-            if(Vector3.Distance(transform.position,player.position) <= 10.0f)
-            {
-                pickPos = Random.Range(1, 3);
-
-                Debug.Log(pickPos);
-
-                if (pickPos == 1)
-                {
-                    nextPos = transform.position + transform.right * distance;
-                }
-                else
-                {
-                    nextPos = transform.position - transform.right * distance;
-                }
-            }
-            else
-            {
-                nextPos = transform.position + transform.forward * distance;
-            }
-            posFound = true;
-        }
-        else
-        {
-            //Debug.Log(posFound);
-
-            NavMeshHit hit;
-            NavMesh.SamplePosition(nextPos, out hit, distance, NavMesh.AllAreas);
-            Vector3 finalPos = hit.position;
-
-            //Debug.Log(Vector3.Distance(transform.position, hit.position));
-
-            if(Vector3.Distance(transform.position, hit.position) > distance + 1.0f)
-            {
-                Debug.Log("Invalid Pos");
-
-                // Find another pos
-                posFound = false;
-            }
-            else
-            {
-                Debug.Log("Moving");
-                nav.SetDestination(hit.position);
-
-                if (Vector3.Distance(transform.position, nav.destination) <= 2.0f)
-                {
-                    //state = EnemyStates.State.AGGRO;
-                    posFound = false;
-                }
-
-            }
-        }
-    }
 
     // Agent Functions //
     public void MoveAgent(Vector3 location, float moveSpeed)

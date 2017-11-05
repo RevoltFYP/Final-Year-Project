@@ -2205,7 +2205,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: Infinity
-  m_AngularDrag: 0.05
+  m_AngularDrag: Infinity
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -2284,6 +2284,7 @@ MonoBehaviour:
   waitTime: 0
   lookSpeed: 3
   wayPoints: []
+  displayMoveArea: 0
   moveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
@@ -2292,8 +2293,10 @@ MonoBehaviour:
   aggroSpeed: 3
   rotateSpeed: 5
   deAggroTime: 5
-  distance: 5
+  minDist: 5
+  maxDist: 8
   rePosTime: 3
+  reposSpeed: 10
 --- !u!114 &114723437707670604
 MonoBehaviour:
   m_ObjectHideFlags: 1

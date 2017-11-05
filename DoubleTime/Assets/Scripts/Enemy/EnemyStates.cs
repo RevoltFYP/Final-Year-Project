@@ -15,18 +15,19 @@ public class EnemyStates : MonoBehaviour {
     }
 
     public State state;
-
     [Header("Patrol Properties")]
+    public float waitTime;
+    private float internalWaitTimer;
+
+    [Header("Waypoint Patrol Properties")]
     // Variables for Patrolling
     public float patrolSpeed;
-    public float waitTime;
     public float lookSpeed = 3;
     public GameObject[] wayPoints;
     private int wayPointCounter = 0;
     private Quaternion targetRot;
-    private float internalWaitTimer;
 
-    [Header("Random Patrol Properties")]
+    [Header("Area Patrol Properties")]
     public bool displayMoveArea;
     public float moveArea;
     public float randomMinTime;

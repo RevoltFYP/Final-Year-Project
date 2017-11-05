@@ -2304,8 +2304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 3
+  waitTime: 5
   patrolSpeed: 3
-  waitTime: 0
   lookSpeed: 3
   wayPoints: []
   displayMoveArea: 0

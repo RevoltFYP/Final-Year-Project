@@ -22,7 +22,7 @@ public class PlayerMelee : MonoBehaviour {
             timer += Time.deltaTime * 1 / Time.timeScale;
         }
 
-        if (Input.GetKeyDown(meleeKey) && timer >= timeBetweenAttack)
+        if (Input.GetKeyDown(meleeKey) && timer >= timeBetweenAttack && ShootBoomarang.haveBoomarang == true)
         {
             attackHitBox.SetActive(true);
             timer = 0;

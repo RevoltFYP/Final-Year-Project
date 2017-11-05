@@ -15,7 +15,7 @@ public class ShootBoomarang : MonoBehaviour {
 
     void ShootBoomarang_()
     {
-        if (Input.GetButtonDown("Fire1") & haveBoomarang == true)
+        if (Input.GetButtonDown("Fire2") & haveBoomarang == true)
         {
             Instantiate(Boomarang, transform.position, transform.rotation);
             haveBoomarang = false;

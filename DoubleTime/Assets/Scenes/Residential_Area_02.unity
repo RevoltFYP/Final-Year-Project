@@ -19605,6 +19605,9 @@ Transform:
   m_PrefabInternal: {fileID: 621826376}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8108afc... Spawn Fix 2.0
 =======
 >>>>>>> parent of 8108afc... Spawn Fix 2.0
 --- !u!1001 &625330383
@@ -19698,8 +19701,11 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: a8ce957f96ba1d741b5df78b95297fb6, type: 2}
   m_IsPrefabParent: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8108afcc5542edec3c8fe56364a8bc8614f761b3
+=======
+>>>>>>> parent of 8108afc... Spawn Fix 2.0
 =======
 >>>>>>> parent of 8108afc... Spawn Fix 2.0
 --- !u!1001 &631327729
@@ -36412,6 +36418,7 @@ Prefab:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 23
 =======
       value: 21
@@ -36425,6 +36432,9 @@ Prefab:
 =======
       value: 22
 >>>>>>> parent of 15e6aa1... testv1
+=======
+      value: 22
+>>>>>>> parent of 8108afc... Spawn Fix 2.0
 =======
       value: 22
 >>>>>>> parent of 8108afc... Spawn Fix 2.0
@@ -57110,6 +57120,7 @@ Prefab:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 22
 =======
       value: 20
@@ -57123,6 +57134,9 @@ Prefab:
 =======
       value: 21
 >>>>>>> parent of 15e6aa1... testv1
+=======
+      value: 21
+>>>>>>> parent of 8108afc... Spawn Fix 2.0
 =======
       value: 21
 >>>>>>> parent of 8108afc... Spawn Fix 2.0

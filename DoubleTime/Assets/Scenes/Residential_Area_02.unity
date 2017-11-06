@@ -18419,6 +18419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyThreshold: 2
+  spawn: 0
   spawnPoints:
   - {fileID: 1774639382}
   - {fileID: 1181409740}

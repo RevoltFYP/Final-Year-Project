@@ -28,7 +28,7 @@ public class SpawnZone : MonoBehaviour {
     public int rangeEnemy;
     public int chargingEnemy;
     public int shieldEnemy;
-    private List<GameObject> enemyList = new List<GameObject>();
+    public List<GameObject> enemyList { get; set; }
 
     [Header("Game Objects References")]
     public GameObject meleeEnemyObj;
@@ -36,11 +36,14 @@ public class SpawnZone : MonoBehaviour {
     public GameObject chargerEnemyObj;
     public GameObject shieldEnemyObj;
 
-    [Header("Corresponding Enemy Zone")]
-    public EnemyZone enemyZone;
+    private EnemyZone enemyZone;
 
     // Use this for initialization
     void Awake () {
+
+        enemyList = new List<GameObject>();
+
+        enemyZone = GetComponent<EnemyZone>();
 
         // Hide all renderers of spawn points
         foreach(GameObject spawnPoint in spawnPoints)
@@ -64,6 +67,8 @@ public class SpawnZone : MonoBehaviour {
 
         // Randomize list of enemies to spawn
         ShuffleList();
+
+        Debug.Log("List Count: " + enemyList.Count);
 
         // Check for spawning every 
         InvokeRepeating("CheckActiveEnemies", checkRate, checkRate);
@@ -97,7 +102,6 @@ public class SpawnZone : MonoBehaviour {
     public void SpawnEnemy()
     {
         //Debug.Log("Spawn");
-        //Debug.Log("EnemyList Count: " + enemyList.Count);
 
         centre = chosenSpawn.GetComponent<Renderer>().bounds.center;
         Vector3 size = chosenSpawn.transform.localScale;
@@ -106,47 +110,32 @@ public class SpawnZone : MonoBehaviour {
         // Get random amount
         int spawnAmount = Random.Range(spawnMin, spawnMax);
 
-        Debug.Log(spawnAmount);
-
-        //Debug.Log("SpawnAmount: " + spawnAmount);
-
-        if (spawnAmount <= enemyList.Count)
+        if (spawnAmount >= enemyList.Count)
         {
-            for (int i = 0; i < spawnAmount; i++)
-            {
-                if (enemyList[i] != null)
-                {
-                    // Get random pos
-                    Vector3 pos = centre + new Vector3(Random.Range(-size.x / 2, size.x / 2), transform.position.y, Random.Range(-size.z / 2, size.z / 2));
-
-                    // Set target spawn to random pos and look at player
-                    enemyList[i].transform.position = pos;
-                    enemyList[i].transform.rotation = Quaternion.LookRotation(player.transform.position - enemyList[i].transform.position);
-
-                    // Set active spawn target
-                    enemyList[i].SetActive(true);
-                    // Debug.Log("SpawnTarget Status: " + enemyList[i].activeSelf);
-
-                    // Set Aggro State
-                    enemyList[i].GetComponent<EnemyStates>().state = EnemyStates.State.AGGRO;
-
-                    // Remove from list
-                    enemyList.Remove(enemyList[i]);
-                    //Debug.Log(enemyList.Count);
-
-                    // Re-shuffle list
-                    ShuffleList();
-                }
-            }
+            spawnAmount = enemyList.Count - 1;
         }
-        else
+
+        Debug.Log("Spawn Amount: " + spawnAmount);
+        Debug.Log("List Count: " + enemyList.Count);
+
+        for (int i = spawnAmount; i >= 0; i--)
         {
-            Debug.Log("True");
+            // Get random pos
+            Vector3 pos = centre + new Vector3(Random.Range(-size.x / 2, size.x / 2), transform.position.y, Random.Range(-size.z / 2, size.z / 2));
 
-            spawnAmount = enemyList.Count;
+            // Set target spawn to random pos and look at player
+            enemyList[i].transform.position = pos;
+            enemyList[i].transform.rotation = Quaternion.LookRotation(player.transform.position - enemyList[i].transform.position);
 
-            // Re-run until spawn amount is less than max amount 
-            SpawnEnemy();
+            // Set active spawn target
+            enemyList[i].SetActive(true);
+            // Debug.Log("SpawnTarget Status: " + enemyList[i].activeSelf);
+
+            // Set Aggro State
+            enemyList[i].GetComponent<EnemyStates>().state = EnemyStates.State.AGGRO;
+
+            // Remove from list
+            enemyList.Remove(enemyList[i]);
         }
     }
 
@@ -202,9 +191,12 @@ public class SpawnZone : MonoBehaviour {
             {
                 foreach (GameObject enemy in enemyZone.enemies)
                 {
-                    if (enemy.activeInHierarchy)
+                    if(enemy != null)
                     {
-                        activeEnemies++;
+                        if (enemy.activeInHierarchy)
+                        {
+                            activeEnemies++;
+                        }
                     }
                 }
             }

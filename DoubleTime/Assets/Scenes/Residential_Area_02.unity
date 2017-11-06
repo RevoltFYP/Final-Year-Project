@@ -18293,7 +18293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4952795497975146, guid: 49b50fc0eb8e205458c4531083e60d95, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114780371611435648, guid: 49b50fc0eb8e205458c4531083e60d95,
         type: 2}
@@ -18367,46 +18367,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 600027653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 148747e1c87961342a66340aeb9e2369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toolTip: {fileID: 1815114507}
-  toolTipTxt: {fileID: 1815114506}
-  toolTipText: "Hold down left-Click to spray your enemies with a hail of bullets.
-    Watch Out as ammo is limited. Kill\r enemies to pick up more ammunition."
---- !u!114 &600027655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 600027653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ca501a1a87dded4cbae200b6b5de793, type: 3}
+  m_Script: {fileID: 11500000, guid: cb115481533820a42832855cb43646aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
-  activeAssets: []
-  deactiveAssets:
+  boundaries:
   - {fileID: 1671748297}
   - {fileID: 1938220303}
   - {fileID: 1313300727}
   - {fileID: 1149650625}
-  addWeapon: 1
---- !u!114 &600027656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 600027653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a03ec7b3f460604e9d1ad9e61488871, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponKeyCode: 51
-  player: {fileID: 66841740}
-  displayTime: 5
 --- !u!114 &600027657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18423,7 +18392,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1774639382}
   - {fileID: 1181409740}
-  spawnMin: 1
+  spawnMin: 5
   spawnMax: 5
   meleeEnemy: 2
   rangeEnemy: 3
@@ -18437,7 +18406,6 @@ MonoBehaviour:
     type: 2}
   shieldEnemyObj: {fileID: 1912437989910784, guid: cb22dbf0538809a4ba59b54734dcb077,
     type: 2}
-  enemyZone: {fileID: 600027655}
 --- !u!1001 &600283981
 Prefab:
   m_ObjectHideFlags: 0
@@ -19144,6 +19112,7 @@ MonoBehaviour:
   - {fileID: 1652715713}
   - {fileID: 1988305191}
   - {fileID: 1826042526}
+  boundaries: []
   activeAssets: []
   deactiveAssets:
   - {fileID: 165376511}
@@ -35521,7 +35490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -36335,7 +36304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_LocalScale.x
@@ -40762,7 +40731,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -52832,7 +52801,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -57013,7 +56982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_LocalScale.x
@@ -60301,91 +60270,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4311342836352688, guid: c0d4c6e5a5632b14ea9ec811b1082f46,
     type: 2}
   m_PrefabInternal: {fileID: 1899576327}
---- !u!1 &1899947528
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1899947532}
-  - component: {fileID: 1899947531}
-  - component: {fileID: 1899947530}
-  - component: {fileID: 1899947529}
-  m_Layer: 0
-  m_Name: Point A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1899947529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1899947528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 148747e1c87961342a66340aeb9e2369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toolTip: {fileID: 0}
-  toolTipTxt: {fileID: 0}
-  toolTipText: 'Press "1" to switch to the Boomerang.
-
-    Left Click to Throw the Boomerang.
-
-    You can also Melee with the "V" Key.'
---- !u!114 &1899947530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1899947528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b285878bf29264cb4a8a1479409aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1402374363}
-  panTarget: {fileID: 66841740}
-  panTime: 0
-  activateBoundaries:
-  - {fileID: 1671748297}
-  - {fileID: 1938220303}
-  - {fileID: 1313300727}
-  - {fileID: 1149650625}
-  toolTip: 0
-  toolTipTime: 10
-  debug: 0
-  debugText: {fileID: 0}
-  enableSlowTime: 0
---- !u!65 &1899947531
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1899947528}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.81, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1899947532
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1899947528}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 203.16, y: 0.67, z: -141.22}
-  m_LocalScale: {x: 3.084521, y: 7.009237, z: 1.1216966}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
 --- !u!1001 &1904227184
 Prefab:
   m_ObjectHideFlags: 0
@@ -61479,7 +61363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4407797205659416, guid: 9a5f3607e8c05064793cf7c453295dcb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x

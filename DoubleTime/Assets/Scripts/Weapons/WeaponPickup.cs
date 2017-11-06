@@ -12,29 +12,19 @@ public class WeaponPickup : MonoBehaviour {
 
     [Header("Weapon Tool Tip")]
     public float displayTime;
-    private ToolTipScript toolTipscript;
-
-    private WeaponInventory weapInven;
-
-    private void Awake()
-    {
-        toolTipscript = GetComponent<ToolTipScript>();
-
-        weapInven = player.GetComponent<WeaponInventory>();
-    }
 
     public void WeaponAdd()
     {
         // Add corresponding KeyCode
-        if (weapInven.keyCodes != null)
+        if (player.GetComponent<WeaponInventory>() != null)
         {
-            weapInven.keyCodes.Add(weaponKeyCode);
+            player.GetComponent<WeaponInventory>().keyCodes.Add(weaponKeyCode);
         }
 
         // Update weapon Tool bar UI
-        weapInven.UpdateWeaponToolbar();
+        player.GetComponent<WeaponInventory>().UpdateWeaponToolbar();
 
         // Show and hide tooltip after display time
-        toolTipscript.DisplayToolTip(displayTime);
+        GetComponent<ToolTipScript>().DisplayToolTip(displayTime);
     }
 }

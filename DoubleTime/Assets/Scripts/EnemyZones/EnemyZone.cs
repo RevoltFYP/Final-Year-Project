@@ -10,29 +10,32 @@ public class EnemyZone : MonoBehaviour {
 
     private SpawnZone spawnZone;
 
+    public List<GameObject> boundaries = new List<GameObject>();
+
     private void Awake()
     {
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-        CheckArray();
+        //CheckArray();
     }
 
     // When player damages any enemy in that zone
     private void Update()
     {
-        CheckArray();
-
         if(enemies.Count > 0)
         {
             foreach (GameObject enemy in enemies)
             {
-                EnemyHealth enemHealth = enemy.GetComponent<EnemyHealth>();
-
-                if (enemHealth.currentHealth < enemHealth.startingHealth)
+                if(enemy != null)
                 {
-                    //Debug.Log("Curr hp less than starting");
-                    AggroAllEnemies(player);
+                    EnemyHealth enemHealth = enemy.GetComponent<EnemyHealth>();
+
+                    if (enemHealth.currentHealth < enemHealth.startingHealth)
+                    {
+                        //Debug.Log("Curr hp less than starting");
+                        AggroAllEnemies(player);
+                    }
                 }
             }
         }
@@ -47,8 +50,18 @@ public class EnemyZone : MonoBehaviour {
 
             if(GetComponent<SpawnZone>() != null)
             {
-                GetComponent<SpawnZone>().spawn = true;
+                GetComponent<SpawnZone>().spawn = GetComponent<SpawnZone>().enemyList.Count > 0 ? true : false;
             }
+
+            ActivateBoundaries();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            CheckArray();
         }
     }
 
@@ -75,6 +88,7 @@ public class EnemyZone : MonoBehaviour {
     protected virtual void DestroyAreaZone()
     {
         enemies.Clear();
+        RemoveBoundaries();
         Destroy(gameObject);
     }
 
@@ -90,5 +104,32 @@ public class EnemyZone : MonoBehaviour {
         }
     }
 
+    private void ActivateBoundaries()
+    {
+        if (boundaries.Count > 0)
+        {
+            for (int i = 0; i < boundaries.Count; i++)
+            {
+                if (!boundaries[i].activeSelf)
+                {
+                    boundaries[i].SetActive(true);
+                }
+            }
+        }
+    }
 
+    private void RemoveBoundaries()
+    {
+        if (boundaries.Count > 0)
+        {
+            for (int i = 0; i < boundaries.Count; i++)
+            {
+                if (boundaries[i].activeSelf)
+                {
+                    //boundaries[i].SetActive(false);
+                    Destroy(boundaries[i]);
+                }
+            }
+        }
+    }
 }

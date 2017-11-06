@@ -8,11 +8,8 @@ public class EnemyZone : MonoBehaviour {
 
     private GameObject player;
 
-    private SpawnZone spawnZone;
-
     private void Awake()
     {
-
         player = GameObject.FindGameObjectWithTag("Player");
 
         CheckArray();
@@ -23,17 +20,14 @@ public class EnemyZone : MonoBehaviour {
     {
         CheckArray();
 
-        if(enemies.Count > 0)
+        foreach (GameObject enemy in enemies)
         {
-            foreach (GameObject enemy in enemies)
-            {
-                EnemyHealth enemHealth = enemy.GetComponent<EnemyHealth>();
+            EnemyHealth enemHealth = enemy.GetComponent<EnemyHealth>();
 
-                if (enemHealth.currentHealth < enemHealth.startingHealth)
-                {
-                    //Debug.Log("Curr hp less than starting");
-                    AggroAllEnemies(player);
-                }
+            if(enemHealth.currentHealth < enemHealth.startingHealth)
+            {
+                //Debug.Log("Curr hp less than starting");
+                AggroAllEnemies(player);
             }
         }
     }
@@ -44,11 +38,6 @@ public class EnemyZone : MonoBehaviour {
         if(other.gameObject.tag == "Player")
         {
             AggroAllEnemies(other.gameObject);
-
-            if(GetComponent<SpawnZone>() != null)
-            {
-                GetComponent<SpawnZone>().spawn = true;
-            }
         }
     }
 

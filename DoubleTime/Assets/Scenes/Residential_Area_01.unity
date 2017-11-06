@@ -18242,12 +18242,12 @@ Prefab:
     - target: {fileID: 114774308071763538, guid: a8ce957f96ba1d741b5df78b95297fb6,
         type: 2}
       propertyPath: meleeEnemy
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114774308071763538, guid: a8ce957f96ba1d741b5df78b95297fb6,
         type: 2}
       propertyPath: rangeEnemy
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114774308071763538, guid: a8ce957f96ba1d741b5df78b95297fb6,
         type: 2}

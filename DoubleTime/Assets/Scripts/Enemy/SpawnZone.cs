@@ -7,7 +7,7 @@ public class SpawnZone : MonoBehaviour {
 
     [Header("Spawn Settings")]
     public int enemyThreshold;
-    public float spawnRate = 4.0f;
+    private float checkRate = 4.0f;
 
     [Header("Spawn Points")]
     public List<GameObject> spawnPoints = new List<GameObject>();
@@ -38,7 +38,6 @@ public class SpawnZone : MonoBehaviour {
     [Header("Corresponding Enemy Zone")]
     public EnemyZone enemyZone;
 
-
     // Use this for initialization
     void Awake () {
 
@@ -52,7 +51,7 @@ public class SpawnZone : MonoBehaviour {
         }
 
         minIndex = 0;
-        maxIndex = spawnPoints.Count + 1;
+        maxIndex = spawnPoints.Count;
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -66,7 +65,7 @@ public class SpawnZone : MonoBehaviour {
         ShuffleList();
 
         // Check for spawning every 
-        InvokeRepeating("CheckActiveEnemies", spawnRate, spawnRate);
+        InvokeRepeating("CheckActiveEnemies", checkRate, checkRate);
     }
 
     public void PickSpawnPoint()
@@ -102,7 +101,7 @@ public class SpawnZone : MonoBehaviour {
         for (int i = 0; i < spawnAmount; i ++)
         {
             // Spawn if amount to spawn does not exceed max amount of enemies pooled
-            if(spawnAmount < enemyList.Count)
+            if(spawnAmount <= enemyList.Count)
             {
                 if (enemyList[i] != null)
                 {

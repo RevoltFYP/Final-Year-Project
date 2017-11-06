@@ -81,11 +81,11 @@ public class RangeEnemyState : EnemyStates {
 
             //Debug.Log(Vector3.Distance(transform.position, hit.position));
 
-            Debug.Log(finalPos);
+            //Debug.Log(finalPos);
 
             if (Vector3.Distance(transform.position, hit.position) > travelDist + 1.0f)
             {
-                Debug.Log("Invalid Pos");
+                //Debug.Log("Invalid Pos");
 
                 // Find another pos
                 posFound = false;
@@ -94,7 +94,7 @@ public class RangeEnemyState : EnemyStates {
             }
             else
             {
-                Debug.Log("Moving");
+                //Debug.Log("Moving");
 
                 nav.speed = reposSpeed;
 
@@ -102,7 +102,7 @@ public class RangeEnemyState : EnemyStates {
 
                 if (Vector3.Distance(transform.position, nav.destination) <= 2.5f)
                 {
-                    Debug.Log("Destination Reached");
+                    //Debug.Log("Destination Reached");
                     //state = EnemyStates.State.AGGRO;
                     posFound = false;
 

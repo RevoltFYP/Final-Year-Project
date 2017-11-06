@@ -33,6 +33,7 @@ public class WeaponBase : MonoBehaviour {
     private Light gunLight { get; set; }
     private float effectsDisplayTime = 0.2f;
     public bool firing { get; set; }
+    private ShootBoomarang shootBoomerang;
 
     void Awake()
     {
@@ -47,6 +48,8 @@ public class WeaponBase : MonoBehaviour {
             GameObject.DontDestroyOnLoad(obj);
         }
 
+        shootBoomerang = transform.parent.GetComponent<ShootBoomarang>();
+
         //player = transform.parent.gameObject;
         shootableMask = LayerMask.GetMask("Shootable");
         gunLight = GetComponent<Light>();
@@ -59,7 +62,7 @@ public class WeaponBase : MonoBehaviour {
 
         if(Input.GetKey(weapInvenReference.fireKey))
         {
-            if(timer >= timeBetweenBullets && currentAmmo > 0 && weapInvenReference.canFire)
+            if(timer >= timeBetweenBullets && currentAmmo > 0 && weapInvenReference.canFire && shootBoomerang.haveBoomarang)
             {
                 firing = true;
                 Shoot();

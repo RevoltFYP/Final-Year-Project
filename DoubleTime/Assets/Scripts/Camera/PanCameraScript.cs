@@ -46,14 +46,17 @@ public class PanCameraScript : MonoBehaviour {
         destroyObject = true;
         destroyScript = true;
 
-        if (debug)
+        if(debugText != null)
         {
-            debugTimer = panTime;
-            debugText.gameObject.SetActive(true);
-        }
-        else
-        {
-            debugText.gameObject.SetActive(false);
+            if (debug)
+            {
+                debugTimer = panTime;
+                debugText.gameObject.SetActive(true);
+            }
+            else
+            {
+                debugText.gameObject.SetActive(false);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -8,6 +8,7 @@ public class SpawnZone : MonoBehaviour {
     [Header("Spawn Settings")]
     public int enemyThreshold;
     private float checkRate = 4.0f;
+    public bool spawn;
 
     [Header("Spawn Points")]
     public List<GameObject> spawnPoints = new List<GameObject>();
@@ -68,6 +69,14 @@ public class SpawnZone : MonoBehaviour {
         InvokeRepeating("CheckActiveEnemies", checkRate, checkRate);
     }
 
+    private void Update()
+    {
+        if(enemyList.Count <= 0)
+        {
+            CancelInvoke();
+        }
+    }
+
     public void PickSpawnPoint()
     {
         // More than 1 spawn point
@@ -92,16 +101,18 @@ public class SpawnZone : MonoBehaviour {
 
         centre = chosenSpawn.GetComponent<Renderer>().bounds.center;
         Vector3 size = chosenSpawn.transform.localScale;
-        chosenSpawn = null;
+        //chosenSpawn = null;
 
         // Get random amount
         int spawnAmount = Random.Range(spawnMin, spawnMax);
+
+        Debug.Log(spawnAmount);
+
         //Debug.Log("SpawnAmount: " + spawnAmount);
 
-        for (int i = 0; i < spawnAmount; i ++)
+        if (spawnAmount <= enemyList.Count)
         {
-            // Spawn if amount to spawn does not exceed max amount of enemies pooled
-            if(spawnAmount <= enemyList.Count)
+            for (int i = 0; i < spawnAmount; i++)
             {
                 if (enemyList[i] != null)
                 {
@@ -114,7 +125,7 @@ public class SpawnZone : MonoBehaviour {
 
                     // Set active spawn target
                     enemyList[i].SetActive(true);
-                   // Debug.Log("SpawnTarget Status: " + enemyList[i].activeSelf);
+                    // Debug.Log("SpawnTarget Status: " + enemyList[i].activeSelf);
 
                     // Set Aggro State
                     enemyList[i].GetComponent<EnemyStates>().state = EnemyStates.State.AGGRO;
@@ -122,17 +133,20 @@ public class SpawnZone : MonoBehaviour {
                     // Remove from list
                     enemyList.Remove(enemyList[i]);
                     //Debug.Log(enemyList.Count);
+
+                    // Re-shuffle list
+                    ShuffleList();
                 }
-
-                // Re-shuffle list
-                ShuffleList();
             }
-            else
-            {
-                // Re-run until spawn amount is less than max amount 
-                SpawnEnemy();
-            }
+        }
+        else
+        {
+            Debug.Log("True");
 
+            spawnAmount = enemyList.Count;
+
+            // Re-run until spawn amount is less than max amount 
+            SpawnEnemy();
         }
     }
 
@@ -163,40 +177,50 @@ public class SpawnZone : MonoBehaviour {
     // Shuffle List to have random spawning
     public void ShuffleList()
     {
-        for(int i = 0; i < enemyList.Count; i++)
+        if(enemyList.Count > 0)
         {
-            // store temp
-            GameObject temp = enemyList[i];
+            for (int i = 0; i < enemyList.Count; i++)
+            {
+                // store temp
+                GameObject temp = enemyList[i];
 
-            // Random an index
-            int randomIndex = Random.Range(i, enemyList.Count);
+                // Random an index
+                int randomIndex = Random.Range(i, enemyList.Count);
 
-            // Assign new index to element
-            enemyList[i] = enemyList[randomIndex];
-            enemyList[randomIndex] = temp;
+                // Assign new index to element
+                enemyList[i] = enemyList[randomIndex];
+                enemyList[randomIndex] = temp;
+            }
         }
     }
 
     public void CheckActiveEnemies()
     {
-        foreach (GameObject enemy in enemyZone.enemies)
+        if (spawn)
         {
-            if (enemy.activeInHierarchy)
+            if (enemyZone.enemies.Count > 0)
             {
-                activeEnemies++;
+                foreach (GameObject enemy in enemyZone.enemies)
+                {
+                    if (enemy.activeInHierarchy)
+                    {
+                        activeEnemies++;
+                    }
+                }
             }
+
+            //Debug.Log("Active Enemies: " + activeEnemies);
+
+            if (activeEnemies <= enemyThreshold)
+            {
+                // Picks which spawnpoint among the list to spawn
+                PickSpawnPoint();
+
+                // Spawn enemy at point
+                SpawnEnemy();
+            }
+
+            activeEnemies = 0;
         }
-        //Debug.Log("Active Enemies: " + activeEnemies);
-
-        if (activeEnemies <= enemyThreshold)
-        {
-            // Picks which spawnpoint among the list to spawn
-            PickSpawnPoint();
-
-            // Spawn enemy at point
-            SpawnEnemy();
-        }
-
-        activeEnemies = 0;
     }
 }

@@ -19,6 +19,7 @@ public class WeaponPickup : MonoBehaviour {
     private void Awake()
     {
         toolTipscript = GetComponent<ToolTipScript>();
+
         weapInven = player.GetComponent<WeaponInventory>();
     }
 

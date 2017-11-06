@@ -32,6 +32,7 @@ public class WeaponBase : MonoBehaviour {
     public int shootableMask { get; set; }
     private Light gunLight { get; set; }
     private float effectsDisplayTime = 0.2f;
+    public bool firing { get; set; }
 
     void Awake()
     {
@@ -56,12 +57,20 @@ public class WeaponBase : MonoBehaviour {
     {
         timer += Time.deltaTime * 1/Time.timeScale;
 
-        if(Input.GetKey(weapInvenReference.fireKey) && timer >= timeBetweenBullets && currentAmmo > 0 && weapInvenReference.canFire)
+        if(Input.GetKey(weapInvenReference.fireKey))
         {
-            Shoot();
+            if(timer >= timeBetweenBullets && currentAmmo > 0 && weapInvenReference.canFire)
+            {
+                firing = true;
+                Shoot();
+            }
+        }
+        else
+        {
+            firing = false;
         }
 
-        if(timer >= timeBetweenBullets * effectsDisplayTime)
+        if (timer >= timeBetweenBullets * effectsDisplayTime)
         {
             DisableEffects();
         }

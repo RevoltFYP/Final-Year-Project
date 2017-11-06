@@ -94,13 +94,16 @@ public class WeaponInventory : MonoBehaviour {
         }
 
         // Check whether to load data or reset
-        if (resetWeapons)
+        if(dataManager != null)
         {
-            dataManager.ResetWeapons();
-        }
-        else
-        {
-            dataManager.LoadWeaponStats(weaponInventory[2].GetComponent<ShotGunScript>(), weaponInventory[1].GetComponent<WeaponBase>());
+            if (resetWeapons)
+            {
+                dataManager.ResetWeapons();
+            }
+            else
+            {
+                dataManager.LoadWeaponStats(weaponInventory[2].GetComponent<ShotGunScript>(), weaponInventory[1].GetComponent<WeaponBase>());
+            }
         }
     }
 
@@ -108,13 +111,9 @@ public class WeaponInventory : MonoBehaviour {
     {
         currentWeapon.SetActive(true);
         currentWeaponImage.gameObject.SetActive(true);
-
-        if (currentWeapon != weaponInventory[0])
-        {
-            currentAmmoText.gameObject.SetActive(true);
-            maxAmmoText.gameObject.SetActive(true);
-            ammoSlider.gameObject.SetActive(true);
-        }
+        currentAmmoText.gameObject.SetActive(true);
+        maxAmmoText.gameObject.SetActive(true);
+        ammoSlider.gameObject.SetActive(true);
 
         for (int i = 0; i < weaponInventory.Count; i++)
         {
@@ -140,7 +139,8 @@ public class WeaponInventory : MonoBehaviour {
 
             if (boomarangCDTimer <= 0)
             {
-                ShootBoomarang.haveBoomarang = true;
+                Debug.Log("True");
+                GetComponent<ShootBoomarang>().haveBoomarang = true;
                 boomarangCDTimer = boomarangCD;
             }
 
@@ -181,33 +181,23 @@ public class WeaponInventory : MonoBehaviour {
 
     private void AmmoUI()
     {
-        if (currentWeapon != weaponInventory[0])
+        ammoSlider.gameObject.SetActive(true);
+
+        if (currentWeapon.GetComponent<ShotGunScript>())
         {
-            ammoSlider.gameObject.SetActive(true);
+            currentAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().currentAmmo.ToString();
+            maxAmmoText.text = "/" + currentWeapon.GetComponent<ShotGunScript>().ammo.ToString();
 
-            if (currentWeapon.GetComponent<ShotGunScript>())
-            {
-                currentAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().currentAmmo.ToString();
-                maxAmmoText.text = "/" + currentWeapon.GetComponent<ShotGunScript>().ammo.ToString();
-
-                ammoSlider.value = currentWeapon.GetComponent<ShotGunScript>().currentAmmo;
-                ammoSlider.maxValue = currentWeapon.GetComponent<ShotGunScript>().ammo;
-            }
-            else
-            {
-                currentAmmoText.text = currentWeapon.GetComponent<WeaponBase>().currentAmmo.ToString();
-                maxAmmoText.text = "/" + currentWeapon.GetComponent<WeaponBase>().ammo.ToString();
-
-                ammoSlider.value = currentWeapon.GetComponent<WeaponBase>().currentAmmo;
-                ammoSlider.maxValue = currentWeapon.GetComponent<WeaponBase>().ammo;
-            }
+            ammoSlider.value = currentWeapon.GetComponent<ShotGunScript>().currentAmmo;
+            ammoSlider.maxValue = currentWeapon.GetComponent<ShotGunScript>().ammo;
         }
         else
         {
-            //Debug.Log("Current Weapon is Boomerang");
-            currentAmmoText.text = string.Empty;
-            maxAmmoText.text = string.Empty;
-            ammoSlider.gameObject.SetActive(false);
+            currentAmmoText.text = currentWeapon.GetComponent<WeaponBase>().currentAmmo.ToString();
+            maxAmmoText.text = "/" + currentWeapon.GetComponent<WeaponBase>().ammo.ToString();
+
+            ammoSlider.value = currentWeapon.GetComponent<WeaponBase>().currentAmmo;
+            ammoSlider.maxValue = currentWeapon.GetComponent<WeaponBase>().ammo;
         }
     }
 

@@ -34,6 +34,7 @@ public class EnemyZone : MonoBehaviour {
                     if (enemHealth.currentHealth < enemHealth.startingHealth)
                     {
                         //Debug.Log("Curr hp less than starting");
+                        GetComponent<SpawnZone>().spawn = true;
                         AggroAllEnemies(player);
                     }
                 }

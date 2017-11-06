@@ -653,23 +653,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1477306157994510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4736829233681158}
-  - component: {fileID: 135421480866727816}
-  - component: {fileID: 114374197065985804}
-  m_Layer: 2
-  m_Name: AggroRadius
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1488346415647988
 GameObject:
   m_ObjectHideFlags: 1
@@ -1759,19 +1742,6 @@ Transform:
   m_Father: {fileID: 4157824138501250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4736829233681158
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1477306157994510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
-  m_Children: []
-  m_Father: {fileID: 4970031271705970}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4766275623764278
 Transform:
   m_ObjectHideFlags: 1
@@ -2053,7 +2023,6 @@ Transform:
   m_Children:
   - {fileID: 4155970063204776}
   - {fileID: 4912300490842532}
-  - {fileID: 4736829233681158}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2170,17 +2139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageToSpawn: 100
---- !u!114 &114374197065985804
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1477306157994510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d9970a0eee8262468b56fbeddb7501f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114462110444480548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2206,6 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1118339076086662}
   enemyHealth: {fileID: 114744279794493574}
+  stopTime: 1
   timeBetweenAttacks: 1
   attackDamage: 10
 --- !u!114 &114630872764572436
@@ -2263,18 +2222,6 @@ MonoBehaviour:
   scoreValue: 10
   spawnAmmo: 1
   spawnScrap: 1
---- !u!135 &135421480866727816
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1477306157994510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136003864242622830
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -1800,7 +1800,7 @@ Prefab:
     - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -1820,11 +1820,11 @@ Prefab:
     - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1938006934195714, guid: 42f50ca2e6f899843bb54d4df19c5722, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42f50ca2e6f899843bb54d4df19c5722, type: 2}
@@ -12357,7 +12357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1093117091}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &372105199
 Prefab:
@@ -14389,6 +14389,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4407797205659416, guid: 7814fa4913335a043adee3e38f3c597f,
     type: 2}
   m_PrefabInternal: {fileID: 449435087}
+--- !u!1 &450330885 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1541254342567078, guid: 59177a05f79a2c244a89f99be34a662e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2124854466}
 --- !u!1001 &450799144
 Prefab:
   m_ObjectHideFlags: 0
@@ -18370,7 +18375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb115481533820a42832855cb43646aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
+  enemies:
+  - {fileID: 0}
   boundaries:
   - {fileID: 1671748297}
   - {fileID: 1938220303}
@@ -60946,11 +60952,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4661924991133768, guid: 5625289e6e1463f40884308c6a9e394f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4925539432733450, guid: 5625289e6e1463f40884308c6a9e394f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
@@ -60982,7 +60988,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1902599038498244, guid: 5625289e6e1463f40884308c6a9e394f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -65133,6 +65139,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114492618280840016, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: scrapText
+      value: 
+      objectReference: {fileID: 1285273675}
+    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: modeText
+      value: 
+      objectReference: {fileID: 723734489}
+    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: slowUI
+      value: 
+      objectReference: {fileID: 521401857}
+    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: circularFillImage
+      value: 
+      objectReference: {fileID: 1589225861}
+    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: percentageText
+      value: 
+      objectReference: {fileID: 1303092820}
+    - target: {fileID: 114824516393664136, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: modeText
+      value: 
+      objectReference: {fileID: 1519236898}
     - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
       propertyPath: healthSlider
@@ -65143,36 +65179,46 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1730847183}
-    - target: {fileID: 114824516393664136, guid: 59177a05f79a2c244a89f99be34a662e,
+    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
-      propertyPath: modeText
+      propertyPath: hpFill
       value: 
-      objectReference: {fileID: 1519236898}
-    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: modeText
-      value: 
-      objectReference: {fileID: 723734489}
-    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: slowSlider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114378617526319584, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: pauseScreen
-      value: 
-      objectReference: {fileID: 701965730}
-    - target: {fileID: 114492618280840016, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: scrapText
-      value: 
-      objectReference: {fileID: 1285273675}
+      objectReference: {fileID: 2008181993}
     - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
-      propertyPath: ammoText
+      propertyPath: currentAmmoText
+      value: 
+      objectReference: {fileID: 1261656729}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: maxAmmoText
       value: 
       objectReference: {fileID: 681136954}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: ammoSlider
+      value: 
+      objectReference: {fileID: 308435510}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: currentWeaponImage
+      value: 
+      objectReference: {fileID: 1582372631}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: weaponToolBar.Array.data[0]
+      value: 
+      objectReference: {fileID: 1033709065}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: weaponToolBar.Array.data[1]
+      value: 
+      objectReference: {fileID: 689079013}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: weaponToolBar.Array.data[2]
+      value: 
+      objectReference: {fileID: 861321471}
     - target: {fileID: 114365239519252168, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
       propertyPath: upgradeUI
@@ -65223,11 +65269,16 @@ Prefab:
       propertyPath: cameraScript
       value: 
       objectReference: {fileID: 1433817449}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+    - target: {fileID: 114378617526319584, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 701965730}
+    - target: {fileID: 114378617526319584, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: settingsButton
+      value: 
+      objectReference: {fileID: 38392852}
     - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
       propertyPath: m_Enabled
@@ -65240,170 +65291,40 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
       propertyPath: keyCodes.Array.data[1]
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
-      propertyPath: dataManager
+      propertyPath: startWeapon
       value: 
-      objectReference: {fileID: 114779013758527584, guid: e90ac8113ac8e0f48a8f5011317d6150,
-        type: 2}
-    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: circularFillImage
-      value: 
-      objectReference: {fileID: 1589225861}
-    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: percentageText
-      value: 
-      objectReference: {fileID: 1303092820}
-    - target: {fileID: 114647738867736116, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: slowUI
-      value: 
-      objectReference: {fileID: 521401857}
+      objectReference: {fileID: 450330885}
     - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
-      propertyPath: currentAmmoText
-      value: 
-      objectReference: {fileID: 1261656729}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: maxAmmoText
-      value: 
-      objectReference: {fileID: 681136954}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: ammoSlider
-      value: 
-      objectReference: {fileID: 308435510}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: currentWeaponImage
-      value: 
-      objectReference: {fileID: 1582372631}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponToolBar.Array.data[0]
-      value: 
-      objectReference: {fileID: 1033709065}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponToolBar.Array.data[1]
-      value: 
-      objectReference: {fileID: 689079013}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponToolBar.Array.data[2]
-      value: 
-      objectReference: {fileID: 861321471}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: damageColour.r
-      value: 0.8455882
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: damageColour.g
-      value: 0.16787414
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: damageColour.b
-      value: 0.16787414
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: hpFill
-      value: 
-      objectReference: {fileID: 2008181993}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: flashColour.r
-      value: 0.8455882
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: flashColour.g
-      value: 0.124351226
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: flashColour.b
-      value: 0.124351226
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: flashColour.a
-      value: 0.103
-      objectReference: {fileID: 0}
-    - target: {fileID: 114238414725486872, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: damageColour.a
-      value: 0.122
-      objectReference: {fileID: 0}
-    - target: {fileID: 114378617526319584, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: settingsButton
-      value: 
-      objectReference: {fileID: 38392852}
-    - target: {fileID: 1671434097925328, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
-      propertyPath: m_IsActive
+      propertyPath: resetWeapons
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114378617526319584, guid: 59177a05f79a2c244a89f99be34a662e,
+    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: boomerang
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114373551975183758, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
         type: 2}
-      propertyPath: weaponUI.currentWeaponImage
-      value: 
-      objectReference: {fileID: 1582372631}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponUI.currentAmmoText
-      value: 
-      objectReference: {fileID: 1261656729}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponUI.maxAmmoText
-      value: 
-      objectReference: {fileID: 681136954}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponUI.ammoSlider
-      value: 
-      objectReference: {fileID: 308435510}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponUI.weaponToolBar.Array.data[0]
-      value: 
-      objectReference: {fileID: 1033709065}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponUI.weaponToolBar.Array.data[1]
-      value: 
-      objectReference: {fileID: 689079013}
-    - target: {fileID: 114966226602742436, guid: 59177a05f79a2c244a89f99be34a662e,
-        type: 2}
-      propertyPath: weaponUI.weaponToolBar.Array.data[2]
-      value: 
-      objectReference: {fileID: 861321471}
-    - target: {fileID: 4220516784511296, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.7
+      propertyPath: keyCodes.Array.data[2]
+      value: 51
       objectReference: {fileID: 0}
-    - target: {fileID: 4085166576357486, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114804851566412068, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
-    - {fileID: 114835127687424888, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &2124854467 stripped
@@ -65412,23 +65333,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2124854466}
   m_Script: {fileID: 11500000, guid: e33de5e165803214e88667d7622a2e2d, type: 3}
---- !u!1 &2124854468 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1126753357859514, guid: 59177a05f79a2c244a89f99be34a662e,
-    type: 2}
-  m_PrefabInternal: {fileID: 2124854466}
---- !u!114 &2124854469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124854468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71028a519033ce44290a8d9e5b4d6459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runDampTime: 0.1
 --- !u!1001 &2128169029
 Prefab:
   m_ObjectHideFlags: 0

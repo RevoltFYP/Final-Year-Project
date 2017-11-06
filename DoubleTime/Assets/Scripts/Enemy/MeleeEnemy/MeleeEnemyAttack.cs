@@ -6,6 +6,7 @@ public class MeleeEnemyAttack : MonoBehaviour {
 
     public GameObject parentObject;
     public EnemyHealth enemyHealth;
+    [Range(0,2)] public float stopTime;
 
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
@@ -13,6 +14,20 @@ public class MeleeEnemyAttack : MonoBehaviour {
     private PlayerHealth playerHealth;
     private bool playerInRange;
     private float timer;
+    private EnemyStates enemyStates;
+
+    private void Awake()
+    {
+        enemyStates = transform.parent.GetComponent<EnemyStates>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -20,7 +35,6 @@ public class MeleeEnemyAttack : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             //Debug.Log("In Range with Player");
-            playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             timer += Time.deltaTime;
             //Debug.Log(timer);
 
@@ -38,10 +52,21 @@ public class MeleeEnemyAttack : MonoBehaviour {
 
     void Attack ()
     {
+        Debug.Log("Attacking");
+
+        enemyStates.StopAgent(true);
+        Invoke("UnStop", stopTime);
+
         timer = 0f;
-        if(playerHealth.currentHealth > 0)
+
+        if (playerHealth.currentHealth > 0)
         {
             playerHealth.TakeDamage(attackDamage);
         }
+    }
+
+    private void UnStop()
+    {
+        enemyStates.StopAgent(false);
     }
 }

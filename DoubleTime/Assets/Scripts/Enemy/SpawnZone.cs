@@ -68,7 +68,7 @@ public class SpawnZone : MonoBehaviour {
         // Randomize list of enemies to spawn
         ShuffleList();
 
-        Debug.Log("List Count: " + enemyList.Count);
+        //Debug.Log("List Count: " + enemyList.Count);
 
         // Check for spawning every 
         InvokeRepeating("CheckActiveEnemies", checkRate, checkRate);
@@ -115,8 +115,8 @@ public class SpawnZone : MonoBehaviour {
             spawnAmount = enemyList.Count - 1;
         }
 
-        Debug.Log("Spawn Amount: " + spawnAmount);
-        Debug.Log("List Count: " + enemyList.Count);
+        //Debug.Log("Spawn Amount: " + spawnAmount);
+        //Debug.Log("List Count: " + enemyList.Count);
 
         for (int i = spawnAmount; i >= 0; i--)
         {

@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 4442762209783282}
   - component: {fileID: 95724309785574186}
   - component: {fileID: 114020497277542178}
+  - component: {fileID: 114912133785467228}
   m_Layer: 0
   m_Name: ProtagonistRun
   m_TagString: Untagged
@@ -534,25 +535,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1205647818845536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4233823880757582}
-  - component: {fileID: 33054021966071354}
-  - component: {fileID: 23194719451892742}
-  - component: {fileID: 108244280330414774}
-  - component: {fileID: 114155696645404098}
-  m_Layer: 0
-  m_Name: Boomerang
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1214675031728138
 GameObject:
   m_ObjectHideFlags: 1
@@ -1130,6 +1112,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1541254342567078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4383714591569458}
+  - component: {fileID: 33299691451391954}
+  - component: {fileID: 23206046411870344}
+  - component: {fileID: 108047192505022628}
+  - component: {fileID: 114023343671779550}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1545475735704196
 GameObject:
   m_ObjectHideFlags: 1
@@ -1456,7 +1457,7 @@ GameObject:
   - component: {fileID: 114492618280840016}
   - component: {fileID: 114378617526319584}
   - component: {fileID: 114365239519252168}
-  - component: {fileID: 114835127687424888}
+  - component: {fileID: 114373551975183758}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2401,11 +2402,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964864817645470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: 1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4222954630726128}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4087195671344470
 Transform:
@@ -2728,7 +2729,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1170804807575144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: 1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4222954630726128}
@@ -2746,9 +2747,9 @@ Transform:
   m_Children:
   - {fileID: 4442762209783282}
   - {fileID: 4157348075365618}
+  - {fileID: 4383714591569458}
   - {fileID: 4738260032895736}
   - {fileID: 4085166576357486}
-  - {fileID: 4233823880757582}
   - {fileID: 4220516784511296}
   - {fileID: 4991446566436414}
   - {fileID: 4868706871862618}
@@ -2770,19 +2771,6 @@ Transform:
   - {fileID: 4153422728723942}
   m_Father: {fileID: 4604941779570104}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4233823880757582
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1205647818845536}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 4222954630726128}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4261629774878124
 Transform:
@@ -2993,6 +2981,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4270617011774380}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4383714591569458
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541254342567078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 4222954630726128}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4385671953160596
 Transform:
@@ -3679,7 +3680,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4222954630726128}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4739842859043312
 Transform:
@@ -4329,12 +4330,12 @@ Transform:
   m_Father: {fileID: 4222954630726128}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23194719451892742
+--- !u!23 &23206046411870344
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1205647818845536}
+  m_GameObject: {fileID: 1541254342567078}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -4489,12 +4490,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33054021966071354
+--- !u!33 &33299691451391954
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1205647818845536}
+  m_GameObject: {fileID: 1541254342567078}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33368734642079420
 MeshFilter:
@@ -4764,13 +4765,13 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!108 &108244280330414774
+--- !u!108 &108047192505022628
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1205647818845536}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1541254342567078}
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9705882, g: 0.28093898, b: 0.16414358, a: 1}
@@ -4881,7 +4882,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.9314401, b: 0.8088235, a: 1}
+  m_Color: {r: 1, g: 0.87606484, b: 0.6544118, a: 1}
   m_Intensity: 1.3
   m_Range: 6.27
   m_SpotAngle: 30
@@ -4920,18 +4921,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runDampTime: 0.1
---- !u!114 &114155696645404098
+--- !u!114 &114023343671779550
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1205647818845536}
+  m_GameObject: {fileID: 1541254342567078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf2e78346d423f488edd14e17ca6992, type: 3}
+  m_Script: {fileID: 11500000, guid: 266d38b5ae79bb44b848949b07c84f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boomarang: {fileID: 1891248918882972, guid: 20928443ca054cd4aadb7c5f9595bfce, type: 2}
+  damagePerShot: 10
+  timeBetweenBullets: 0.5
+  bulletForce: 30
+  bulletSpread: 10
+  bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
+  ammo: 10
+  ammoPerShot: 1
+  pooledAmount: 30
 --- !u!114 &114165772486272068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4960,8 +4968,8 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
   flashSpeed: 5
-  flashColour: {r: 0.72794116, g: 0.13381271, b: 0.13381271, a: 0.122}
-  damageColour: {r: 0.8088235, g: 0.17841694, b: 0.17841694, a: 0.1254902}
+  flashColour: {r: 0.8455882, g: 0.124351226, b: 0.124351226, a: 0.103}
+  damageColour: {r: 0.8455882, g: 0.16787414, b: 0.16787414, a: 0.122}
   hpFill: {fileID: 0}
   ragDoll: {fileID: 1670370590747816}
   charac: {fileID: 1126753357859514}
@@ -5005,6 +5013,18 @@ MonoBehaviour:
   cameraScript: {fileID: 0}
   dataManager: {fileID: 114779013758527584, guid: e90ac8113ac8e0f48a8f5011317d6150,
     type: 2}
+--- !u!114 &114373551975183758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671434097925328}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf2e78346d423f488edd14e17ca6992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boomarang: {fileID: 1891248918882972, guid: 20928443ca054cd4aadb7c5f9595bfce, type: 2}
 --- !u!114 &114378617526319584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5097,18 +5117,6 @@ MonoBehaviour:
   timeBetweenAttack: 5
   attackHitBox: {fileID: 1903241017510266}
   modeText: {fileID: 0}
---- !u!114 &114835127687424888
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1671434097925328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!114 &114872793444263290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5121,8 +5129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 6
-  anim: {fileID: 95724309785574186}
-  animDampTime: 0.1
+--- !u!114 &114912133785467228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126753357859514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71028a519033ce44290a8d9e5b4d6459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runDampTime: 0.1
 --- !u!114 &114966226602742436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5136,15 +5154,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireKey: 323
   weaponInventory:
-  - {fileID: 1205647818845536}
+  - {fileID: 1541254342567078}
   - {fileID: 1170804807575144}
   - {fileID: 1964864817645470}
-  startWeapon: {fileID: 1205647818845536}
+  - {fileID: 0}
+  boomerang: {fileID: 0}
+  startWeapon: {fileID: 0}
   keyCodes: 31000000
   pooledAmount: 5
   ammoTypes:
-  - {fileID: 1602413169718630, guid: f09f789732378bb419bcae147d36cd8c, type: 2}
+  - {fileID: 1956681426793928, guid: 12fed3034e852aa46a23c045a33d2985, type: 2}
   - {fileID: 1801401736131450, guid: 4f91a51787c79cc489306291a73170cf, type: 2}
+  - {fileID: 1602413169718630, guid: f09f789732378bb419bcae147d36cd8c, type: 2}
   dataManager: {fileID: 0}
   resetWeapons: 1
   boomarangCD: 4

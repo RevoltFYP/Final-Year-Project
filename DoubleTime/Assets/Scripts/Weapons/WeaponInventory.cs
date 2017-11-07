@@ -139,7 +139,7 @@ public class WeaponInventory : MonoBehaviour {
 
             if (boomarangCDTimer <= 0)
             {
-                Debug.Log("True");
+                //Debug.Log("True");
                 GetComponent<ShootBoomarang>().haveBoomarang = true;
                 boomarangCDTimer = boomarangCD;
             }

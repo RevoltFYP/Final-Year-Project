@@ -18375,8 +18375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb115481533820a42832855cb43646aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 0}
+  enemies: []
   boundaries:
   - {fileID: 1671748297}
   - {fileID: 1938220303}
@@ -18393,13 +18392,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766c1931e311f9146b297c53fd327ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyThreshold: 2
+  enemyThreshold: 3
   spawn: 0
   spawnPoints:
   - {fileID: 1774639382}
   - {fileID: 1181409740}
-  spawnMin: 5
-  spawnMax: 5
+  spawnMin: 1
+  spawnMax: 3
   meleeEnemy: 2
   rangeEnemy: 3
   chargingEnemy: 0
@@ -35534,6 +35533,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.600413, y: 1.0000004, z: 1.28}
   m_Center: {x: -8.881784e-15, y: -0.00000014901161, z: 0.64}
+--- !u!208 &1149650627
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1149650625}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.3000001, y: 0.5, z: 0.64000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.64000005}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1150855732
 Prefab:
   m_ObjectHideFlags: 0
@@ -36282,15 +36296,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 230.96
+      value: 228.29
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.19
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -156.14
+      value: -156.12
       objectReference: {fileID: 0}
     - target: {fileID: 4000802629606722, guid: 17f2231f6b29e1d4d89dc4dddbe44a13, type: 2}
       propertyPath: m_LocalRotation.x
@@ -40775,6 +40789,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.600413, y: 1.0000004, z: 1.28}
   m_Center: {x: -8.881784e-15, y: -0.00000014901161, z: 0.64}
+--- !u!208 &1313300729
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313300727}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.3000001, y: 0.5, z: 0.64000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.64000005}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1317445087
 Prefab:
   m_ObjectHideFlags: 0
@@ -52845,6 +52874,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.600413, y: 1.0000004, z: 1.28}
   m_Center: {x: -8.881784e-15, y: -0.00000014901161, z: 0.64}
+--- !u!208 &1671748299
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671748297}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.3000001, y: 0.5, z: 0.64000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.64000005}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1672286689
 Prefab:
   m_ObjectHideFlags: 0
@@ -61407,6 +61451,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.600413, y: 1.0000004, z: 1.28}
   m_Center: {x: -8.881784e-15, y: -0.00000014901161, z: 0.64}
+--- !u!208 &1938220305
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938220303}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.3000001, y: 0.5, z: 0.64000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.64000005}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1945903432
 Prefab:
   m_ObjectHideFlags: 0

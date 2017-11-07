@@ -4951,7 +4951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77b89f2ff2e4294eaee3d4a1a40e7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 1000
+  damagePerAttack: 10
 --- !u!114 &114238414725486872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5057,9 +5057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerShot: 10
-  timeBetweenBullets: 0.15
+  timeBetweenBullets: 0.11
   bulletForce: 40
-  bulletSpread: 10
+  bulletSpread: 1
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   ammo: 90
   ammoPerShot: 1
@@ -5113,8 +5113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f037d5ca71ec6654594290eed01b4770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeKey: 118
-  timeBetweenAttack: 5
+  meleeKey: 102
+  timeBetweenAttack: 0.3
   attackHitBox: {fileID: 1903241017510266}
   modeText: {fileID: 0}
 --- !u!114 &114872793444263290
@@ -5158,7 +5158,6 @@ MonoBehaviour:
   - {fileID: 1170804807575144}
   - {fileID: 1964864817645470}
   - {fileID: 0}
-  boomerang: {fileID: 0}
   startWeapon: {fileID: 0}
   keyCodes: 31000000
   pooledAmount: 5

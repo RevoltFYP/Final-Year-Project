@@ -144,4 +144,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoType: 2
   amount: 2
-  destroyIn: 10
+  destroyIn: 100

@@ -11,32 +11,31 @@ public class EnemyStates : MonoBehaviour {
         AGGRO,
         DEAGGRO,
         NONE,
-        RANDOMPATROL
+        WANDERING
     }
 
     public State state;
+
     [Header("Patrol Properties")]
+    // Variables for Patrolling
     public float waitTime;
     private float internalWaitTimer;
-
-    [Header("Waypoint Patrol Properties")]
-    // Variables for Patrolling
     public float patrolSpeed;
     public float lookSpeed = 3;
     public GameObject[] wayPoints;
     private int wayPointCounter = 0;
     private Quaternion targetRot;
 
-    [Header("Area Patrol Properties")]
+    [Header("Wandering Properties")]
     public bool displayMoveArea;
-    public float moveArea;
     public float randomMinTime;
     public float randomMaxTime;
     public GameObject aggroZone;
+    public Vector3 wanderArea;
+    public Vector3 wanderOffset;
     private float randomTime = 0;
 
     [Header("Aggro Properties")]
-    // Variables for Aggro
     public bool lookAtPlayer;
     public float aggroSpeed;
     public float rotateSpeed;
@@ -89,8 +88,8 @@ public class EnemyStates : MonoBehaviour {
                 case State.DEAGGRO:
                     DeAggro();
                     break;
-                case State.RANDOMPATROL:
-                    RandomPatrol();
+                case State.WANDERING:
+                    Wander();
                     break;
             }
         }
@@ -101,12 +100,12 @@ public class EnemyStates : MonoBehaviour {
         if (displayMoveArea)
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(aggroZone.transform.position + Random.insideUnitSphere, moveArea);
+            Gizmos.DrawWireCube(aggroZone.transform.position + wanderOffset, wanderArea);
         }
     }
 
     //Random Patrol State //
-    public void RandomPatrol()
+    public void Wander()
     {
         nav.updateRotation = true;
 
@@ -121,11 +120,11 @@ public class EnemyStates : MonoBehaviour {
 
             if (internalWaitTimer > randomTime)
             {
-                Vector3 randomPos = aggroZone.transform.position + Random.insideUnitSphere * moveArea;
+                Vector3 randomPos = aggroZone.transform.position + new Vector3(Random.Range(-wanderArea.x / 2, wanderArea.x / 2), 0f, Random.Range(-wanderArea.z / 2, wanderArea.z / 2)) + wanderOffset;
                 Vector3 newPos = new Vector3(randomPos.x, transform.position.y, randomPos.z);
 
                 NavMeshHit hit;
-                NavMesh.SamplePosition(newPos, out hit, moveArea, NavMesh.AllAreas);
+                NavMesh.SamplePosition(newPos, out hit, Vector3.SqrMagnitude(wanderArea), NavMesh.AllAreas);
                 Vector3 finalPos = hit.position;
 
                 nav.SetDestination(newPos);

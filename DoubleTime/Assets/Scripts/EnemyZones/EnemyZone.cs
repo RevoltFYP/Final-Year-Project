@@ -19,6 +19,11 @@ public class EnemyZone : MonoBehaviour {
             boundary.gameObject.SetActive(false);
         }
 
+        if(GetComponent<SpawnZone>() != null)
+        {
+            spawnZone = GetComponent<SpawnZone>();
+        }
+
         player = GameObject.FindGameObjectWithTag("Player");
 
         //CheckArray();
@@ -33,13 +38,19 @@ public class EnemyZone : MonoBehaviour {
             {
                 if(enemy != null)
                 {
-                    EnemyHealth enemHealth = enemy.GetComponent<EnemyHealth>();
-
-                    if (enemHealth.currentHealth < enemHealth.startingHealth)
+                    if(enemy.GetComponent<EnemyStates>().state != EnemyStates.State.AGGRO)
                     {
-                        //Debug.Log("Curr hp less than starting");
-                        GetComponent<SpawnZone>().spawn = true;
-                        AggroAllEnemies(player);
+                        EnemyHealth enemHealth = enemy.GetComponent<EnemyHealth>();
+
+                        if (enemHealth.currentHealth < enemHealth.startingHealth)
+                        {
+                            //Debug.Log("Curr hp less than starting");
+                            if(spawnZone != null)
+                            {
+                                spawnZone.spawn = true;
+                            }
+                            AggroAllEnemies(player);
+                        }
                     }
                 }
             }
@@ -53,9 +64,9 @@ public class EnemyZone : MonoBehaviour {
         {
             AggroAllEnemies(other.gameObject);
 
-            if(GetComponent<SpawnZone>() != null)
+            if(spawnZone != null)
             {
-                GetComponent<SpawnZone>().spawn = GetComponent<SpawnZone>().enemyList.Count > 0 ? true : false;
+                spawnZone.spawn = spawnZone.enemyList.Count > 0 ? true : false;
             }
 
             ActivateBoundaries();

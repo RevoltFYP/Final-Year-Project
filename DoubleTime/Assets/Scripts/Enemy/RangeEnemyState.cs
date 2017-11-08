@@ -18,6 +18,11 @@ public class RangeEnemyState : EnemyStates {
     private int pickPos;
     private float internalTimer;
 
+    private void Start()
+    {
+        internalTimer = rePosRate;
+    }
+
     // Aggresive State //
     protected override void Aggresive()
     {

@@ -47,18 +47,18 @@ public class RangeEnemyState : EnemyStates {
 
     public void CalculateNewPosition()
     {
-
         // Calculate pos to travel to
-        float distanceFromPlayer = Vector3.Distance(transform.position, player.position);
+        //float distanceFromPlayer = Vector3.Distance(transform.position, player.position);
+        Vector3 dir = transform.position - player.transform.position;
         travelDist = Random.Range(minDist, maxDist);
 
         //Debug.DrawRay(transform.position, transform.right * travelDist / 2, Color.red);
         //Debug.DrawRay(transform.position, -transform.right * travelDist / 2, Color.red);
         //Debug.DrawRay(transform.position, -transform.forward * travelDist / 2, Color.red);
 
-        Debug.Log(distanceFromPlayer);
+        //Debug.Log(distanceFromPlayer);
 
-        if (distanceFromPlayer <= 10.0f)
+        if (dir.sqrMagnitude < 10.0f * 10.0f)
         {
             //Debug.Log("In Dist");
 
@@ -81,7 +81,7 @@ public class RangeEnemyState : EnemyStates {
                     nextPos = transform.position + transform.right * travelDist;
                 }
             }
-            else if (distanceFromPlayer <= 5.0f)
+            else if (dir.sqrMagnitude < 5.0f * 5.0f)
             {
                 RaycastHit behindHit;
 
@@ -117,7 +117,7 @@ public class RangeEnemyState : EnemyStates {
         else
         {
             //Debug.Log("Too Far");
-            nextPos = transform.position + transform.forward * distanceFromPlayer / 2;
+            nextPos = transform.position + transform.forward * travelDist;
         }
     }
 

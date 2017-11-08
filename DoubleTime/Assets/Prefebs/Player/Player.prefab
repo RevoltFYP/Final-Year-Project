@@ -1456,7 +1456,6 @@ GameObject:
   - component: {fileID: 114966226602742436}
   - component: {fileID: 114492618280840016}
   - component: {fileID: 114378617526319584}
-  - component: {fileID: 114365239519252168}
   - component: {fileID: 114373551975183758}
   m_Layer: 0
   m_Name: Player
@@ -4973,46 +4972,6 @@ MonoBehaviour:
   hpFill: {fileID: 0}
   ragDoll: {fileID: 1670370590747816}
   charac: {fileID: 1126753357859514}
---- !u!114 &114365239519252168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1671434097925328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22da0cc287dedd047ae5f7ac5f9bc851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 101
-  upgradeUI: {fileID: 0}
-  upgrade: {fileID: 0}
-  pickWeapon: {fileID: 0}
-  Weap_upgrade: {fileID: 0}
-  weapImg: {fileID: 0}
-  upgradeMG: {fileID: 21300000, guid: d6bfceb7c98aec54798a8cfd9bfc9870, type: 3}
-  upgradeSG: {fileID: 21300000, guid: 2a5783eae1658db41958d83e1df31029, type: 3}
-  damageSlider: {fileID: 0}
-  ammoSlider: {fileID: 0}
-  spreadSlider: {fileID: 0}
-  currencyText: {fileID: 0}
-  machineGun: {fileID: 1170804807575144}
-  MG_damageMax: 50
-  MG_ammoMax: 220
-  MG_spreadMax: 15
-  MG_damageIncrease: 10
-  MG_ammoIncrease: 20
-  MG_spreadDecrease: 3
-  shotGun: {fileID: 1964864817645470}
-  SG_damageMax: 50
-  SG_ammoMax: 32
-  SG_spreadMax: 20
-  SG_damageIncrease: 10
-  SG_ammoIncrease: 8
-  SG_spreadDecrease: 3
-  cameraScript: {fileID: 0}
-  dataManager: {fileID: 114779013758527584, guid: e90ac8113ac8e0f48a8f5011317d6150,
-    type: 2}
 --- !u!114 &114373551975183758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5043,7 +5002,7 @@ MonoBehaviour:
   - {fileID: 114872793444263290}
   - {fileID: 114647738867736116}
   - {fileID: 114966226602742436}
-  - {fileID: 114365239519252168}
+  - {fileID: 0}
   - {fileID: 114824516393664136}
 --- !u!114 &114470206417927966
 MonoBehaviour:
@@ -5157,8 +5116,7 @@ MonoBehaviour:
   - {fileID: 1541254342567078}
   - {fileID: 1170804807575144}
   - {fileID: 1964864817645470}
-  - {fileID: 0}
-  startWeapon: {fileID: 0}
+  startWeapon: {fileID: 1541254342567078}
   keyCodes: 31000000
   pooledAmount: 5
   ammoTypes:

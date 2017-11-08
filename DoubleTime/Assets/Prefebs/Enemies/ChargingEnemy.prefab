@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e2a1d8332acb04c9ea95c7d84a101a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeForce: 3
+  chargeForce: 15
   chargeRange: 7
   chargeCoolDown: 7
   chargeBuffer: 1.5

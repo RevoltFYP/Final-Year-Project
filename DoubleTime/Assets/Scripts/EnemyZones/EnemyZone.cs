@@ -14,6 +14,10 @@ public class EnemyZone : MonoBehaviour {
 
     private void Awake()
     {
+        foreach(GameObject boundary in boundaries)
+        {
+            boundary.gameObject.SetActive(false);
+        }
 
         player = GameObject.FindGameObjectWithTag("Player");
 

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(EnemyStates))]
 public class ChargerScript : MonoBehaviour {
 
-    [Range(0,5)] public float chargeForce;
+    [Range(0,100)] public float chargeForce;
     public float chargeRange;
     public float chargeCoolDown;
     public float chargeBuffer;

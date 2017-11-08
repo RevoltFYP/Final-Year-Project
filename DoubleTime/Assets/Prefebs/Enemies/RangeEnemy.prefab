@@ -2206,7 +2206,7 @@ MonoBehaviour:
   deAggroTime: 5
   minDist: 5
   maxDist: 8
-  rePosTime: 3
+  rePosRate: 3
   reposSpeed: 10
 --- !u!114 &114723437707670604
 MonoBehaviour:
@@ -2232,8 +2232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26909dec2007e34bb1c03775b429f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 60
-  currentHealth: 60
+  startingHealth: 30
+  currentHealth: 30
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1
@@ -2253,8 +2253,8 @@ MonoBehaviour:
   firePoint: {fileID: 1247772124587592}
   enemyHealth: {fileID: 114737893163543058}
   damage: 5
-  timeBetweenBullet: 1
-  projectileForceMultiplyer: 30
+  timeBetweenBullet: 0.5
+  projectileForceMultiplyer: 27
 --- !u!114 &114873569152328850
 MonoBehaviour:
   m_ObjectHideFlags: 1

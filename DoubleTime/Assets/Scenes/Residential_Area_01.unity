@@ -4346,19 +4346,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4494482849163024, guid: 008ad0bc3a8882e40a65e53e0303bd33, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.6468063
+      value: 0.64680636
       objectReference: {fileID: 0}
     - target: {fileID: 4494482849163024, guid: 008ad0bc3a8882e40a65e53e0303bd33, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.28572133
+      value: -0.28572136
       objectReference: {fileID: 0}
     - target: {fileID: 4494482849163024, guid: 008ad0bc3a8882e40a65e53e0303bd33, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.6468127
+      value: -0.64681274
       objectReference: {fileID: 0}
     - target: {fileID: 4494482849163024, guid: 008ad0bc3a8882e40a65e53e0303bd33, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.28572416
+      value: 0.2857242
       objectReference: {fileID: 0}
     - target: {fileID: 4494482849163024, guid: 008ad0bc3a8882e40a65e53e0303bd33, type: 2}
       propertyPath: m_RootOrder
@@ -27894,7 +27894,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4222954630726128, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4222954630726128, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
       propertyPath: m_LocalRotation.z
@@ -28003,6 +28003,23 @@ Prefab:
       propertyPath: settingsButton
       value: 
       objectReference: {fileID: 969439320}
+    - target: {fileID: 1903241017510266, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738260032895736, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.4878963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738260032895736, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165772486272068, guid: 59177a05f79a2c244a89f99be34a662e,
+        type: 2}
+      propertyPath: damagePerAttack
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
   m_IsPrefabParent: 0

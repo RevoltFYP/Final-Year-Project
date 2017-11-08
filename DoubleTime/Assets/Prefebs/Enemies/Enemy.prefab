@@ -2197,13 +2197,14 @@ MonoBehaviour:
   lookSpeed: 3
   wayPoints: []
   displayMoveArea: 0
-  moveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
   aggroZone: {fileID: 0}
+  wanderArea: {x: 0, y: 0, z: 0}
+  wanderOffset: {x: 0, y: 0, z: 0}
   lookAtPlayer: 1
   aggroSpeed: 7
-  rotateSpeed: 5
+  rotateSpeed: 20
   deAggroTime: 5
 --- !u!114 &114744279794493574
 MonoBehaviour:
@@ -2354,10 +2355,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 12
-  m_Acceleration: 8
+  m_Acceleration: 19
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

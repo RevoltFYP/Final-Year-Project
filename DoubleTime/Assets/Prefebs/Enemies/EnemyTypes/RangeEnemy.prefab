@@ -855,7 +855,6 @@ GameObject:
   - component: {fileID: 195081475548257284}
   - component: {fileID: 114737893163543058}
   - component: {fileID: 114723437707670604}
-  - component: {fileID: 114873569152328850}
   - component: {fileID: 114618218626083580}
   m_Layer: 9
   m_Name: RangeEnemy
@@ -2190,7 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e217d8b56d442438e4db2307495dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: 3
   waitTime: 5
   patrolSpeed: 3
   lookSpeed: 3
@@ -2238,7 +2237,6 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1
-  spawnScrap: 0
 --- !u!114 &114827537913755404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2262,18 +2260,6 @@ MonoBehaviour:
   spreadTime: 3
   spreadSize: 5
   spread: 2.5
---- !u!114 &114873569152328850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1800027596413486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d71ff6872e60504f91e49a269a792e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  percentageToSpawn: 100
 --- !u!136 &136750002522860738
 CapsuleCollider:
   m_ObjectHideFlags: 1

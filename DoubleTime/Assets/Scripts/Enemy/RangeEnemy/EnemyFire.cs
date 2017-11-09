@@ -31,7 +31,6 @@ public class EnemyFire : MonoBehaviour {
     public float spreadTime;
     public int spreadSize = 5;
     public float spread;
-    private float angleChange;
 
     private float timer;
     private float posTimer;
@@ -68,6 +67,8 @@ public class EnemyFire : MonoBehaviour {
 
         if(timer >= spreadTime)
         {
+            float angleChange = 0;
+
             for(int i = 0; i < spreadSize; i++)
             {
                 Quaternion fireRotation = Quaternion.LookRotation(transform.forward); // converts transform forward into Quaternion

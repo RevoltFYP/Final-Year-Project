@@ -152,8 +152,10 @@ public class EnemyStates : MonoBehaviour {
                     nav.speed = patrolSpeed;
                 }
 
+                Vector3 distance = transform.position - wayPoints[wayPointCounter].transform.position;
+
                 // too far away from waypoint
-                if (Vector3.Distance(transform.position, wayPoints[wayPointCounter].transform.position) > 2)
+                if (distance.sqrMagnitude > 2 * 2)
                 {
                     nav.SetDestination(wayPoints[wayPointCounter].transform.position); // go to waypoint
 
@@ -170,7 +172,7 @@ public class EnemyStates : MonoBehaviour {
                     }
                 }
                 // Reset way point counter
-                else if (Vector3.Distance(transform.position, wayPoints[wayPointCounter].transform.position) <= 1)
+                else if (distance.sqrMagnitude <= 1 * 1)
                 {
                     // Goes to next way point
                     wayPointCounter += 1;

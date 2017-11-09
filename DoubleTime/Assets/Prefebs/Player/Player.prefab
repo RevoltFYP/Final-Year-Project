@@ -1454,7 +1454,6 @@ GameObject:
   - component: {fileID: 114824516393664136}
   - component: {fileID: 114647738867736116}
   - component: {fileID: 114966226602742436}
-  - component: {fileID: 114492618280840016}
   - component: {fileID: 114378617526319584}
   - component: {fileID: 114373551975183758}
   m_Layer: 0
@@ -2740,7 +2739,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671434097925328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: -43.75, y: 2.3, z: -27.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3675,8 +3674,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903241017510266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.034, y: 0, z: 1}
+  m_LocalScale: {x: 1.4878963, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4222954630726128}
   m_RootOrder: 3
@@ -4936,8 +4935,11 @@ MonoBehaviour:
   bulletForce: 30
   bulletSpread: 10
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
-  ammo: 10
+  infiniteAmmo: 0
+  magazineSize: 0
+  maxAmmo: 10
   ammoPerShot: 1
+  reloadTime: 2
   pooledAmount: 30
 --- !u!114 &114165772486272068
 MonoBehaviour:
@@ -4950,7 +4952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77b89f2ff2e4294eaee3d4a1a40e7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 10
+  damagePerAttack: 20
 --- !u!114 &114238414725486872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5020,24 +5022,12 @@ MonoBehaviour:
   bulletForce: 40
   bulletSpread: 1
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
-  ammo: 90
+  infiniteAmmo: 0
+  magazineSize: 0
+  maxAmmo: 10
   ammoPerShot: 1
+  reloadTime: 2
   pooledAmount: 90
---- !u!114 &114492618280840016
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1671434097925328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 492c4108e4681e54a8e9feb50fcdfddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrapText: {fileID: 0}
-  pooledAmount: 1000
-  scrapPrefab: {fileID: 1333337679002772, guid: c22cde02c103eb34ca7e1a6e747f7a84,
-    type: 2}
 --- !u!114 &114647738867736116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5112,6 +5102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireKey: 323
+  reloadKey: 0
   weaponInventory:
   - {fileID: 1541254342567078}
   - {fileID: 1170804807575144}
@@ -5162,8 +5153,11 @@ MonoBehaviour:
   bulletForce: 20
   bulletSpread: 20
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
-  ammo: 10
+  infiniteAmmo: 0
+  magazineSize: 0
+  maxAmmo: 10
   ammoPerShot: 1
+  reloadTime: 2
   pooledAmount: 64
   shellsFired: 8
 --- !u!135 &135457831218467734

@@ -204,7 +204,6 @@ GameObject:
   - component: {fileID: 195980264274652498}
   - component: {fileID: 114118183770868438}
   - component: {fileID: 114028200261299684}
-  - component: {fileID: 114137103048435864}
   - component: {fileID: 114059517006944944}
   m_Layer: 9
   m_Name: RangeEnemy(Burst)
@@ -2203,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e217d8b56d442438e4db2307495dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: 3
   waitTime: 5
   patrolSpeed: 3
   lookSpeed: 3
@@ -2238,19 +2237,6 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1
-  spawnScrap: 0
---- !u!114 &114137103048435864
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1059056020653292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d71ff6872e60504f91e49a269a792e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  percentageToSpawn: 100
 --- !u!114 &114316711766896602
 MonoBehaviour:
   m_ObjectHideFlags: 1

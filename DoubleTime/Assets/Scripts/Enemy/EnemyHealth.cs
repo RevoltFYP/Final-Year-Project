@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(SpawnAmmo))]
-[RequireComponent(typeof(SpawnScrap))]
 
 public class EnemyHealth : MonoBehaviour {
 
@@ -18,7 +17,6 @@ public class EnemyHealth : MonoBehaviour {
 
     [Header("Upon Death")]
     public bool spawnAmmo;
-    public bool spawnScrap;
 
     void Awake()
     {
@@ -60,13 +58,6 @@ public class EnemyHealth : MonoBehaviour {
             // Spawns Ammo Box
             SpawnAmmo spawnAmmoScript = GetComponent<SpawnAmmo>();
             spawnAmmoScript.SpawnAmmoBox(transform.position);
-        }
-
-        if (spawnScrap)
-        {
-            // Spawns Scrap
-            SpawnScrap spawnScrapScript = GetComponent<SpawnScrap>();
-            spawnScrapScript.SpawnScrapObject(transform.position + transform.forward);
         }
 
         // Destroy all scripts in child and object except EnemyHealth

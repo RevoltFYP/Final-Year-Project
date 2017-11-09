@@ -11,7 +11,7 @@ public class EnemyZone : MonoBehaviour {
     private SpawnZone spawnZone;
 
     public List<GameObject> boundaries = new List<GameObject>();
-    public GameObject blockerStick;
+    public List<GameObject> blockerSticks = new List<GameObject>();
 
     private void Awake()
     {
@@ -63,7 +63,8 @@ public class EnemyZone : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            blockerStick.GetComponent<Animator>().SetBool("activated", true);
+            ActivateBlockers(true);
+
             AggroAllEnemies(other.gameObject);
 
             if(spawnZone != null)
@@ -105,6 +106,7 @@ public class EnemyZone : MonoBehaviour {
     // Destroys zone if there are no enemies left
     protected virtual void DestroyAreaZone()
     {
+        ActivateBlockers(false);
         enemies.Clear();
         RemoveBoundaries();
         Destroy(gameObject);
@@ -148,6 +150,14 @@ public class EnemyZone : MonoBehaviour {
                     Destroy(boundaries[i]);
                 }
             }
+        }
+    }
+
+    private void ActivateBlockers(bool activate)
+    {
+        foreach(GameObject blocker in blockerSticks)
+        {
+            blocker.GetComponent<Animator>().SetBool("activated", activate);
         }
     }
 }

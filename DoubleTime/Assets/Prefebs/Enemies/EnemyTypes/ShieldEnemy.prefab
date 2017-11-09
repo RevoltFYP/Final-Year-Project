@@ -1027,7 +1027,6 @@ GameObject:
   - component: {fileID: 114732715074544516}
   - component: {fileID: 114869486710806820}
   - component: {fileID: 114496206123645744}
-  - component: {fileID: 114071498032845794}
   m_Layer: 9
   m_Name: ShieldEnemy
   m_TagString: MeleeEnemy
@@ -2305,18 +2304,6 @@ MonoBehaviour:
   spreadTime: 0
   spreadSize: 5
   spread: 0
---- !u!114 &114071498032845794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1912437989910784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d71ff6872e60504f91e49a269a792e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  percentageToSpawn: 100
 --- !u!114 &114187883627271000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2399,7 +2386,6 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1
-  spawnScrap: 1
 --- !u!114 &114869486710806820
 MonoBehaviour:
   m_ObjectHideFlags: 1

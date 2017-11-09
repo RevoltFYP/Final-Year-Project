@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShotGunScript : WeaponBase {
 
     public int shellsFired = 8;
-    private float angleChange = 0;
+    //private float angleChange = 0;
 
     // Fires shellsFired in a Cone Spread //
     protected override void Shoot()
@@ -17,6 +17,7 @@ public class ShotGunScript : WeaponBase {
         currentAmmo -= ammoPerShot;
 
         float distanceBetweenBullets = ((bulletSpread - (-bulletSpread)) / shellsFired); // calculates the distance between each bullet in spread
+        float angleChange = 0;
 
         // Instantiate shots equal to Shells Fired //
         for (int i = 0; i < shellsFired; i++)

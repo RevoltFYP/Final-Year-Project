@@ -25425,7 +25425,7 @@ Prefab:
     - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -25445,7 +25445,7 @@ Prefab:
     - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224286830997425924, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -31213,17 +31213,27 @@ Prefab:
     - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
         type: 2}
       propertyPath: wanderArea.x
-      value: 10
+      value: 3.62
       objectReference: {fileID: 0}
     - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
         type: 2}
       propertyPath: wanderArea.z
-      value: 5
+      value: 10.53
       objectReference: {fileID: 0}
     - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
         type: 2}
       propertyPath: wanderOffset.z
-      value: 6.14
+      value: 3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderOffset.x
+      value: -5.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b800271d82f7cf4b93a31f3d9a86619, type: 2}
@@ -52397,6 +52407,36 @@ Prefab:
       propertyPath: size.z
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: displayMoveArea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderArea.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderArea.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderOffset.x
+      value: 3.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderOffset.z
+      value: -3.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b800271d82f7cf4b93a31f3d9a86619, type: 2}
   m_IsPrefabParent: 0
@@ -53281,7 +53321,7 @@ Prefab:
     - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
         type: 2}
       propertyPath: state
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
         type: 2}
@@ -53337,6 +53377,36 @@ Prefab:
         type: 2}
       propertyPath: size.z
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: displayMoveArea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderArea.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderArea.z
+      value: 7.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderOffset.x
+      value: 3.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderOffset.z
+      value: 6.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 114738029990822600, guid: 1b800271d82f7cf4b93a31f3d9a86619,
+        type: 2}
+      propertyPath: wanderSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b800271d82f7cf4b93a31f3d9a86619, type: 2}

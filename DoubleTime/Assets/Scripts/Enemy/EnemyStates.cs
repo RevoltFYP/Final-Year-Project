@@ -27,6 +27,7 @@ public class EnemyStates : MonoBehaviour {
     private Quaternion targetRot;
 
     [Header("Wandering Properties")]
+    public float wanderSpeed;
     public bool displayMoveArea;
     public float randomMinTime;
     public float randomMaxTime;
@@ -107,30 +108,34 @@ public class EnemyStates : MonoBehaviour {
     //Random Patrol State //
     public void Wander()
     {
-        nav.updateRotation = true;
-
-        if (randomTime == 0)
+        if(wanderArea != Vector3.zero)
         {
-           randomTime = Random.Range(randomMinTime, randomMaxTime);
-        }
-        else
-        {
-            //Debug.Log(randomTime);
-            internalWaitTimer += Time.deltaTime;
+            nav.updateRotation = true;
+            nav.speed = wanderSpeed;
 
-            if (internalWaitTimer > randomTime)
+            if (randomTime == 0)
             {
-                Vector3 randomPos = aggroZone.transform.position + new Vector3(Random.Range(-wanderArea.x / 2, wanderArea.x / 2), 0f, Random.Range(-wanderArea.z / 2, wanderArea.z / 2)) + wanderOffset;
-                Vector3 newPos = new Vector3(randomPos.x, transform.position.y, randomPos.z);
+                randomTime = Random.Range(randomMinTime, randomMaxTime);
+            }
+            else
+            {
+                //Debug.Log(randomTime);
+                internalWaitTimer += Time.deltaTime;
 
-                NavMeshHit hit;
-                NavMesh.SamplePosition(newPos, out hit, Vector3.SqrMagnitude(wanderArea), NavMesh.AllAreas);
-                Vector3 finalPos = hit.position;
+                if (internalWaitTimer > randomTime)
+                {
+                    Vector3 randomPos = aggroZone.transform.position + new Vector3(Random.Range(-wanderArea.x / 2, wanderArea.x / 2), 0f, Random.Range(-wanderArea.z / 2, wanderArea.z / 2)) + wanderOffset;
+                    Vector3 newPos = new Vector3(randomPos.x, transform.position.y, randomPos.z);
 
-                nav.SetDestination(newPos);
+                    NavMeshHit hit;
+                    NavMesh.SamplePosition(newPos, out hit, Vector3.SqrMagnitude(wanderArea), NavMesh.AllAreas);
+                    Vector3 finalPos = hit.position;
 
-                internalWaitTimer = 0;
-                randomTime = 0;
+                    nav.SetDestination(newPos);
+
+                    internalWaitTimer = 0;
+                    randomTime = 0;
+                }
             }
         }
     }
@@ -147,10 +152,7 @@ public class EnemyStates : MonoBehaviour {
             if (wayPoints.Length > 0)
             {
                 // Slowly increases speed to patrol speed //
-                if (nav.speed != patrolSpeed)
-                {
-                    nav.speed = patrolSpeed;
-                }
+                nav.speed = patrolSpeed;
 
                 Vector3 distance = transform.position - wayPoints[wayPointCounter].transform.position;
 

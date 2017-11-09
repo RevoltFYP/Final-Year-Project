@@ -53,7 +53,6 @@ public class RangeEnemyState : EnemyStates {
     public void CalculateNewPosition()
     {
         // Calculate pos to travel to
-        //float distanceFromPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 dir = transform.position - player.transform.position;
         travelDist = Random.Range(minDist, maxDist);
 
@@ -61,6 +60,7 @@ public class RangeEnemyState : EnemyStates {
         //Debug.DrawRay(transform.position, -transform.right * travelDist / 2, Color.red);
         //Debug.DrawRay(transform.position, -transform.forward * travelDist / 2, Color.red);
 
+        //float distanceFromPlayer = Vector3.Distance(transform.position, player.position);
         //Debug.Log(distanceFromPlayer);
 
         if (dir.sqrMagnitude < 10.0f * 10.0f)

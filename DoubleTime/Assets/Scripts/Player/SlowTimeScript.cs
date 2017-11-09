@@ -19,7 +19,6 @@ public class SlowTimeScript : MonoBehaviour {
     private float innerSlow;
     private bool disabled = false;
 
-
     [Header("VFX")]
     public ParticleSystem startEffect;
     public ParticleSystem endEffect;
@@ -67,18 +66,18 @@ public class SlowTimeScript : MonoBehaviour {
             if (!buffering)
             {
                 //Debug.Log("Buffer False");
-                Toggle(); // buffering is true
-
-                slow = !slow;
-
                 if (!disabled)
                 {
+                    Toggle(); // buffering is true
+
+                    slow = !slow;
+
                     PlayVFX(slow ? startEffect : endEffect);
+
+                    Invoke("Toggle", bufferTime); // set buffering back to false
+
+                    bufferTime = slow ? startEffect.main.duration * slowAmount : endEffect.main.duration * slowAmount;
                 }
-
-                bufferTime = slow ? startEffect.main.duration * slowAmount : endEffect.main.duration * slowAmount;
-
-                Invoke("Toggle", bufferTime); // set buffering back to false
             }
         }
 

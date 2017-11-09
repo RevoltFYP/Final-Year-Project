@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(EnemyStates))]
 public class ChargerScript : MonoBehaviour {
 
-    [Range(0,100)] public float chargeForce;
+    [Range(1,3)] public float chargeForce;
     public float chargeRange;
     public float chargeCoolDown;
     public float chargeBuffer;
@@ -50,6 +50,7 @@ public class ChargerScript : MonoBehaviour {
     {
         // Stop agent
         agent.isStopped = true;
+        rb.isKinematic = false;
 
         // Wait for X amount of seconds
         yield return new WaitForSeconds(chargeBuffer);
@@ -65,6 +66,7 @@ public class ChargerScript : MonoBehaviour {
 
         // Resume movement of agent
         agent.isStopped = false;
+        rb.isKinematic = true;
     }
 
     private void CoolDown()

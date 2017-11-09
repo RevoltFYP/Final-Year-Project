@@ -18,6 +18,7 @@ public class PanCameraScript : MonoBehaviour {
     private PlayerMelee playerMelee;
     private PlayerPause playerPause;
     private GameObject player;
+    private ShootBoomarang shootBoomerang;
 
     private bool panToTarget;
 
@@ -71,6 +72,7 @@ public class PanCameraScript : MonoBehaviour {
             slowTime = other.GetComponent<SlowTimeScript>();
             playerMelee = other.GetComponent<PlayerMelee>();
             playerPause = other.GetComponent<PlayerPause>();
+            shootBoomerang = other.GetComponent<ShootBoomarang>();
 
             panToTarget = true;
             Invoke("TogglePanToTarget", panTime);
@@ -111,6 +113,7 @@ public class PanCameraScript : MonoBehaviour {
         slowTime.enabled = false;
         playerMelee.enabled = false;
         playerPause.enabled = false;
+        shootBoomerang.enabled = false;
 
         // Disable all scripts on weapons //
         for (int i = 0; i < weapInven.weaponInventory.Count; i++)
@@ -128,6 +131,7 @@ public class PanCameraScript : MonoBehaviour {
         playerMove.enabled = true;
         playerMelee.enabled = true;
         playerPause.enabled = true;
+        shootBoomerang.enabled = true;
 
         if (enableSlowTime)
         {

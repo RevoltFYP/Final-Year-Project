@@ -2196,18 +2196,19 @@ MonoBehaviour:
   lookSpeed: 3
   wayPoints: []
   displayMoveArea: 0
-  moveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
   aggroZone: {fileID: 0}
+  wanderArea: {x: 0, y: 0, z: 0}
+  wanderOffset: {x: 0, y: 0, z: 0}
   lookAtPlayer: 1
-  aggroSpeed: 3
-  rotateSpeed: 5
+  aggroSpeed: 4
+  rotateSpeed: 14
   deAggroTime: 5
-  minDist: 5
-  maxDist: 8
-  rePosRate: 3
-  reposSpeed: 10
+  minDist: 7
+  maxDist: 15
+  rePosRate: 2.6
+  reposSpeed: 8
 --- !u!114 &114723437707670604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2237,7 +2238,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   spawnAmmo: 1
-  spawnScrap: 1
+  spawnScrap: 0
 --- !u!114 &114827537913755404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2252,9 +2253,9 @@ MonoBehaviour:
   projectile: {fileID: 1370475600220950, guid: 3b3428c6ba4914f419b11d62bbeb52e3, type: 2}
   firePoint: {fileID: 1247772124587592}
   enemyHealth: {fileID: 114737893163543058}
-  damage: 5
-  timeBetweenBullet: 0.5
-  projectileForceMultiplyer: 27
+  damage: 10
+  timeBetweenBullet: 1
+  projectileForceMultiplyer: 15
 --- !u!114 &114873569152328850
 MonoBehaviour:
   m_ObjectHideFlags: 1

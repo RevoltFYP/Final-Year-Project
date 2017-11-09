@@ -133,22 +133,22 @@ public class UpgradeWeapon : MonoBehaviour {
 
     public void UpgradeAmmo(int cost)
     {
-        if(weapBase.ammo < ammoSlider.maxValue && scrapManager.scrap >= cost)
+        if(weapBase.totalAmmo < ammoSlider.maxValue && scrapManager.scrap >= cost)
         {
             // Reduce scrap by cost 
             scrapManager.RemoveScrap(cost);
 
-            weapBase.ammo += ammoIncrease;
-            ammoSlider.value = weapBase.ammo;
+            weapBase.totalAmmo += ammoIncrease;
+            ammoSlider.value = weapBase.totalAmmo;
 
             // Set current ammo to max
-            weapBase.currentAmmo = weapBase.ammo;
+            weapBase.currentAmmo = weapBase.totalAmmo;
 
             // Save data to be loaded
             SaveData();
         }
 
-        Debug.Log(weaponToUpgrade.name + ": " + weapBase.ammo);
+        Debug.Log(weaponToUpgrade.name + ": " + weapBase.totalAmmo);
     }
 
     public void UpgradeBulletSpread(int cost)
@@ -208,7 +208,7 @@ public class UpgradeWeapon : MonoBehaviour {
 
         // Show selected weapon stats
         damageSlider.value = weapBase.damagePerShot;
-        ammoSlider.value = weapBase.ammo;
+        ammoSlider.value = weapBase.totalAmmo;
         spreadSlider.value = weapBase.bulletSpread;
         currencyText.text = "Scrap: " + scrapManager.scrap.ToString();
 

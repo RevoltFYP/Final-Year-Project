@@ -11,6 +11,7 @@ public class EnemyZone : MonoBehaviour {
     private SpawnZone spawnZone;
 
     public List<GameObject> boundaries = new List<GameObject>();
+    public GameObject blockerStick;
 
     private void Awake()
     {
@@ -62,6 +63,7 @@ public class EnemyZone : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
+            blockerStick.GetComponent<Animator>().SetBool("activated", true);
             AggroAllEnemies(other.gameObject);
 
             if(spawnZone != null)

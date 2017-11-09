@@ -140,6 +140,7 @@
     <Compile Include="Assets\Scripts\Enemy\MarkedEnemyScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy\ChargerScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy\MeleeEnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\RangeEnemy\EnemyBurstFire.cs" />
     <Compile Include="Assets\Scripts\Enemy\RangeEnemy\EnemyFire.cs" />
     <Compile Include="Assets\Scripts\Enemy\RangeEnemy\Grenade.cs" />
     <Compile Include="Assets\Scripts\Enemy\RangeEnemyState.cs" />

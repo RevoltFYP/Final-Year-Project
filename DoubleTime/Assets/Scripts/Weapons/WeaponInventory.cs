@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WeaponInventory : MonoBehaviour {
 
     public KeyCode fireKey;
+    public KeyCode reloadKey;
     public List<GameObject> weaponInventory = new List<GameObject>(); // all weapons in player 
 
     public GameObject startWeapon; // starting weapon of player
@@ -186,18 +187,18 @@ public class WeaponInventory : MonoBehaviour {
         if (currentWeapon.GetComponent<ShotGunScript>())
         {
             currentAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().currentAmmo.ToString();
-            maxAmmoText.text = "/" + currentWeapon.GetComponent<ShotGunScript>().ammo.ToString();
+            maxAmmoText.text = "/" + currentWeapon.GetComponent<ShotGunScript>().totalAmmo.ToString();
 
             ammoSlider.value = currentWeapon.GetComponent<ShotGunScript>().currentAmmo;
-            ammoSlider.maxValue = currentWeapon.GetComponent<ShotGunScript>().ammo;
+            ammoSlider.maxValue = currentWeapon.GetComponent<ShotGunScript>().magazineSize;
         }
         else
         {
             currentAmmoText.text = currentWeapon.GetComponent<WeaponBase>().currentAmmo.ToString();
-            maxAmmoText.text = "/" + currentWeapon.GetComponent<WeaponBase>().ammo.ToString();
+            maxAmmoText.text = "/" + currentWeapon.GetComponent<WeaponBase>().totalAmmo.ToString();
 
             ammoSlider.value = currentWeapon.GetComponent<WeaponBase>().currentAmmo;
-            ammoSlider.maxValue = currentWeapon.GetComponent<WeaponBase>().ammo;
+            ammoSlider.maxValue = currentWeapon.GetComponent<WeaponBase>().magazineSize;
         }
     }
 

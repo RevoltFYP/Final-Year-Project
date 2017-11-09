@@ -19,8 +19,12 @@ public class WeaponBase : MonoBehaviour {
     public GameObject bullet;
 
     [Header("Ammo Stats")]
-    public int ammo = 10;
+    public bool infiniteAmmo;
+    public int magazineSize;
+    public int maxAmmo = 10;
     public int ammoPerShot = 1;
+    public float reloadTime = 2;
+    private bool isReloading = false;
 
     [Header("Object Polling")]
     public int pooledAmount = 30;
@@ -28,6 +32,7 @@ public class WeaponBase : MonoBehaviour {
 
     private GameObject player;
     public int currentAmmo { get; set; }
+    public int totalAmmo { get; set; }
     private float timer { get; set; }
     public int shootableMask { get; set; }
     private Light gunLight { get; set; }
@@ -53,12 +58,30 @@ public class WeaponBase : MonoBehaviour {
         //player = transform.parent.gameObject;
         shootableMask = LayerMask.GetMask("Shootable");
         gunLight = GetComponent<Light>();
-        currentAmmo = ammo;
+
+        totalAmmo = maxAmmo;
+        currentAmmo = magazineSize;
+    }
+
+    private void OnEnable()
+    {
+        isReloading = false;
     }
 
     void Update()
     {
         timer += Time.deltaTime * 1/Time.timeScale;
+
+        if (isReloading)
+        {
+            return;
+        }
+
+        if(currentAmmo <= 0)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
 
         if(Input.GetKey(weapInvenReference.fireKey))
         {
@@ -71,6 +94,11 @@ public class WeaponBase : MonoBehaviour {
         else
         {
             firing = false;
+        }
+
+        if (Input.GetKeyDown(weapInvenReference.reloadKey))
+        {
+            StartCoroutine(Reload());
         }
 
         if (timer >= timeBetweenBullets * effectsDisplayTime)
@@ -130,5 +158,31 @@ public class WeaponBase : MonoBehaviour {
     protected void ResetTimer()
     {
         timer = 0f;
+    }
+
+    public IEnumerator Reload()
+    {
+        isReloading = true;
+        Debug.Log("Reloading");
+
+        // Find missing amount of ammo
+        int missingAmmo = magazineSize - currentAmmo;
+
+        yield return new WaitForSeconds(reloadTime);
+
+        if (!infiniteAmmo)
+        {
+            // Subtract missing ammo from total ammo;
+            totalAmmo -= missingAmmo;
+
+            // Add missing ammo to current ammo
+            currentAmmo += missingAmmo;
+        }
+        else
+        {
+            currentAmmo += missingAmmo;
+        }
+
+        isReloading = false;
     }
 }

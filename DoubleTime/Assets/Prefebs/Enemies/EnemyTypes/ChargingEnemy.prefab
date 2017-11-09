@@ -151,10 +151,11 @@ MonoBehaviour:
   lookSpeed: 3
   wayPoints: []
   displayMoveArea: 0
-  moveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
   aggroZone: {fileID: 0}
+  wanderArea: {x: 0, y: 0, z: 0}
+  wanderOffset: {x: 0, y: 0, z: 0}
   lookAtPlayer: 1
   aggroSpeed: 5
   rotateSpeed: 5

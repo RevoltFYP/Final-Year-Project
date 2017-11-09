@@ -2293,12 +2293,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7974ce468c7ff41488838bb3724b6307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 0
   projectile: {fileID: 1370475600220950, guid: 3b3428c6ba4914f419b11d62bbeb52e3, type: 2}
   firePoint: {fileID: 1837232056893390}
   enemyHealth: {fileID: 114732715074544516}
   damage: 15
-  timeBetweenBullet: 1
+  timeBetweenBullets: 0.5
   projectileForceMultiplyer: 30
+  burstTime: 0
+  projectilesPerBurst: 5
+  spreadTime: 0
+  spreadSize: 5
+  spread: 0
 --- !u!114 &114071498032845794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2356,10 +2362,11 @@ MonoBehaviour:
   lookSpeed: 3
   wayPoints: []
   displayMoveArea: 0
-  moveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
   aggroZone: {fileID: 0}
+  wanderArea: {x: 0, y: 0, z: 0}
+  wanderOffset: {x: 0, y: 0, z: 0}
   lookAtPlayer: 1
   aggroSpeed: 7
   rotateSpeed: 5

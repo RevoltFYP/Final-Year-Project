@@ -28,16 +28,22 @@ public class AmmoPickUp : MonoBehaviour {
             WeaponInventory weapInven = other.gameObject.GetComponent<WeaponInventory>();
             WeaponBase weapBase = weapInven.weaponInventory[ammoType].GetComponent<WeaponBase>();
 
-            if (weapBase.currentAmmo < weapBase.ammo)
+            if(weapBase.currentAmmo < weapBase.magazineSize || weapBase.totalAmmo < weapBase.maxAmmo)
             {
-                weapBase.currentAmmo += amount;
-
-                // after adding curr ammo exceeds max ammo
-                if (weapBase.currentAmmo > weapBase.ammo)
+                for (int i = 0; i < amount; i++)
                 {
-                    weapBase.currentAmmo = weapBase.ammo;
+                    if (weapBase.currentAmmo < weapBase.magazineSize)
+                    {
+                        weapBase.currentAmmo += 1;
+                    }
+                    else
+                    {
+                        if (weapBase.totalAmmo < weapBase.maxAmmo)
+                        {
+                            weapBase.totalAmmo += 1;
+                        }
+                    }
                 }
-
                 Destroy();
             }
         }

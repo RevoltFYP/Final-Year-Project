@@ -18,12 +18,12 @@ public class DataManager : MonoBehaviour {
     {
         // Save Shot Gun Data
         PlayerPrefs.SetInt("Shotgun Damage", shotGun.damagePerShot);
-        PlayerPrefs.SetInt("Shotgun Ammo", shotGun.ammo);
+        PlayerPrefs.SetInt("Shotgun Ammo", shotGun.totalAmmo);
         PlayerPrefs.SetFloat("Shotgun Spread", shotGun.bulletSpread);
 
         // Save Machine Gun Data
         PlayerPrefs.SetInt("Machinegun Damage", machineGun.damagePerShot);
-        PlayerPrefs.SetInt("Machinegun Ammo", machineGun.ammo);
+        PlayerPrefs.SetInt("Machinegun Ammo", machineGun.totalAmmo);
         PlayerPrefs.SetFloat("Machinegun Spread", machineGun.bulletSpread);
     }
 
@@ -34,7 +34,7 @@ public class DataManager : MonoBehaviour {
         shotGun.damagePerShot = PlayerPrefs.GetInt("Shotgun Damage");
 
         if(PlayerPrefs.HasKey("Shotgun Ammo"))
-        shotGun.ammo = PlayerPrefs.GetInt("Shotgun Ammo");
+        shotGun.totalAmmo = PlayerPrefs.GetInt("Shotgun Ammo");
 
         if(PlayerPrefs.HasKey("Shotgun Spread"))
         shotGun.bulletSpread = PlayerPrefs.GetFloat("Shotgun Spread");
@@ -44,7 +44,7 @@ public class DataManager : MonoBehaviour {
         machineGun.damagePerShot = PlayerPrefs.GetInt("Machinegun Damage");
 
         if (PlayerPrefs.HasKey("Machinegun Ammo"))
-        machineGun.ammo = PlayerPrefs.GetInt("Machinegun Ammo");
+        machineGun.totalAmmo = PlayerPrefs.GetInt("Machinegun Ammo");
 
         if (PlayerPrefs.HasKey("Machinegun Spread"))
         machineGun.bulletSpread = PlayerPrefs.GetInt("Machinegun Spread");

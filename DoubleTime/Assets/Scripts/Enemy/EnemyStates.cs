@@ -38,7 +38,7 @@ public class EnemyStates : MonoBehaviour {
     [Header("Aggro Properties")]
     public bool lookAtPlayer;
     public float aggroSpeed;
-    public float rotateSpeed;
+    [Range(0,1)] public float rotateTime;
 
     [Header("DeAggro Properties")]
     public float deAggroTime;
@@ -155,7 +155,7 @@ public class EnemyStates : MonoBehaviour {
                 Vector3 distance = transform.position - wayPoints[wayPointCounter].transform.position;
 
                 // too far away from waypoint
-                if (distance.sqrMagnitude > 2 * 2)
+                if (distance.sqrMagnitude >= 2 * 2)
                 {
                     nav.SetDestination(wayPoints[wayPointCounter].transform.position); // go to waypoint
 
@@ -172,7 +172,7 @@ public class EnemyStates : MonoBehaviour {
                     }
                 }
                 // Reset way point counter
-                else if (distance.sqrMagnitude <= 1 * 1)
+                else if (distance.sqrMagnitude <= 2 * 2)
                 {
                     // Goes to next way point
                     wayPointCounter += 1;
@@ -197,21 +197,23 @@ public class EnemyStates : MonoBehaviour {
     // Aggresive State //
     protected virtual void Aggresive()
     {
+        Vector3 targetDir = player.transform.position - transform.position;
+
         if (lookAtPlayer)
         {
             nav.updateRotation = false;
 
-            float step = rotateSpeed * Time.deltaTime;
-            Vector3 targetDir = player.transform.position - transform.position;
-            Vector3 lookDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-
-            transform.rotation = Quaternion.LookRotation(lookDir);
+            targetDir.y = 0;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDir), rotateTime);
         }
 
-        // Slowly increases speed to aggro speed
+        // Increases speed to aggro speed
         nav.speed = aggroSpeed;
 
-        nav.SetDestination(player.position);
+        if(targetDir.sqrMagnitude > 3 * 3)
+        {
+            nav.SetDestination(player.position);
+        }
     }
 
     public void DeAggro()

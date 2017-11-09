@@ -30,11 +30,9 @@ public class RangeEnemyState : EnemyStates {
         {
             nav.updateRotation = false;
 
-            float step = rotateSpeed * Time.deltaTime;
             Vector3 targetDir = player.transform.position - transform.position;
-            Vector3 lookDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-
-            transform.rotation = Quaternion.LookRotation(lookDir);
+            targetDir.y = 0;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDir), rotateTime);
         }
 
         CalculateNewPosition();

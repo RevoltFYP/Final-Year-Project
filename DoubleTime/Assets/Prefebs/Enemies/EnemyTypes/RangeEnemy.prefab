@@ -2202,7 +2202,7 @@ MonoBehaviour:
   wanderOffset: {x: 0, y: 0, z: 0}
   lookAtPlayer: 1
   aggroSpeed: 4
-  rotateSpeed: 14
+  rotateTime: 0.1
   deAggroTime: 5
   minDist: 7
   maxDist: 15

@@ -157,7 +157,7 @@ MonoBehaviour:
   wanderOffset: {x: 0, y: 0, z: 0}
   lookAtPlayer: 1
   aggroSpeed: 5
-  rotateSpeed: 5
+  rotateTime: 0.1
   deAggroTime: 5
 --- !u!114 &114436038533241360
 MonoBehaviour:
@@ -172,7 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1118339076086662}
   enemyHealth: {fileID: 114744279794493574}
-  stopTime: 0
   timeBetweenAttacks: 2
   attackDamage: 20
 --- !u!114 &114732471164050344

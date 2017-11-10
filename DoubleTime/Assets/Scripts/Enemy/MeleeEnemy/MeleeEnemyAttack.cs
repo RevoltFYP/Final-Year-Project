@@ -13,12 +13,6 @@ public class MeleeEnemyAttack : MonoBehaviour {
     private PlayerHealth playerHealth;
     private bool playerInRange;
     private float timer;
-    private EnemyStates enemyStates;
-
-    private void Awake()
-    {
-        enemyStates = transform.parent.GetComponent<EnemyStates>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -12,6 +12,7 @@ public class WeaponBase : MonoBehaviour {
     [Header("Gun Stats")]
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
+    public Transform firePoint;
 
     [Header("Bullet Stats")]
     public float bulletForce = 30.0f;
@@ -130,7 +131,7 @@ public class WeaponBase : MonoBehaviour {
         {
             if (!projectiles[i].activeInHierarchy)
             {
-                projectiles[i].transform.position = transform.position;
+                projectiles[i].transform.position = firePoint.position;
                 projectiles[i].transform.rotation = fireRotation;
                 projectiles[i].SetActive(true);
 

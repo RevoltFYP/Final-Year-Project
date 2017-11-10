@@ -24,11 +24,11 @@ public class WeaponInventory : MonoBehaviour {
     public GameObject[] ammoTypes;
     public List<GameObject> ammoDrops { get; set; }
 
-    [Header("Weapon Data")]
+    /*[Header("Weapon Data")]
     public DataManager dataManager;
     public bool resetWeapons;
     private ShotGunScript shotGunScript;
-    private WeaponBase machineGunScript;
+    private WeaponBase machineGunScript;*/
 
     [Header("Boomarang CD")]
     public float boomarangCD = 5f;
@@ -47,9 +47,10 @@ public class WeaponInventory : MonoBehaviour {
     public List<Sprite> selectedWeaponSprite = new List<Sprite>();
     public List<Sprite> unselectedWeaponImage = new List<Sprite>();
 
-    private Animator animator;
+    [Header("Models")]
     public GameObject protagonistObj;
     public GameObject weaponObj;
+    private Animator animator;
 
     public bool canFire { get; set; }
 
@@ -95,7 +96,7 @@ public class WeaponInventory : MonoBehaviour {
         }
 
         // Check whether to load data or reset
-        if(dataManager != null)
+        /*if(dataManager != null)
         {
             if (resetWeapons)
             {
@@ -105,7 +106,7 @@ public class WeaponInventory : MonoBehaviour {
             {
                 dataManager.LoadWeaponStats(weaponInventory[2].GetComponent<ShotGunScript>(), weaponInventory[1].GetComponent<WeaponBase>());
             }
-        }
+        }*/
     }
 
     private void OnEnable()

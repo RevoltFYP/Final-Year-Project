@@ -8,11 +8,13 @@ public class EnemyFire : MonoBehaviour {
     {
         REGULAR,
         BURST,
-        SPREAD
+        SPREAD,
+        REGULARWITHGRENADE
     }
 
     public Mode mode;
 
+    public GameObject grenadePrefab;
     public GameObject projectile;
     public GameObject firePoint;
     public EnemyHealth enemyHealth;
@@ -32,6 +34,15 @@ public class EnemyFire : MonoBehaviour {
     public int spreadSize = 5;
     public float spread;
 
+    [Header("Grenade Settings")]
+    public float throwForce = 10f;
+    public float timeBetweenGrenade = 5f;
+    public float waitTime = 1f;
+
+    private bool throwing = false;
+    private bool hasThrown = false;
+
+    private float gTimer;
     private float timer;
     private float posTimer;
 
@@ -54,6 +65,9 @@ public class EnemyFire : MonoBehaviour {
                     break;
                 case EnemyFire.Mode.SPREAD:
                     SpreadShot();
+                    break;
+                case EnemyFire.Mode.REGULARWITHGRENADE:
+                    ThrowGrenade();
                     break;
             }
         }
@@ -117,5 +131,53 @@ public class EnemyFire : MonoBehaviour {
 
             timer = 0;
         }
+    }
+
+    private void ThrowGrenade()
+    {
+        timer += Time.deltaTime;
+        gTimer += Time.deltaTime;
+        //Debug.Log("Timer " + timer + " - timeBetweenGrenade" + timeBetweenGrenade);
+        if (gTimer >= timeBetweenGrenade)
+        {
+            throwing = true;
+            hasThrown = false;
+            StartCoroutine("Throw", waitTime);
+            //Debug.Log("GRENADE");
+        }
+        if (timer >= timeBetweenBullets && throwing == false)
+        {
+            GameObject projectileFired = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
+
+            projectileFired.GetComponent<ProjectileBase>().projectileDamage = damage;
+
+            timer = 0;
+        }
+        
+    }
+
+    private void ThrowGrenadeCheck()
+    {
+        if (hasThrown == false)
+        {
+            GameObject grenade = Instantiate(grenadePrefab, firePoint.transform.position, firePoint.transform.rotation);
+            Rigidbody rb = grenade.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
+            hasThrown = true;
+        }
+
+    }
+
+    IEnumerator Throw()
+    {
+        //Stop firing 
+        //throwing = true;
+        yield return new WaitForSeconds(waitTime);
+
+        ThrowGrenadeCheck();
+        gTimer = 0;
+
+        yield return new WaitForSeconds(waitTime);
+        throwing = false;
     }
 }

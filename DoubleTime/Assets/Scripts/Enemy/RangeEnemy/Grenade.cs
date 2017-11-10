@@ -9,9 +9,10 @@ public class Grenade : MonoBehaviour {
     public float radius = 5f;
     public float explosionForce = 100f;
     public float explosionUpwardsForce = 0;
+    public int explosionDamage = 90;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         StartCoroutine("Blast",waitTime);
 	}
@@ -36,7 +37,17 @@ public class Grenade : MonoBehaviour {
             //Check if the gameobject have rigidbody
             if(gameobj.gameObject.GetComponent<Rigidbody>() != null)
             {
+                
                 gameobj.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, this.transform.position, radius, explosionUpwardsForce);
+                if(gameobj.gameObject.tag == "Player")
+                {
+                    //Debug.Log("PLAYER!!! - health");
+                    if (gameobj.gameObject.GetComponent<PlayerHealth>().currentHealth > 0)
+                    {
+                        gameobj.gameObject.GetComponent<PlayerHealth>().TakeDamage(explosionDamage);
+                    }
+                }
+                Destroy(this.gameObject);
             }
         }
     }

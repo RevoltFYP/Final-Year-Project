@@ -163,7 +163,7 @@ public class WeaponBase : MonoBehaviour {
     public IEnumerator Reload()
     {
         isReloading = true;
-        Debug.Log("Reloading");
+        //Debug.Log("Reloading");
 
         // Find missing amount of ammo
         int missingAmmo = magazineSize - currentAmmo;

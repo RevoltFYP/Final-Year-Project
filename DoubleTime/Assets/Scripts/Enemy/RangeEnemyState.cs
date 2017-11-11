@@ -69,7 +69,7 @@ public class RangeEnemyState : EnemyStates {
 
             if (Physics.Raycast(transform.position, transform.right, out rightHit, travelDist / 2, 11))
             {
-                if (rightHit.collider.gameObject.tag == "Building")
+                if (rightHit.collider.gameObject.layer == 11)
                 {
                     //Debug.Log("Right Obstructed");
                     nextPos = transform.position - transform.right * travelDist;
@@ -77,7 +77,7 @@ public class RangeEnemyState : EnemyStates {
             }
             else if (Physics.Raycast(transform.position, -transform.right, out leftHit, travelDist / 2, 11))
             {
-                if (leftHit.collider.gameObject.tag == "Building")
+                if (leftHit.collider.gameObject.layer == 11)
                 {
                     //Debug.Log("Left Obstructed");
                     nextPos = transform.position + transform.right * travelDist;
@@ -89,7 +89,7 @@ public class RangeEnemyState : EnemyStates {
 
                 if (Physics.Raycast(transform.position, -transform.forward, out behindHit))
                 {
-                    if (behindHit.collider.gameObject.tag == "Building")
+                    if (behindHit.collider.gameObject.layer == 11)
                     {
                         //Debug.Log("Back Obstructed");
                         return;

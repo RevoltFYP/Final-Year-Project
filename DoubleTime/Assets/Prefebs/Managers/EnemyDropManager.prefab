@@ -56,5 +56,5 @@ MonoBehaviour:
   - {fileID: 1956681426793928, guid: 12fed3034e852aa46a23c045a33d2985, type: 2}
   - {fileID: 1801401736131450, guid: 4f91a51787c79cc489306291a73170cf, type: 2}
   - {fileID: 1602413169718630, guid: f09f789732378bb419bcae147d36cd8c, type: 2}
-  healthPackPool: 10
-  healthPack: {fileID: 1569299039974528, guid: e8cf2aab676bd8c4791283db9bb56364, type: 2}
+  healthPackPool: 20
+  healthPack: {fileID: 1767889806214752, guid: 355eddeca3906e54ca4b93a8d95d4163, type: 2}

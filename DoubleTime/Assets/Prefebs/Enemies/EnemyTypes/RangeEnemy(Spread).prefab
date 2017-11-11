@@ -659,9 +659,9 @@ GameObject:
   - component: {fileID: 136404213433342758}
   - component: {fileID: 195012233598476422}
   - component: {fileID: 114066592508509392}
-  - component: {fileID: 114869736485491546}
   - component: {fileID: 114150936411167884}
   - component: {fileID: 114161244130982518}
+  - component: {fileID: 114869736485491546}
   m_Layer: 9
   m_Name: RangeEnemy(Spread)
   m_TagString: RangeEnemy

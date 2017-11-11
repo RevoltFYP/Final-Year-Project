@@ -25,10 +25,10 @@ GameObject:
   - component: {fileID: 136003864242622830}
   - component: {fileID: 195307957706242052}
   - component: {fileID: 114744279794493574}
-  - component: {fileID: 114240859762011146}
   - component: {fileID: 114732471164050344}
-  - component: {fileID: 114928340445633712}
+  - component: {fileID: 114240859762011146}
   - component: {fileID: 114407301807105070}
+  - component: {fileID: 114928340445633712}
   m_Layer: 9
   m_Name: ChargingEnemy
   m_TagString: MeleeEnemy

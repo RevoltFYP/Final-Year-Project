@@ -17,10 +17,9 @@ public class HealthPack : MonoBehaviour {
         {
             PlayerHealth playerHpScript = other.gameObject.GetComponent<PlayerHealth>();
 
-            if(playerHpScript.currMedKit < playerHpScript.maxMedKit)
+            if(playerHpScript.currentMedKit < playerHpScript.maxMedKit)
             {
-                // Update UI
-                playerHpScript.currMedKit += 1;
+                playerHpScript.currentMedKit += 1;
                 playerHpScript.UpdateMedKitUI();
 
                 Destroy();

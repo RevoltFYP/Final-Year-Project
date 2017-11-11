@@ -6014,20 +6014,19 @@ MonoBehaviour:
   hpFill: {fileID: 0}
   ragDoll: {fileID: 1670370590747816}
   charac: {fileID: 1126753357859514}
-  medKey: 113
+  medKitKey: 113
   recoverAmount: 15
   maxMedKit: 3
-  image: {fileID: 114809688699493794, guid: 1d24db7c85c066f4caeb8ddb26943ef7, type: 2}
+  kitImage: {fileID: 114019563014029864, guid: 64c025c994657a74889096c8fa2ebde9, type: 2}
   emptySprite: {fileID: 21300000, guid: a73cb52ce8409dd43ac7decc697b127f, type: 3}
   filledSprite: {fileID: 21300000, guid: 8be3cdcea1448e241940e943cee6b62a, type: 3}
-  medKitGroup: {fileID: 0}
 --- !u!114 &114373551975183758
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671434097925328}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf2e78346d423f488edd14e17ca6992, type: 3}
   m_Name: 
@@ -6088,8 +6087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modeText: {fileID: 0}
-  slowAmount: 0.2
-  transitionTime: 3
+  slowAmount: 0.3
+  transitionTime: 0.25
   slowDownKey: 32
   slowTotal: 40
   cost: 0.1
@@ -6125,7 +6124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec19e9a8c59433349b7e2d83bf3a2a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 6
+  playerSpeed: 6.8
 --- !u!114 &114912133785467228
 MonoBehaviour:
   m_ObjectHideFlags: 1

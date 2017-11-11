@@ -8,7 +8,7 @@ public class SpawnZone : MonoBehaviour {
     [Header("Spawn Settings")]
     public int enemyThreshold;
     private float checkRate = 4.0f;
-    public bool spawn;
+    public bool spawn { get; set; }
 
     [Header("Spawn Points")]
     public List<GameObject> spawnPoints = new List<GameObject>();
@@ -23,28 +23,30 @@ public class SpawnZone : MonoBehaviour {
     private GameObject player;
     private int activeEnemies;
 
-    [Header("Enemy Types")]
+    [Header("Total Amount")]
     public int meleeEnemy;
     public int rangeEnemy;
     public int chargingEnemy;
     public int shieldEnemy;
-    public int rangeEnemy_Burst;
     public int rangeEnemy_Spread;
+    public int rangeEnemy_Burst;
 
     public List<GameObject> enemyList { get; set; }
 
-    [Header("Game Objects References")]
+    [Header("Enemy Types")]
     public GameObject meleeEnemyObj;
     public GameObject rangeEnemyObj;
     public GameObject chargerEnemyObj;
     public GameObject shieldEnemyObj;
-    public GameObject burstRangeObj;
-    public GameObject spreadRangeObj;
+    public GameObject spreadEnemyObj;
+    public GameObject burstEnemyObj;
 
     private EnemyZone enemyZone;
 
     // Use this for initialization
     void Awake () {
+
+        spawn = false;
 
         enemyList = new List<GameObject>();
 
@@ -69,8 +71,8 @@ public class SpawnZone : MonoBehaviour {
         AddEnemyToList(rangeEnemy, rangeEnemyObj);
         AddEnemyToList(chargingEnemy, chargerEnemyObj);
         AddEnemyToList(shieldEnemy, shieldEnemyObj);
-        AddEnemyToList(rangeEnemy_Burst, burstRangeObj);
-        AddEnemyToList(rangeEnemy_Spread, spreadRangeObj);
+        AddEnemyToList(rangeEnemy_Spread, spreadEnemyObj);
+        AddEnemyToList(rangeEnemy_Burst, burstEnemyObj);
 
         // Randomize list of enemies to spawn
         ShuffleList();

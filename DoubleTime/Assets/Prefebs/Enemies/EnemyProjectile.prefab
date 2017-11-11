@@ -113,7 +113,7 @@ MonoBehaviour:
   damageTag: Player
   damageParticles: {fileID: 198581800847576424, guid: ec25bdf9cbc13c841a5a6e5a2c24f56d,
     type: 2}
-  speed: 27
+  speed: 26
 --- !u!135 &135124819731772112
 SphereCollider:
   m_ObjectHideFlags: 1

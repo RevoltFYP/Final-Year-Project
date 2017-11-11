@@ -19,11 +19,6 @@ public class WeaponInventory : MonoBehaviour {
 
     public List<KeyCode> keyCodes = new List<KeyCode>();
 
-    [Header("Ammo Drops")]
-    public int pooledAmount = 10;
-    public GameObject[] ammoTypes;
-    public List<GameObject> ammoDrops { get; set; }
-
     /*[Header("Weapon Data")]
     public DataManager dataManager;
     public bool resetWeapons;
@@ -60,19 +55,6 @@ public class WeaponInventory : MonoBehaviour {
         canFire = true;
 
         animator = protagonistObj.GetComponent<Animator>();
-
-        ammoDrops = new List<GameObject>();
-
-        foreach(GameObject ammo in ammoTypes)
-        {
-            for (int i = 0; i < pooledAmount; i++)
-            {
-                GameObject obj = (GameObject)Instantiate(ammo);
-                ammoDrops.Add(obj);
-                obj.SetActive(false);
-                GameObject.DontDestroyOnLoad(obj);
-            }
-        }
 
         // Ignores collision between weapons and enemies
         Physics.IgnoreLayerCollision(weaponsLayerNumber, enemyLayerNumber);
@@ -122,6 +104,7 @@ public class WeaponInventory : MonoBehaviour {
             if (currentWeapon == weaponInventory[i])
             {
                 SelectedWeapon(i);
+                WeaponSwitch(i);
             }
         }
     }

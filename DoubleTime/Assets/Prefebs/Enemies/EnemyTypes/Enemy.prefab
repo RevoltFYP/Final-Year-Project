@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 114744279794493574}
   - component: {fileID: 114630872764572436}
   - component: {fileID: 114738029990822600}
+  - component: {fileID: 114150720763650770}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: MeleeEnemy
@@ -1253,7 +1254,7 @@ Transform:
   m_GameObject: {fileID: 1396846885029074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4720130153439100}
   - {fileID: 4968508734881676}
@@ -2126,6 +2127,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114150720763650770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118339076086662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1092658534373664aa5c314b48a04ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentageToSpawn: 100
 --- !u!114 &114462110444480548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2164,7 +2177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb7668928fb2d44cb40e0cf4b842cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoType: MachineGun
+  ammoType: {fileID: 1602413169718630, guid: f09f789732378bb419bcae147d36cd8c, type: 2}
   percentageToSpawn: 100
 --- !u!114 &114738029990822600
 MonoBehaviour:
@@ -2182,6 +2195,7 @@ MonoBehaviour:
   patrolSpeed: 3
   lookSpeed: 3
   wayPoints: []
+  wanderSpeed: 0
   displayMoveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
@@ -2207,7 +2221,6 @@ MonoBehaviour:
   currentHealth: 25
   sinkSpeed: 2.5
   scoreValue: 10
-  spawnAmmo: 1
 --- !u!136 &136003864242622830
 CapsuleCollider:
   m_ObjectHideFlags: 1

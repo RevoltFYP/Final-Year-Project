@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(SpawnAmmo))]
-
 public class EnemyHealth : MonoBehaviour {
 
     public int startingHealth = 100;
@@ -14,9 +12,6 @@ public class EnemyHealth : MonoBehaviour {
 
     public bool isDead { get; set; }
     private bool isSinking;
-
-    [Header("Upon Death")]
-    public bool spawnAmmo;
 
     void Awake()
     {
@@ -53,11 +48,15 @@ public class EnemyHealth : MonoBehaviour {
     {
         isDead = true;
 
-        if (spawnAmmo)
+        if (GetComponent<SpawnAmmo>() != null)
         {
             // Spawns Ammo Box
-            SpawnAmmo spawnAmmoScript = GetComponent<SpawnAmmo>();
-            spawnAmmoScript.SpawnAmmoBox(transform.position);
+            GetComponent<SpawnAmmo>().SpawnAmmoBox(transform.position);
+        }
+
+        if(GetComponent<HealthSpawn>() != null)
+        {
+            GetComponent<HealthSpawn>().SpawnHealthPack(transform.position);
         }
 
         // Destroy all scripts in child and object except EnemyHealth

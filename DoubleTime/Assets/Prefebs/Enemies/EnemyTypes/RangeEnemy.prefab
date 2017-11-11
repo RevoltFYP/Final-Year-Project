@@ -856,6 +856,7 @@ GameObject:
   - component: {fileID: 114737893163543058}
   - component: {fileID: 114723437707670604}
   - component: {fileID: 114618218626083580}
+  - component: {fileID: 114607107017169004}
   m_Layer: 9
   m_Name: RangeEnemy
   m_TagString: RangeEnemy
@@ -1380,7 +1381,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247772124587592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.967, z: 0.93}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.93}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4657692259244146}
@@ -1776,7 +1777,7 @@ Transform:
   m_GameObject: {fileID: 1155482906529080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.5000001}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4708434980084816}
   - {fileID: 4914730203958862}
@@ -2178,6 +2179,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runDampTime: 0.1
+--- !u!114 &114607107017169004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800027596413486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1092658534373664aa5c314b48a04ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentageToSpawn: 100
 --- !u!114 &114618218626083580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2194,6 +2207,7 @@ MonoBehaviour:
   patrolSpeed: 3
   lookSpeed: 3
   wayPoints: []
+  wanderSpeed: 0
   displayMoveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
@@ -2219,7 +2233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb7668928fb2d44cb40e0cf4b842cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoType: MachineGun
+  ammoType: {fileID: 1801401736131450, guid: 4f91a51787c79cc489306291a73170cf, type: 2}
   percentageToSpawn: 100
 --- !u!114 &114737893163543058
 MonoBehaviour:
@@ -2236,7 +2250,6 @@ MonoBehaviour:
   currentHealth: 30
   sinkSpeed: 2.5
   scoreValue: 10
-  spawnAmmo: 1
 --- !u!114 &114827537913755404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2249,6 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 0
+  grenadePrefab: {fileID: 0}
   projectile: {fileID: 1370475600220950, guid: 3b3428c6ba4914f419b11d62bbeb52e3, type: 2}
   firePoint: {fileID: 1247772124587592}
   enemyHealth: {fileID: 114737893163543058}
@@ -2260,6 +2274,9 @@ MonoBehaviour:
   spreadTime: 3
   spreadSize: 5
   spread: 2.5
+  throwForce: 10
+  timeBetweenGrenade: 5
+  waitTime: 1
 --- !u!136 &136750002522860738
 CapsuleCollider:
   m_ObjectHideFlags: 1

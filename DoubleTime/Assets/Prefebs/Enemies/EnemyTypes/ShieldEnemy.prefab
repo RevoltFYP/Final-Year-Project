@@ -1027,6 +1027,7 @@ GameObject:
   - component: {fileID: 114732715074544516}
   - component: {fileID: 114869486710806820}
   - component: {fileID: 114496206123645744}
+  - component: {fileID: 114928609032095672}
   m_Layer: 9
   m_Name: ShieldEnemy
   m_TagString: MeleeEnemy
@@ -1202,7 +1203,7 @@ Transform:
   m_GameObject: {fileID: 1558319150812502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1.5000005, y: 1.4999999, z: 1.5000005}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4284132012632290}
   - {fileID: 4666128399602394}
@@ -2293,6 +2294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 0
+  grenadePrefab: {fileID: 0}
   projectile: {fileID: 1370475600220950, guid: 3b3428c6ba4914f419b11d62bbeb52e3, type: 2}
   firePoint: {fileID: 1837232056893390}
   enemyHealth: {fileID: 114732715074544516}
@@ -2304,6 +2306,9 @@ MonoBehaviour:
   spreadTime: 0
   spreadSize: 5
   spread: 0
+  throwForce: 10
+  timeBetweenGrenade: 5
+  waitTime: 1
 --- !u!114 &114187883627271000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2347,6 +2352,7 @@ MonoBehaviour:
   patrolSpeed: 3
   lookSpeed: 3
   wayPoints: []
+  wanderSpeed: 0
   displayMoveArea: 0
   randomMinTime: 0
   randomMaxTime: 0
@@ -2384,7 +2390,6 @@ MonoBehaviour:
   currentHealth: 55
   sinkSpeed: 2.5
   scoreValue: 10
-  spawnAmmo: 1
 --- !u!114 &114869486710806820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2396,7 +2401,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb7668928fb2d44cb40e0cf4b842cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoType: MachineGun
+  ammoType: {fileID: 1602413169718630, guid: f09f789732378bb419bcae147d36cd8c, type: 2}
+  percentageToSpawn: 100
+--- !u!114 &114928609032095672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1912437989910784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1092658534373664aa5c314b48a04ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   percentageToSpawn: 100
 --- !u!136 &136465027477457252
 CapsuleCollider:

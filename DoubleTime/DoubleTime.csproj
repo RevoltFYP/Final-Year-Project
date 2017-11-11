@@ -132,12 +132,16 @@
     <Compile Include="Assets\Scripts\DestroyParticles.cs" />
     <Compile Include="Assets\Scripts\Enemy\AggroScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAnimControl.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyDropManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyShieldScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyToolTip.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyZones\AssetEnemyZone.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyZones\EnemyZone.cs" />
+    <Compile Include="Assets\Scripts\Enemy\HealthPack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\HealthSpawn.cs" />
     <Compile Include="Assets\Scripts\Enemy\LineOfSight.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MarkedEnemyScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy\ChargerScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy\MeleeEnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\RangeEnemy\EnemyBurstFire.cs" />
@@ -145,8 +149,6 @@
     <Compile Include="Assets\Scripts\Enemy\RangeEnemy\Grenade.cs" />
     <Compile Include="Assets\Scripts\Enemy\RangeEnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemy\SpawnZone.cs" />
-    <Compile Include="Assets\Scripts\EnemyZones\AssetEnemyZone.cs" />
-    <Compile Include="Assets\Scripts\EnemyZones\EnemyZone.cs" />
     <Compile Include="Assets\Scripts\EscapePoint.cs" />
     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\Manager\ButtonManager.cs" />

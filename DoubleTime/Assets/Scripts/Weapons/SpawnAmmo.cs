@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class SpawnAmmo : MonoBehaviour {
 
-    public string ammoType;
+    public GameObject ammoType;
     [Range(0,100)] public float percentageToSpawn; //percentage to spawn random weapon in arr
+
+    private GameObject enemyDropManager;
+    private EnemyDropManager managerScript;
+
+    private void Awake()
+    {
+        enemyDropManager = GameObject.Find("EnemyDropManager");
+        managerScript = enemyDropManager.GetComponent<EnemyDropManager>();
+    }
 
     // Checks against percentage to Spawn to spawn weapon at location //
     public void SpawnAmmoBox(Vector3 spawnLocation)
     {
+        //Debug.Log("Spawned Ammo");
         float percentage = Random.Range(0.0f, 100.0f);
 
         // If percentage to spawn is true
         if(percentage <= percentageToSpawn)
         {
-            GameObject player = GameObject.Find("Player");
-            WeaponInventory weapInven = player.GetComponent<WeaponInventory>();
-
-            for (int i = 0; i < weapInven.ammoDrops.Count; i++)
+            for (int i = 0; i < managerScript.ammoDrops.Count; i++)
             {
-                if (!weapInven.ammoDrops[i].activeInHierarchy)
+                if (!managerScript.ammoDrops[i].activeInHierarchy)
                 {
-                    if (weapInven.ammoDrops[i].name.Contains(ammoType))
+                    if (managerScript.ammoDrops[i].name == ammoType.name + "(Clone)")
                     {
+                        //Debug.Log("Matched Ammo Type");
                         // Spawn ammo
-                        weapInven.ammoDrops[i].transform.position = spawnLocation;
-                        weapInven.ammoDrops[i].transform.rotation = Quaternion.identity;
-                        weapInven.ammoDrops[i].SetActive(true);
+                        managerScript.ammoDrops[i].transform.position = spawnLocation;
+                        managerScript.ammoDrops[i].transform.rotation = Quaternion.identity;
+                        managerScript.ammoDrops[i].SetActive(true);
                         break;
                     }
                 }

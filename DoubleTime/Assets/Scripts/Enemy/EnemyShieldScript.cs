@@ -10,7 +10,7 @@ public class EnemyShieldScript : MonoBehaviour {
     {
         if(other.gameObject.layer == playerBulletLayer)
         {
-            Debug.Log("true");
+            //Debug.Log("true");
             other.GetComponent<ProjectileBase>().Destroy();
         }
     }

@@ -41,7 +41,7 @@ public class EnemyStates : MonoBehaviour {
     public float aggroSpeed;
     [Range(0,1)] public float rotateTime;
 
-    [Header("DeAggro Properties")]
+    [Header("DeAggro Properties (Obseleate)")]
     public float deAggroTime;
 
     public Transform player { get; set; }

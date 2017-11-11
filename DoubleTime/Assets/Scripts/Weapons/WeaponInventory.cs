@@ -49,7 +49,7 @@ public class WeaponInventory : MonoBehaviour {
 
     [Header("Models")]
     public GameObject protagonistObj;
-    public GameObject weaponObj;
+    public List<GameObject> weaponMeshes = new List<GameObject>();
     private Animator animator;
 
     public bool canFire { get; set; }
@@ -166,7 +166,7 @@ public class WeaponInventory : MonoBehaviour {
                     SelectedWeapon(i);
 
                     // Plays weapon switch animation
-                    WeaponSwitch();
+                    WeaponSwitch(i);
                 }
             }
         }
@@ -219,17 +219,17 @@ public class WeaponInventory : MonoBehaviour {
         currentWeaponImage.sprite = selectedWeaponSprite[number];
     }
 
-    private void WeaponSwitch()
+    private void WeaponSwitch(int weaponNumber)
     {
-        if (currentWeapon != weaponInventory[0])
+        if(currentWeapon != null)
         {
+            foreach (GameObject mesh in weaponMeshes)
+            {
+                mesh.SetActive(false);
+            }
+
             animator.SetBool("WeaponEquipped", true);
-            weaponObj.SetActive(true);
-        }
-        else
-        {
-            animator.SetBool("WeaponEquipped", false);
-            weaponObj.SetActive(false);
+            weaponMeshes[weaponNumber].SetActive(true);
         }
     }
 }

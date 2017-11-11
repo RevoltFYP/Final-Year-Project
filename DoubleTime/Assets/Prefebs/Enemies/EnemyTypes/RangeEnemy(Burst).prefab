@@ -1183,7 +1183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059056020653292}
   m_LocalRotation: {x: -0, y: 0.71209115, z: -0, w: -0.70208704}
-  m_LocalPosition: {x: 203, y: 1.21, z: -128.6}
+  m_LocalPosition: {x: 213.87964, y: 1.07, z: -150.4618}
   m_LocalScale: {x: 1.0000012, y: 1, z: 1.0000012}
   m_Children:
   - {fileID: 4500138205355660}
@@ -2180,8 +2180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoType: {fileID: 1801401736131450, guid: 4f91a51787c79cc489306291a73170cf, type: 2}
   percentageToSpawn: 100
-  managerScript: {fileID: 114430872800460696, guid: 72ab3bc71c693ad41bebab9e00a31e9c,
-    type: 2}
 --- !u!114 &114031157065088804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2236,8 +2234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26909dec2007e34bb1c03775b429f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 30
-  currentHealth: 30
+  startingHealth: 25
+  currentHealth: 25
   sinkSpeed: 2.5
   scoreValue: 10
 --- !u!114 &114316711766896602
@@ -2257,16 +2255,16 @@ MonoBehaviour:
   firePoint: {fileID: 1707773436414528}
   enemyHealth: {fileID: 114118183770868438}
   damage: 10
-  timeBetweenBullets: 1
-  projectileForceMultiplyer: 15
-  burstTime: 5
-  projectilesPerBurst: 5
+  timeBetweenBullets: 0.08
+  projectileForceMultiplyer: 17
+  burstTime: 4
+  projectilesPerBurst: 6
   spreadTime: 3
   spreadSize: 5
   spread: 2.5
   throwForce: 10
-  timeBetweenGrenade: 5
-  waitTime: 1
+  timeBetweenGrenade: 10
+  waitTime: 0.8
 --- !u!114 &114360183474865992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2279,8 +2277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageToSpawn: 100
-  managerScript: {fileID: 114430872800460696, guid: 72ab3bc71c693ad41bebab9e00a31e9c,
-    type: 2}
 --- !u!136 &136056654457306532
 CapsuleCollider:
   m_ObjectHideFlags: 1

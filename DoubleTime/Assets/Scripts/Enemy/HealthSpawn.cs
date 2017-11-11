@@ -22,14 +22,14 @@ public class HealthSpawn : MonoBehaviour {
 
         if (percentage <= percentageToSpawn)
         {
-            Debug.Log("Lower Percentage");
+            //Debug.Log("Lower Percentage");
             for (int i = 0; i < managerScript.healthDrops.Count; i++)
             {
-                Debug.Log("Looping");
+                //Debug.Log("Looping");
 
                 if (!managerScript.healthDrops[i].activeInHierarchy)
                 {
-                    Debug.Log("Health Pack Available");
+                    //Debug.Log("Health Pack Available");
 
                     managerScript.healthDrops[i].transform.position = spawnLocation;
                     managerScript.healthDrops[i].transform.rotation = Quaternion.identity;

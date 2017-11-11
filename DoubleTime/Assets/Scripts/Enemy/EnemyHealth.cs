@@ -56,7 +56,7 @@ public class EnemyHealth : MonoBehaviour {
 
         if(GetComponent<HealthSpawn>() != null)
         {
-            GetComponent<HealthSpawn>().SpawnHealthPack(transform.position);
+            GetComponent<HealthSpawn>().SpawnHealthPack(transform.position + Vector3.forward);
         }
 
         // Destroy all scripts in child and object except EnemyHealth

@@ -173,11 +173,14 @@ public class WeaponBase : MonoBehaviour {
 
         if (!infiniteAmmo)
         {
-            // Subtract missing ammo from total ammo;
-            totalAmmo -= missingAmmo;
+            if(totalAmmo >= missingAmmo)
+            {
+                // Subtract missing ammo from total ammo;
+                totalAmmo -= missingAmmo;
 
-            // Add missing ammo to current ammo
-            currentAmmo += missingAmmo;
+                // Add missing ammo to current ammo
+                currentAmmo += missingAmmo;
+            }
         }
         else
         {

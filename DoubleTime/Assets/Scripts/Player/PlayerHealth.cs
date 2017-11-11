@@ -92,5 +92,8 @@ public class PlayerHealth : MonoBehaviour
 
         // Disable player melee
         GetComponent<PlayerMelee>().enabled = false;
+
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public int startingHealth = 100;
     public int currentHealth;
     public Slider healthSlider;
@@ -22,6 +21,18 @@ public class PlayerHealth : MonoBehaviour
     public GameObject ragDoll;
     public GameObject charac;
 
+    [Header("Med Kits")]
+    public KeyCode medKey;
+    public int recoverAmount;
+    public int maxMedKit;
+    public Image image;
+    public Sprite emptySprite;
+    public Sprite filledSprite;
+
+    private GameObject medKitGroup;
+    private List<Image> medKitImage = new List<Image>();
+    public int currMedKit { get; set; }
+
     private bool isDead;
     private bool isDamaged;
 
@@ -29,10 +40,27 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = startingHealth;
         originalColour = hpFill.color;
+
+        currMedKit = 0;
+
+        medKitGroup = GameObject.Find("MedKitImages");
+
+        for (int i = 0; i < maxMedKit; i++)
+        {
+            Image img = (Image)Instantiate(image);
+            img.transform.SetParent(medKitGroup.transform);
+
+            medKitImage.Add(img);
+        }
     }
 
     void Update ()
     {
+        if (Input.GetKeyDown(medKey))
+        {
+            UseMedKit();
+        }
+
         if(isDamaged)
         {
             // Flashes when damaged 
@@ -95,5 +123,48 @@ public class PlayerHealth : MonoBehaviour
 
         GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
+    }
+
+    // Use Med Kit to recover HP
+    public void UseMedKit()
+    {
+        // Player has any med kit
+        if(currMedKit > 0)
+        {
+            // Player not at full health
+            if (currentHealth < startingHealth)
+            {
+                // Add health
+                currentHealth += recoverAmount;
+
+                if (currentHealth >= startingHealth)
+                {
+                    currentHealth = startingHealth;
+                }
+
+                // reduce med kit
+                currMedKit -= 1;
+
+                // Update UI
+                healthSlider.value = currentHealth;
+                UpdateMedKitUI();
+            }
+        }
+    }
+
+    public void UpdateMedKitUI()
+    {
+        foreach(Image image in medKitImage)
+        {
+            image.GetComponent<Image>().sprite = emptySprite;
+        }
+
+        if(currMedKit > 0)
+        {
+            for (int i = 0; i < currMedKit; i++)
+            {
+                medKitImage[i].GetComponent<Image>().sprite = filledSprite;
+            }
+        }
     }
 }

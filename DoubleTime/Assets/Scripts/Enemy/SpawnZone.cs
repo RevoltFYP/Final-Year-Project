@@ -23,11 +23,14 @@ public class SpawnZone : MonoBehaviour {
     private GameObject player;
     private int activeEnemies;
 
-    [Header("Total Amount")]
+    [Header("Enemy Types")]
     public int meleeEnemy;
     public int rangeEnemy;
     public int chargingEnemy;
     public int shieldEnemy;
+    public int rangeEnemy_Burst;
+    public int rangeEnemy_Spread;
+
     public List<GameObject> enemyList { get; set; }
 
     [Header("Game Objects References")]
@@ -35,6 +38,8 @@ public class SpawnZone : MonoBehaviour {
     public GameObject rangeEnemyObj;
     public GameObject chargerEnemyObj;
     public GameObject shieldEnemyObj;
+    public GameObject burstRangeObj;
+    public GameObject spreadRangeObj;
 
     private EnemyZone enemyZone;
 
@@ -64,6 +69,8 @@ public class SpawnZone : MonoBehaviour {
         AddEnemyToList(rangeEnemy, rangeEnemyObj);
         AddEnemyToList(chargingEnemy, chargerEnemyObj);
         AddEnemyToList(shieldEnemy, shieldEnemyObj);
+        AddEnemyToList(rangeEnemy_Burst, burstRangeObj);
+        AddEnemyToList(rangeEnemy_Spread, spreadRangeObj);
 
         // Randomize list of enemies to spawn
         ShuffleList();

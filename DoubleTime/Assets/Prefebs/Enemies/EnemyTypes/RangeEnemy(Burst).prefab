@@ -203,8 +203,8 @@ GameObject:
   - component: {fileID: 136056654457306532}
   - component: {fileID: 195980264274652498}
   - component: {fileID: 114118183770868438}
-  - component: {fileID: 114028200261299684}
   - component: {fileID: 114059517006944944}
+  - component: {fileID: 114028200261299684}
   - component: {fileID: 114360183474865992}
   m_Layer: 9
   m_Name: RangeEnemy(Burst)
@@ -2180,8 +2180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoType: {fileID: 1801401736131450, guid: 4f91a51787c79cc489306291a73170cf, type: 2}
   percentageToSpawn: 100
-  managerScript: {fileID: 114430872800460696, guid: 72ab3bc71c693ad41bebab9e00a31e9c,
-    type: 2}
 --- !u!114 &114031157065088804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2257,7 +2255,7 @@ MonoBehaviour:
   firePoint: {fileID: 1707773436414528}
   enemyHealth: {fileID: 114118183770868438}
   damage: 10
-  timeBetweenBullets: 1
+  timeBetweenBullets: 0.15
   projectileForceMultiplyer: 15
   burstTime: 5
   projectilesPerBurst: 5
@@ -2279,8 +2277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageToSpawn: 100
-  managerScript: {fileID: 114430872800460696, guid: 72ab3bc71c693ad41bebab9e00a31e9c,
-    type: 2}
 --- !u!136 &136056654457306532
 CapsuleCollider:
   m_ObjectHideFlags: 1

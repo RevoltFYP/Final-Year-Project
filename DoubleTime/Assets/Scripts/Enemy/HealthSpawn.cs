@@ -19,11 +19,14 @@ public class HealthSpawn : MonoBehaviour {
     {
         //Debug.Log("Spawned Health");
         float percentage = Random.Range(0.0f, 100.0f);
-
         if (percentage <= percentageToSpawn)
         {
+            //Debug.Log("true");
+            // For Temp
+            Instantiate(managerScript.healthPack, spawnLocation, Quaternion.identity);
+
             //Debug.Log("Lower Percentage");
-            for (int i = 0; i < managerScript.healthDrops.Count; i++)
+            /*for (int i = 0; i < managerScript.healthDrops.Count; i++)
             {
                 //Debug.Log("Looping");
 
@@ -31,15 +34,18 @@ public class HealthSpawn : MonoBehaviour {
                 {
                     //Debug.Log("Health Pack Available");
 
+                    // For Test
+                    //Instantiate(managerScript.healthDrops[i], spawnLocation, Quaternion.identity);
+
                     managerScript.healthDrops[i].transform.position = spawnLocation;
                     managerScript.healthDrops[i].transform.rotation = Quaternion.identity;
                     managerScript.healthDrops[i].SetActive(true);
 
-                    //Debug.Log(managerScript.healthDrops[i].activeInHierarchy);
+                    Debug.Log(managerScript.healthDrops[i].activeInHierarchy);
+
                     break;
                 }
-
-            }
+            }*/
         }
 
     }

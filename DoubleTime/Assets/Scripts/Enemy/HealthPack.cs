@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class HealthPack : MonoBehaviour {
 
-    public int recoverAmount;
+    public float destroyIn;
+
+    private void OnEnable()
+    {
+        Invoke("Destroy", destroyIn);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,15 +17,19 @@ public class HealthPack : MonoBehaviour {
         {
             PlayerHealth playerHpScript = other.gameObject.GetComponent<PlayerHealth>();
 
-            if(playerHpScript.currentHealth <= playerHpScript.startingHealth)
+            if(playerHpScript.currMedKit < playerHpScript.maxMedKit)
             {
-                playerHpScript.currentHealth += recoverAmount;
+                // Update UI
+                playerHpScript.currMedKit += 1;
+                playerHpScript.UpdateMedKitUI();
 
-                if(playerHpScript.currentHealth >= playerHpScript.startingHealth)
-                {
-                    playerHpScript.currentHealth = playerHpScript.startingHealth;
-                }
+                Destroy();
             }
         }
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

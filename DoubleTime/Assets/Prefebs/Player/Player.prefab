@@ -6014,6 +6014,13 @@ MonoBehaviour:
   hpFill: {fileID: 0}
   ragDoll: {fileID: 1670370590747816}
   charac: {fileID: 1126753357859514}
+  medKey: 113
+  recoverAmount: 15
+  maxMedKit: 3
+  image: {fileID: 114809688699493794, guid: 1d24db7c85c066f4caeb8ddb26943ef7, type: 2}
+  emptySprite: {fileID: 21300000, guid: a73cb52ce8409dd43ac7decc697b127f, type: 3}
+  filledSprite: {fileID: 21300000, guid: 8be3cdcea1448e241940e943cee6b62a, type: 3}
+  medKitGroup: {fileID: 0}
 --- !u!114 &114373551975183758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6150,11 +6157,6 @@ MonoBehaviour:
   - {fileID: 1964864817645470}
   startWeapon: {fileID: 1541254342567078}
   keyCodes: 310000003200000033000000
-  pooledAmount: 5
-  ammoTypes:
-  - {fileID: 1956681426793928, guid: 12fed3034e852aa46a23c045a33d2985, type: 2}
-  - {fileID: 1801401736131450, guid: 4f91a51787c79cc489306291a73170cf, type: 2}
-  - {fileID: 1602413169718630, guid: f09f789732378bb419bcae147d36cd8c, type: 2}
   boomarangCD: 4
   currentAmmoText: {fileID: 0}
   maxAmmoText: {fileID: 0}

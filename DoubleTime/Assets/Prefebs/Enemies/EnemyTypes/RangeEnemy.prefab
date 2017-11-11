@@ -854,8 +854,8 @@ GameObject:
   - component: {fileID: 136750002522860738}
   - component: {fileID: 195081475548257284}
   - component: {fileID: 114737893163543058}
-  - component: {fileID: 114723437707670604}
   - component: {fileID: 114618218626083580}
+  - component: {fileID: 114723437707670604}
   - component: {fileID: 114607107017169004}
   m_Layer: 9
   m_Name: RangeEnemy

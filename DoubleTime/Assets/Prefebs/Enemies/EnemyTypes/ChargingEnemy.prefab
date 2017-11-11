@@ -25,8 +25,8 @@ GameObject:
   - component: {fileID: 136003864242622830}
   - component: {fileID: 195307957706242052}
   - component: {fileID: 114744279794493574}
-  - component: {fileID: 114732471164050344}
   - component: {fileID: 114240859762011146}
+  - component: {fileID: 114732471164050344}
   - component: {fileID: 114928340445633712}
   - component: {fileID: 114407301807105070}
   m_Layer: 9
@@ -216,7 +216,6 @@ MonoBehaviour:
   currentHealth: 300
   sinkSpeed: 2.5
   scoreValue: 50
-  spawnAmmo: 1
 --- !u!114 &114928340445633712
 MonoBehaviour:
   m_ObjectHideFlags: 1

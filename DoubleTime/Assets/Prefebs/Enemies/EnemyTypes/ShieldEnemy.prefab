@@ -1025,8 +1025,8 @@ GameObject:
   - component: {fileID: 136645325396542978}
   - component: {fileID: 195031494577970736}
   - component: {fileID: 114732715074544516}
-  - component: {fileID: 114869486710806820}
   - component: {fileID: 114496206123645744}
+  - component: {fileID: 114869486710806820}
   - component: {fileID: 114928609032095672}
   m_Layer: 9
   m_Name: ShieldEnemy

@@ -129,6 +129,7 @@
     <Compile Include="Assets\Scripts\Camera\PanCameraScript.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerCull.cs" />
+    <Compile Include="Assets\Scripts\DestroyInScript.cs" />
     <Compile Include="Assets\Scripts\DestroyParticles.cs" />
     <Compile Include="Assets\Scripts\Enemy\AggroScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAnimControl.cs" />
@@ -139,7 +140,6 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyToolTip.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyZones\AssetEnemyZone.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyZones\EnemyZone.cs" />
-    <Compile Include="Assets\Scripts\Enemy\HealthPack.cs" />
     <Compile Include="Assets\Scripts\Enemy\HealthSpawn.cs" />
     <Compile Include="Assets\Scripts\Enemy\LineOfSight.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy\ChargerScript.cs" />
@@ -157,6 +157,9 @@
     <Compile Include="Assets\Scripts\Manager\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ScrapManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SpawnPointScript.cs" />
+    <Compile Include="Assets\Scripts\PickUp\AmmoPickUp.cs" />
+    <Compile Include="Assets\Scripts\PickUp\HealthPack.cs" />
+    <Compile Include="Assets\Scripts\PickUp\WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\Player\DataManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimControl.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
@@ -177,7 +180,6 @@
     <Compile Include="Assets\Scripts\Scrap\ScrapScript.cs" />
     <Compile Include="Assets\Scripts\Scrap\SpawnScrap.cs" />
     <Compile Include="Assets\Scripts\ToolTipScript.cs" />
-    <Compile Include="Assets\Scripts\Weapons\AmmoPickUp.cs" />
     <Compile Include="Assets\Scripts\Weapons\PlayerBoomarang_.cs" />
     <Compile Include="Assets\Scripts\Weapons\ProjectileBase.cs" />
     <Compile Include="Assets\Scripts\Weapons\ShotGunScript.cs" />
@@ -185,7 +187,6 @@
     <Compile Include="Assets\Scripts\Weapons\WeaponBase.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponDataStorage.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponInventory.cs" />
-    <Compile Include="Assets\Scripts\Weapons\WeaponPickup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3D Models\Characters\CustomStandard Two Sided Soft Blend.shader" />

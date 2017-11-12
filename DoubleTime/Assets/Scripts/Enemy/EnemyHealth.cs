@@ -54,7 +54,7 @@ public class EnemyHealth : MonoBehaviour {
             GetComponent<SpawnAmmo>().SpawnAmmoBox(transform.position);
         }
 
-        if(GetComponent<HealthSpawn>() != null)
+        if (GetComponent<HealthSpawn>() != null)
         {
             GetComponent<HealthSpawn>().SpawnHealthPack(transform.position + Vector3.forward);
         }

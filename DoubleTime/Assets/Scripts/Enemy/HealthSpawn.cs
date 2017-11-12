@@ -6,13 +6,13 @@ public class HealthSpawn : MonoBehaviour {
 
     [Range(0, 100)] public float percentageToSpawn; //percentage to spawn health
 
-    private GameObject healthSpawnManager;
+    private GameObject enemyDropManager;
     private EnemyDropManager managerScript;
     // Use this for initialization
     void Awake () {
 
-        healthSpawnManager = GameObject.Find("EnemyDropManager");
-        managerScript = healthSpawnManager.GetComponent<EnemyDropManager>();
+        enemyDropManager = GameObject.Find("EnemyDropManager");
+        managerScript = enemyDropManager.GetComponent<EnemyDropManager>();
 	}
 
     public void SpawnHealthPack(Vector3 spawnLocation)
@@ -23,10 +23,10 @@ public class HealthSpawn : MonoBehaviour {
         if (percentage <= percentageToSpawn)
         {
             // temp
-            Instantiate(managerScript.healthPack, spawnLocation, Quaternion.identity);
+            //Instantiate(managerScript.healthPack, spawnLocation, Quaternion.identity);
 
             //Debug.Log("Lower Percentage");
-            /*for (int i = 0; i < managerScript.healthDrops.Count; i++)
+            for (int i = 0; i < managerScript.healthDrops.Count; i++)
             {
                 //Debug.Log("Looping");
 
@@ -38,11 +38,11 @@ public class HealthSpawn : MonoBehaviour {
                     managerScript.healthDrops[i].transform.rotation = Quaternion.identity;
                     managerScript.healthDrops[i].SetActive(true);
 
-                    //Debug.Log(managerScript.healthDrops[i].activeInHierarchy);
+                    Debug.Log(managerScript.healthDrops[i].transform.position);
                     break;
                 }
 
-            }*/
+            }
         }
 
     }

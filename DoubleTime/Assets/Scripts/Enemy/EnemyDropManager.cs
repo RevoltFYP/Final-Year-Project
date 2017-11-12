@@ -9,7 +9,7 @@ public class EnemyDropManager : MonoBehaviour {
     public GameObject[] ammoTypes;
     public List<GameObject> ammoDrops { get; set; }
 
-    [Header("Health Drops (Not Working)")]
+    [Header("Health Drops")]
     public int healthPackPool = 10;
     public GameObject healthPack;
     public List<GameObject> healthDrops { get; set; }
@@ -17,7 +17,7 @@ public class EnemyDropManager : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-        //PoolHealthPacks();
+        PoolHealthPacks();
         PoolAmmo();
     }
 
@@ -28,7 +28,7 @@ public class EnemyDropManager : MonoBehaviour {
         for (int i = 0; i < healthPackPool; i++)
         {
             GameObject obj = (GameObject)Instantiate(healthPack);
-            healthDrops.Add(healthPack);
+            healthDrops.Add(obj);
             obj.SetActive(false);
             GameObject.DontDestroyOnLoad(obj);
         }

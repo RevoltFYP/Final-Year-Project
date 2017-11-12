@@ -2224,7 +2224,7 @@ MonoBehaviour:
   firePoint: {fileID: 1143143317059158}
   enemyHealth: {fileID: 114066592508509392}
   damage: 10
-  timeBetweenBullets: 0.15
+  timeBetweenBullets: 0.05
   projectileForceMultiplyer: 15
   burstTime: 5
   projectilesPerBurst: 5

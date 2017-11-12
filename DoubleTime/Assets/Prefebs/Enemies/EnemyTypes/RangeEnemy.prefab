@@ -2220,7 +2220,8 @@ MonoBehaviour:
   deAggroTime: 5
   minDist: 7
   maxDist: 15
-  rePosRate: 2.6
+  minRate: 2
+  maxRate: 4
   reposSpeed: 8
 --- !u!114 &114723437707670604
 MonoBehaviour:

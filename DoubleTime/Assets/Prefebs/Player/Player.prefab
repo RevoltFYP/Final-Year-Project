@@ -5969,14 +5969,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266d38b5ae79bb44b848949b07c84f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 10
-  timeBetweenBullets: 0.3
+  damagePerShot: 7
+  timeBetweenBullets: 0.2
   firePoint: {fileID: 4864848553925034}
   bulletForce: 30
-  bulletSpread: 10
+  bulletSpread: 0
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 1
-  magazineSize: 10
+  magazineSize: 6
   maxAmmo: 999
   ammoPerShot: 1
   reloadTime: 2

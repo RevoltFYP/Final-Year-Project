@@ -2275,7 +2275,8 @@ MonoBehaviour:
   deAggroTime: 5
   minDist: 7
   maxDist: 15
-  rePosRate: 2.6
+  minRate: 3
+  maxRate: 6
   reposSpeed: 8
 --- !u!136 &136404213433342758
 CapsuleCollider:

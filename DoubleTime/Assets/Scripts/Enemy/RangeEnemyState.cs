@@ -8,18 +8,21 @@ public class RangeEnemyState : EnemyStates {
     [Header("Reposition Settings")]
     public float minDist = 5.0f;
     public float maxDist = 8.0f;
-    public float rePosRate = 3.0f;
+    public float minRate = 3.0f;
+    public float maxRate = 8.0f;
     public float reposSpeed = 10;
 
+    private float reposTime;
     private float travelDist;
     private bool posFound;
     private Vector3 nextPos;
     private int pickPos;
     private float internalTimer;
+    private bool timeGotten;
 
-    private void Start()
+    private void OnEnable()
     {
-        internalTimer = rePosRate;
+        RePosition();
     }
 
     // Aggresive State //
@@ -34,11 +37,15 @@ public class RangeEnemyState : EnemyStates {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDir), rotateTime);
         }
 
+        // Calculate distance and decide which action to take
         CalculateNewPosition();
+
+        // Get Random Time
+        GetTime();
 
         internalTimer += Time.deltaTime;
 
-        if (internalTimer >= rePosRate)
+        if (internalTimer >= reposTime)
         {
             //Debug.Log("Repositioning");
 
@@ -47,11 +54,20 @@ public class RangeEnemyState : EnemyStates {
         }
     }
 
+    public void GetTime()
+    {
+        if (!timeGotten)
+        {
+            travelDist = Random.Range(minDist, maxDist);
+            reposTime = Random.Range(minRate, maxRate);
+            timeGotten = true;
+        }
+    }
+
     public void CalculateNewPosition()
     {
         // Calculate pos to travel to
         Vector3 dir = transform.position - player.transform.position;
-        travelDist = Random.Range(minDist, maxDist);
 
         //Debug.DrawRay(transform.position, transform.right * travelDist / 2, Color.red);
         //Debug.DrawRay(transform.position, -transform.right * travelDist / 2, Color.red);
@@ -139,6 +155,7 @@ public class RangeEnemyState : EnemyStates {
 
         nav.SetDestination(hit.position);
 
+        timeGotten = false;
         internalTimer = 0;
     }
 }

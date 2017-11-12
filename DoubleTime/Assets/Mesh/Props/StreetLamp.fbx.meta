@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 15dc0c506274b1146b0c31dd17478552
-timeCreated: 1510499500
+guid: 15cb08c65ab94294c94b2b75c6c40a2f
+timeCreated: 1509341888
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: StreetLampNEW
-    9500000: //RootNode
+    4300000: StreetLamp
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +74,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

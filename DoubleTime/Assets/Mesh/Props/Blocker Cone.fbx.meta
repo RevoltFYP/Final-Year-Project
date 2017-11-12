@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0cbc1db98802c764d91793a746c193fe
-timeCreated: 1510499325
+guid: ea2321ce4e646f4439733123ef5f9a54
+timeCreated: 1509604493
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -10,7 +10,6 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Blocker Cone
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +74,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

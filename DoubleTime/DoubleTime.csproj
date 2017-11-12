@@ -129,7 +129,6 @@
     <Compile Include="Assets\Scripts\Camera\PanCameraScript.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerCull.cs" />
-    <Compile Include="Assets\Scripts\DestroyInScript.cs" />
     <Compile Include="Assets\Scripts\DestroyParticles.cs" />
     <Compile Include="Assets\Scripts\Enemy\AggroScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAnimControl.cs" />
@@ -177,6 +176,7 @@
     <Compile Include="Assets\Scripts\Residential_Area_02\LeaderEventScript.cs" />
     <Compile Include="Assets\Scripts\Residential_Area_02\LeaderTargetScript.cs" />
     <Compile Include="Assets\Scripts\Residential_Area_02\TargetEvent.cs" />
+    <Compile Include="Assets\Scripts\RotationScript.cs" />
     <Compile Include="Assets\Scripts\Scrap\ScrapScript.cs" />
     <Compile Include="Assets\Scripts\Scrap\SpawnScrap.cs" />
     <Compile Include="Assets\Scripts\ToolTipScript.cs" />

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23331585170098616}
   - component: {fileID: 108208214150747510}
   - component: {fileID: 114646314238021532}
+  - component: {fileID: 114774754143901404}
   m_Layer: 10
   m_Name: ShotGun_Ammo
   m_TagString: Untagged
@@ -145,3 +146,15 @@ MonoBehaviour:
   ammoType: 2
   amount: 2
   destroyIn: 100
+--- !u!114 &114774754143901404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1602413169718630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf46677389dff0149b492483c00bb41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5

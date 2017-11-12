@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23474172370675422}
   - component: {fileID: 108067025334815592}
   - component: {fileID: 114033029549044312}
+  - component: {fileID: 114689037367485538}
   m_Layer: 10
   m_Name: MachineGun_Ammo
   m_TagString: Untagged
@@ -145,3 +146,15 @@ MonoBehaviour:
   ammoType: 1
   amount: 15
   destroyIn: 100
+--- !u!114 &114689037367485538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801401736131450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf46677389dff0149b492483c00bb41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5

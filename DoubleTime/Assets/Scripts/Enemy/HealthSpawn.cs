@@ -35,10 +35,8 @@ public class HealthSpawn : MonoBehaviour {
                     //Debug.Log("Health Pack Available");
 
                     managerScript.healthDrops[i].transform.position = spawnLocation;
-                    managerScript.healthDrops[i].transform.rotation = Quaternion.identity;
+                    managerScript.healthDrops[i].transform.rotation = Quaternion.Euler(0,0,30);
                     managerScript.healthDrops[i].SetActive(true);
-
-                    Debug.Log(managerScript.healthDrops[i].transform.position);
                     break;
                 }
 

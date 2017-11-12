@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23860121974403296}
   - component: {fileID: 108829600141492990}
   - component: {fileID: 114904290908715988}
+  - component: {fileID: 114188083580545160}
   m_Layer: 10
   m_Name: Gun_Ammo
   m_TagString: Untagged
@@ -131,6 +132,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114188083580545160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1956681426793928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf46677389dff0149b492483c00bb41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5
 --- !u!114 &114904290908715988
 MonoBehaviour:
   m_ObjectHideFlags: 1

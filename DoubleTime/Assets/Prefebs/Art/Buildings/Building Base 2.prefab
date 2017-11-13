@@ -25,8 +25,8 @@ GameObject:
   m_Name: Building 2 Details
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!1 &1252308438257716
 GameObject:
@@ -43,8 +43,8 @@ GameObject:
   m_Name: Building Base 2
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &4065167461973592
 Transform:
@@ -52,14 +52,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252308438257716}
-  m_LocalRotation: {x: 0.49999815, y: -0.50000185, z: -0.50000185, w: -0.49999815}
-  m_LocalPosition: {x: -11.668895, y: 0, z: -7.274}
-  m_LocalScale: {x: 0.08000007, y: 0.08000004, z: 0.08000004}
+  m_LocalRotation: {x: -0.0000016242263, y: -0.7071069, z: -0.70710677, w: 0.000001594424}
+  m_LocalPosition: {x: -34.67, y: 0, z: -50.810005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4544437319168862}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -270}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
 --- !u!4 &4544437319168862
 Transform:
   m_ObjectHideFlags: 1

@@ -15,10 +15,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 43
-    width: 1920
-    height: 997
+    width: 1536
+    height: 783
   m_ShowMode: 4
   m_Title: 
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_RootView: {fileID: 2}
   m_MinSize: {x: 950, y: 492}
@@ -26,6 +27,14 @@ MonoBehaviour:
   m_RootView: {fileID: 4}
   m_MinSize: {x: 950, y: 542}
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 950, y: 542}
+=======
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 950, y: 545}
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -35,17 +44,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  - {fileID: 4}
-  - {fileID: 5}
+  m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1920
     height: 997
@@ -62,6 +69,23 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    width: 234
+    height: 316
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+=======
+    width: 1536
+    height: 783
+  m_MinSize: {x: 950, y: 545}
+  m_MaxSize: {x: 10000, y: 10000}
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,14 +94,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 2}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 1409
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1920
     height: 30
@@ -92,6 +119,21 @@ MonoBehaviour:
   vertical: 1
   controlID: 706
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    width: 234
+    height: 947
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
+  vertical: 1
+  controlID: 706
+=======
+    width: 1536
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -100,17 +142,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 5}
   - {fileID: 6}
   - {fileID: 7}
-  - {fileID: 8}
-  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 30
     width: 1920
@@ -126,7 +168,119 @@ MonoBehaviour:
   m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    y: 0
+    width: 1920
+    height: 997
+  m_MinSize: {x: 950, y: 542}
+  m_MaxSize: {x: 10000, y: 10000}
+=======
+    y: 763
+    width: 1536
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
 --- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    y: 977
+=======
+    y: 0
+>>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    y: 0
+>>>>>>> parent of 236cc618... 1221
+    width: 1920
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  m_LastLoadedLayoutName: 2 by 3
+>>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+  m_LastLoadedLayoutName: 2 by 3
+=======
+    y: 30
+    width: 1536
+    height: 733
+  m_MinSize: {x: 538, y: 495}
+  m_MaxSize: {x: 18008, y: 14045}
+  vertical: 0
+  controlID: 13354
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    y: 0
+    width: 1205
+=======
+    y: 30
+    width: 1920
+>>>>>>> parent of 236cc618... 1221
+    height: 947
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 327
+=======
+    y: 0
+    width: 1014
+    height: 733
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+<<<<<<< HEAD
+  controlID: 236
+=======
+    y: 30
+    width: 1920
+    height: 947
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 327
+>>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+  controlID: 13294
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -140,80 +294,30 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 1205
+=======
     x: 0
 <<<<<<< HEAD
     y: 977
-=======
-    y: 0
->>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
     width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-<<<<<<< HEAD
 =======
-  m_LastLoadedLayoutName: 2 by 3
->>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 10}
-  - {fileID: 11}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-<<<<<<< HEAD
+>>>>>>> parent of 236cc618... 1221
     y: 0
-    width: 1205
-    height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
-  vertical: 1
-  controlID: 236
-=======
-    y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
-  vertical: 0
-  controlID: 327
->>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-<<<<<<< HEAD
-    x: 1205
-    y: 0
-    width: 204
-    height: 947
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 12}
+    width: 1014
+    height: 324
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 12}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
 --- !u!114 &8
 =======
     x: 0
@@ -255,6 +359,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 12}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+<<<<<<< HEAD
+    y: 0
+    width: 1409
+    height: 947
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 328
+=======
+    y: 324
+    width: 1014
+    height: 409
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -262,26 +403,45 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1409
     y: 0
 =======
     x: 0
     y: 316
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    x: 0
+    y: 316
+>>>>>>> parent of 236cc618... 1221
     width: 234
-    height: 947
+    height: 631
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &9
 =======
 --- !u!114 &10
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+=======
+    x: 1014
+    y: 0
+    width: 234
+    height: 733
+  m_MinSize: {x: 234, y: 495}
+  m_MaxSize: {x: 10004, y: 14045}
+  vertical: 1
+  controlID: 13355
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+--- !u!114 &10
+>>>>>>> parent of 236cc618... 1221
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -297,10 +457,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1643
     y: 0
+<<<<<<< HEAD
     width: 277
     height: 947
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_ActualView: {fileID: 13}
   m_Panes:
@@ -310,35 +472,20 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 14}
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1205
-    height: 486
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-<<<<<<< HEAD
-  m_ActualView: {fileID: 16}
 =======
-  m_ActualView: {fileID: 17}
->>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 14}
+=======
+    width: 234
+    height: 462
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &11
@@ -356,21 +503,34 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 486
-    width: 1205
-    height: 461
+<<<<<<< HEAD
+    y: 0
+    width: 1409
+    height: 726
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_ActualView: {fileID: 16}
+=======
+  m_ActualView: {fileID: 17}
+>>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+  m_ActualView: {fileID: 17}
+=======
+    y: 462
+    width: 234
+    height: 271
+  m_MinSize: {x: 234, y: 271}
+  m_MaxSize: {x: 10004, y: 10021}
+  m_ActualView: {fileID: 16}
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
-<<<<<<< HEAD
 --- !u!114 &12
-=======
---- !u!114 &13
->>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -378,6 +538,206 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+<<<<<<< HEAD
+    x: 0
+    y: 726
+    width: 1409
+    height: 221
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  m_Selected: 0
+=======
+    x: 1248
+    y: 0
+    width: 288
+    height: 733
+  m_MinSize: {x: 102, y: 124}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 17}
+  - {fileID: 18}
+  m_Selected: 1
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+  m_LastSelected: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &12
+=======
+--- !u!114 &13
+>>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+--- !u!114 &13
+>>>>>>> parent of 236cc618... 1221
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+<<<<<<< HEAD
+=======
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoRepaintOnSceneChange: 1
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_DepthBufferBits: 32
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 416
+    width: 1012
+    height: 388
+  m_MaximizeOnPlay: 1
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_TargetDisplay: 0
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoom: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 17
+      width: 1012
+      height: 371
+    m_Scale: {x: 0.34351853, y: 0.34351853}
+    m_Translation: {x: 506.00003, y: 185.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -1472.992
+      y: -540
+      width: 2945.984
+      height: 1080
+    m_MinimalGUI: 1
+  m_defaultScale: 0.34351853
+  m_TargetTexture: {fileID: 0}
+  m_CurrentColorSpace: 1
+  m_LastWindowPixelSize: {x: 1012, y: 388}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000100000100
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoRepaintOnSceneChange: 1
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_DepthBufferBits: 32
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 92
+    width: 1012
+    height: 303
+  m_SceneLighting: 1
+  lastFramingTime: 1321.327877305681
+  m_2DMode: 0
+  m_isRotationLocked: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 367.53958, y: 136.01645, z: 25.013}
+    speed: 2
+    m_Value: {x: 367.53958, y: 136.01645, z: 25.013}
+  m_RenderMode: 0
+  m_ValidateTrueMetals: 0
+  m_SceneViewState:
+    showFog: 1
+    showMaterialUpdate: 0
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+  grid:
+    xGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    yGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  m_Rotation:
+    m_Target: {x: -0.061645992, y: 0.06343313, z: -0.003925511, w: -0.99607915}
+    speed: 2
+    m_Value: {x: -0.06164599, y: 0.06343313, z: -0.003925511, w: -0.99607915}
+  m_Size:
+    m_Target: 738.78625
+    speed: 2
+    m_Value: 738.78625
+  m_Ortho:
+    m_Target: 0
+    speed: 2
+    m_Value: 0
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
   m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -393,14 +753,29 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1207
+=======
+    x: 1411
+>>>>>>> parent of 236cc618... 1221
     y: 92
-    width: 200
-    height: 926
+    width: 230
+    height: 295
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 186}
+    m_SelectedIDs: 7accffff
+    m_LastClickedID: -13190
+    m_ExpandedIDs: defbffff0000000062390000a03f0000
+=======
+    x: 1016
+    y: 92
+    width: 230
+    height: 441
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba370000
+    m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 62d8ffffdad9ffff54dbffff00000000
 =======
     x: 1411
@@ -413,6 +788,10 @@ MonoBehaviour:
     m_LastClickedID: -13190
     m_ExpandedIDs: defbffff0000000062390000a03f0000
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    m_ExpandedIDs: d634faffd834faff187afbff647afbffc28efbff7e0ffcffca0ffcffb625fcffc261fcffa6fbfcff5c0dfdff5e0dfdff5842fdff38befdff30e0fdffb238feff001dffff401dfffff2e8fffffee8ffff10e9ffff22e9ffff58e9ffff74e9ffff82e9ffff88e9ffff94eaffffd6eaffff24ebffff9af8ffff4cf9ffffaaf9ffff7afafffffcfaffff04fbffffe4fbfffff4ffffff00000000
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -431,15 +810,19 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
-  - Residential_Area_01
+  - Residential_Area_02
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &13
 =======
 --- !u!114 &14
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+--- !u!114 &14
+>>>>>>> parent of 236cc618... 1221
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -473,10 +856,17 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &14
 =======
 --- !u!114 &15
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+--- !u!114 &15
+=======
+--- !u!114 &16
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -498,7 +888,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1411
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 92
     width: 230
@@ -508,6 +900,17 @@ MonoBehaviour:
     width: 230
     height: 610
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    y: 408
+    width: 230
+    height: 610
+=======
+    x: 1016
+    y: 554
+    width: 230
+    height: 250
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -520,20 +923,29 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
   m_ViewMode: 1
 =======
     - Assets
   m_ViewMode: 0
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    - Assets
+=======
+    - Assets/Prefebs/PickUps/AmmoTypes
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+  m_ViewMode: 0
+>>>>>>> parent of 236cc618... 1221
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\SP\DGDD Yr3\GDDS3\Builds\Final-Year-Project\DoubleTime
+  m_LastProjectPath: C:\Users\Gregory\Desktop\Year 3\Studio (FYP)\GameBuild\Final-Year-Project\DoubleTime
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: ee360000
     m_LastClickedID: 14062
@@ -543,6 +955,16 @@ MonoBehaviour:
     m_LastClickedID: 11824
     m_ExpandedIDs: 00000000302e00005a2e0000d22e0000282f0000e82f00001e300000363000004e30000074300000d4300000dc3000000631000030310000383100006c31000008320000163200002832000086320000be320000d2320000d6320000de320000083300001a3400002234000040340000583400000435000094350000c8520000ca520000cc520000ce520000d0520000d2520000d452000000ca9a3bffffff7f
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    m_SelectedIDs: 302e0000
+    m_LastClickedID: 11824
+    m_ExpandedIDs: 00000000302e00005a2e0000d22e0000282f0000e82f00001e300000363000004e30000074300000d4300000dc3000000631000030310000383100006c31000008320000163200002832000086320000be320000d2320000d6320000de320000083300001a3400002234000040340000583400000435000094350000c8520000ca520000cc520000ce520000d0520000d2520000d452000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: b42d0000
+    m_LastClickedID: 11700
+    m_ExpandedIDs: 00000000ec250000182600009a260000fe2600001227000030270000d0270000222800003c2800006a280000d6280000e02800002c2900003c290000522900007e29000096290000322a0000582a0000ba2a0000022b0000062b0000102b00003e2b00009a2c0000c02c0000da2c0000a42d000016420000164d0000184d00001a4d00001c4d00001e4d0000204d0000
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -567,14 +989,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 168}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_ExpandedIDs: 000000000a32000034320000aa320000fe320000ac330000d0330000e833000000340000223400007034000078340000bc340000dc340000e234000014350000ac350000b6350000cc3500001c3600004e36000064360000683600007036000098360000a0370000a8370000c2370000da370000803800000c390000ba390000bc390000be390000c0390000c2390000c4390000c639000000ca9a3bffffff7f
 =======
     m_ExpandedIDs: 00000000302e00005a2e0000d22e0000282f0000e82f00001e300000363000004e30000074300000d4300000dc3000000631000030310000383100006c31000008320000163200002832000086320000be320000d2320000d6320000de320000083300001a3400002234000040340000583400000435000094350000c8520000ca520000cc520000ce520000d0520000d2520000d452000000ca9a3bffffff7f
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+    m_ExpandedIDs: 00000000302e00005a2e0000d22e0000282f0000e82f00001e300000363000004e30000074300000d4300000dc3000000631000030310000383100006c31000008320000163200002832000086320000be320000d2320000d6320000de320000083300001a3400002234000040340000583400000435000094350000c8520000ca520000cc520000ce520000d0520000d2520000d452000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 00000000ec250000182600009a260000fe2600001227000030270000d0270000222800003c2800006a280000d6280000e02800002c2900003c290000522900007e29000096290000322a0000582a0000ba2a0000022b0000062b0000102b00003e2b00009a2c0000c02c0000da2c0000a42d000016420000164d0000184d00001a4d00001c4d00001e4d0000204d0000
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -601,7 +1030,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -629,12 +1058,21 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 110
 --- !u!114 &15
 =======
   m_DirectoriesAreaWidth: 115
 --- !u!114 &16
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &16
+=======
+  m_DirectoriesAreaWidth: 96
+--- !u!114 &17
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -656,22 +1094,23 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
-    y: 578
-    width: 1203
-    height: 440
+    y: 818
+    width: 1407
+    height: 200
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -601.5
-    m_HBaseRangeMax: 601.5
-    m_VBaseRangeMin: -211.5
-    m_VBaseRangeMax: 211.5
+    m_HBaseRangeMin: -162.66667
+    m_HBaseRangeMax: 162.66667
+    m_VBaseRangeMin: -91.5
+    m_VBaseRangeMax: 91.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -688,33 +1127,51 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1203
-      height: 423
+      width: 1407
+      height: 183
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 601.5, y: 211.5}
+    m_Translation: {x: 703.5, y: 91.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -601.5
-      y: -211.5
-      width: 1203
-      height: 423
+      x: -703.5
+      y: -91.5
+      width: 1407
+      height: 183
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
-  m_LastWindowPixelSize: {x: 1203, y: 440}
+  m_LastWindowPixelSize: {x: 1407, y: 200}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &16
 =======
 --- !u!114 &17
 >>>>>>> parent of 89593f6b... Merge branch 'master' of https://github.com/RevoltFYP/Final-Year-Project
+=======
+--- !u!114 &17
+=======
+    x: 1250
+    y: 92
+    width: 286
+    height: 712
+  m_ScrollPosition: {x: 0, y: 0}
+  m_InspectorMode: 0
+  m_PreviewResizer:
+    m_CachedPref: 167
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &18
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca
+>>>>>>> parent of 236cc618... 1221
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -736,19 +1193,20 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 92
-    width: 1203
-    height: 465
+    width: 1407
+    height: 705
   m_SceneLighting: 1
-  lastFramingTime: 0
+  lastFramingTime: 71.80770627599472
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.8102665, y: 4.7368507, z: 10.579247}
+    m_Target: {x: -44.581367, y: -0.08026123, z: -39.68633}
     speed: 2
-    m_Value: {x: 12.8102665, y: 4.7368507, z: 10.579247}
+    m_Value: {x: -44.581367, y: -0.08026123, z: -39.68633}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -771,13 +1229,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.16447103, y: -0.2265243, z: 0.038840104, w: -0.95923275}
+    m_Target: {x: -0.61216295, y: 0.005216238, z: -0.004038431, w: -0.7907042}
     speed: 2
-    m_Value: {x: -0.16447103, y: -0.2265243, z: 0.038840104, w: -0.95923275}
+    m_Value: {x: -0.61216295, y: 0.005216238, z: -0.004038431, w: -0.7907042}
   m_Size:
-    m_Target: 10
+    m_Target: 16.750994
     speed: 2
-    m_Value: 10
+    m_Value: 16.750994
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -788,3 +1246,9 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+=======
+    x: 1250
+    y: 92
+    width: 286
+    height: 712
+>>>>>>> 60766bf8359acf06ea92f48a5b65b81b877516ca

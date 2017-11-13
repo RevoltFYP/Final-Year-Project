@@ -2294,7 +2294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 0
-  grenadePrefab: {fileID: 0}
+  grenadePrefab: {fileID: 1805691733487294, guid: 0f4b5c5e7a6a33840b3bcca646cbbcc8,
+    type: 2}
   projectile: {fileID: 1370475600220950, guid: 3b3428c6ba4914f419b11d62bbeb52e3, type: 2}
   firePoint: {fileID: 1837232056893390}
   enemyHealth: {fileID: 114732715074544516}

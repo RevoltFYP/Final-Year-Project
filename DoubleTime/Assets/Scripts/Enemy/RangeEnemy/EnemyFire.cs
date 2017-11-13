@@ -9,7 +9,7 @@ public class EnemyFire : MonoBehaviour {
         REGULAR,
         BURST,
         SPREAD,
-        REGULARWITHGRENADE
+        GRENADE
     }
 
     public Mode mode;
@@ -19,7 +19,9 @@ public class EnemyFire : MonoBehaviour {
     public GameObject firePoint;
     public EnemyHealth enemyHealth;
     public int damage = 5;
+
     private EnemyStates enemyStates;
+    private Mode prevMode;
 
     [Header("Projectile Stats")]
     public float timeBetweenBullets = 1.0f;
@@ -35,6 +37,7 @@ public class EnemyFire : MonoBehaviour {
     public float spread;
 
     [Header("Grenade Settings")]
+    public bool grenadeThrow;
     public float throwForce = 10f;
     public float timeBetweenGrenade = 5f;
     public float waitTime = 1f;
@@ -66,9 +69,25 @@ public class EnemyFire : MonoBehaviour {
                 case EnemyFire.Mode.SPREAD:
                     SpreadShot();
                     break;
-                case EnemyFire.Mode.REGULARWITHGRENADE:
+                case EnemyFire.Mode.GRENADE:
                     ThrowGrenade();
                     break;
+            }
+
+            if (grenadeThrow)
+            {
+                gTimer += Time.deltaTime;
+
+                if (gTimer >= timeBetweenGrenade)
+                {
+                    hasThrown = false;
+                    prevMode = mode;
+                    mode = EnemyFire.Mode.GRENADE;
+                }
+                else
+                {
+                    hasThrown = true;
+                }
             }
         }
     }
@@ -114,7 +133,6 @@ public class EnemyFire : MonoBehaviour {
 
                 yield return new WaitForSeconds(timeBetweenBullets);
             }
-
         }
     }
 
@@ -135,49 +153,38 @@ public class EnemyFire : MonoBehaviour {
 
     private void ThrowGrenade()
     {
-        timer += Time.deltaTime;
-        gTimer += Time.deltaTime;
-        //Debug.Log("Timer " + timer + " - timeBetweenGrenade" + timeBetweenGrenade);
-        if (gTimer >= timeBetweenGrenade)
-        {
-            throwing = true;
-            hasThrown = false;
-            StartCoroutine("Throw", waitTime);
-            //Debug.Log("GRENADE");
-        }
-        if (timer >= timeBetweenBullets && throwing == false)
-        {
-            GameObject projectileFired = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
-
-            projectileFired.GetComponent<ProjectileBase>().projectileDamage = damage;
-
-            timer = 0;
-        }
-        
+        enemyStates.StopAgent(true);
+        StartCoroutine("Throw", waitTime);
+        //Invoke("Throw", waitTime);
+        mode = prevMode;    
     }
 
     private void ThrowGrenadeCheck()
     {
-        if (hasThrown == false)
+        if (!hasThrown)
         {
+            hasThrown = true;
+            Debug.Log("Spawned");
             GameObject grenade = Instantiate(grenadePrefab, firePoint.transform.position, firePoint.transform.rotation);
             Rigidbody rb = grenade.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
-            hasThrown = true;
         }
-
     }
 
     IEnumerator Throw()
     {
-        //Stop firing 
-        //throwing = true;
-        yield return new WaitForSeconds(waitTime);
-
         ThrowGrenadeCheck();
         gTimer = 0;
+<<<<<<< HEAD
+        
 
         yield return new WaitForSeconds(waitTime);
         throwing = false;
+=======
+
+        yield return new WaitForSeconds(waitTime);
+
+>>>>>>> 617bdc588a81bacb4dff04bb9ed4a6622aa12a92
+        enemyStates.StopAgent(false);
     }
 }

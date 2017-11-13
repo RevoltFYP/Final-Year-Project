@@ -26,13 +26,13 @@ public class PlayerHealth : MonoBehaviour
     public KeyCode medKitKey;
     public int recoverAmount;
     public int maxMedKit;
-    public Image kitImage;
+    //public Image kitImage;
     public Sprite emptySprite;
     public Sprite filledSprite;
 
     public int currentMedKit { get; set; }
     private GameObject medKitGroup;
-    private List<Image> medKitImages = new List<Image>();
+    public List<Image> medKitImages = new List<Image>();
 
     private bool isDead;
     private bool isDamaged;
@@ -42,16 +42,17 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = startingHealth;
         originalColour = hpFill.color;
 
-        medKitGroup = GameObject.Find("MedKitImages");
+        /*medKitGroup = GameObject.Find("MedKitImages");
 
         for (int i = 0; i < maxMedKit; i++)
         {
             Image img = (Image)Instantiate(kitImage);
             img.transform.SetParent(medKitGroup.transform);
+
             medKitImages.Add(img);
 
             img.gameObject.SetActive(true);
-        }
+        }*/
     }
 
     void Update ()

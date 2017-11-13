@@ -129,6 +129,7 @@
     <Compile Include="Assets\Scripts\Camera\PanCameraScript.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerCull.cs" />
+    <Compile Include="Assets\Scripts\CursorManager.cs" />
     <Compile Include="Assets\Scripts\DestroyParticles.cs" />
     <Compile Include="Assets\Scripts\Enemy\AggroScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAnimControl.cs" />
@@ -150,7 +151,6 @@
     <Compile Include="Assets\Scripts\Enemy\SpawnZone.cs" />
     <Compile Include="Assets\Scripts\EscapePoint.cs" />
     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
-    <Compile Include="Assets\Scripts\LockDownScript.cs" />
     <Compile Include="Assets\Scripts\Manager\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SceneManagerScript.cs" />
@@ -170,6 +170,7 @@
     <Compile Include="Assets\Scripts\Player\ShootBoomarang.cs" />
     <Compile Include="Assets\Scripts\Player\SlowTimeScript.cs" />
     <Compile Include="Assets\Scripts\Player\UpgradeWeapon.cs" />
+    <Compile Include="Assets\Scripts\PlayerCanvas.cs" />
     <Compile Include="Assets\Scripts\Residential_Area_01\SlowTimeEvent.cs" />
     <Compile Include="Assets\Scripts\Residential_Area_01\TutorialEndingScript.cs" />
     <Compile Include="Assets\Scripts\Residential_Area_01\TutorialStartScript.cs" />

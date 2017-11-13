@@ -42,7 +42,6 @@ public class EnemyFire : MonoBehaviour {
     public float timeBetweenGrenade = 5f;
     public float waitTime = 1f;
 
-    private bool throwing = false;
     private bool hasThrown = false;
 
     private float gTimer;
@@ -174,17 +173,8 @@ public class EnemyFire : MonoBehaviour {
     IEnumerator Throw()
     {
         ThrowGrenadeCheck();
-        gTimer = 0;
-<<<<<<< HEAD
-        
-
+        gTimer = 0;        
         yield return new WaitForSeconds(waitTime);
-        throwing = false;
-=======
-
-        yield return new WaitForSeconds(waitTime);
-
->>>>>>> 617bdc588a81bacb4dff04bb9ed4a6622aa12a92
         enemyStates.StopAgent(false);
     }
 }

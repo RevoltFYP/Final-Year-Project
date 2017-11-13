@@ -212,7 +212,7 @@ public class EnemyStates : MonoBehaviour {
         // Increases speed to aggro speed
         nav.speed = aggroSpeed;
 
-        if(targetDir.sqrMagnitude > 3 * 3)
+        if(targetDir.sqrMagnitude > 2 * 2)
         {
             nav.SetDestination(player.position);
         }

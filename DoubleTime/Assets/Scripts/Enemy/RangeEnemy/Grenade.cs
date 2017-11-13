@@ -17,7 +17,7 @@ public class Grenade : MonoBehaviour {
         StartCoroutine("Blast",waitTime);
 	}
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radius);
@@ -36,8 +36,7 @@ public class Grenade : MonoBehaviour {
         {
             //Check if the gameobject have rigidbody
             if(gameobj.gameObject.GetComponent<Rigidbody>() != null)
-            {
-                
+            {                
                 gameobj.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, this.transform.position, radius, explosionUpwardsForce);
                 if(gameobj.gameObject.tag == "Player")
                 {

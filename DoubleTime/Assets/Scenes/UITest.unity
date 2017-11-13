@@ -14331,6 +14331,7 @@ GameObject:
   - component: {fileID: 704039808}
   - component: {fileID: 704039807}
   - component: {fileID: 704039806}
+  - component: {fileID: 704039809}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -14415,6 +14416,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &704039809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 704039804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9cebb360b8b1e4f98de59e698f2b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &704062908
 Prefab:
   m_ObjectHideFlags: 0
@@ -18218,6 +18230,46 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 46.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 168.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42f50ca2e6f899843bb54d4df19c5722, type: 2}

@@ -170,31 +170,34 @@ public class WeaponBase : MonoBehaviour {
 
     public IEnumerator Reload()
     {
-        isReloading = true;
-        //Debug.Log("Reloading");
-
-        // Find missing amount of ammo
-        int missingAmmo = magazineSize - currentAmmo;
-
-        yield return new WaitForSeconds(reloadTime);
-
-        if (!infiniteAmmo)
+        if(currentAmmo < magazineSize)
         {
-            if(totalAmmo >= missingAmmo)
-            {
-                // Subtract missing ammo from total ammo;
-                totalAmmo -= missingAmmo;
+            isReloading = true;
+            //Debug.Log("Reloading");
 
-                // Add missing ammo to current ammo
+            // Find missing amount of ammo
+            int missingAmmo = magazineSize - currentAmmo;
+
+            yield return new WaitForSeconds(reloadTime);
+
+            if (!infiniteAmmo)
+            {
+                if (totalAmmo >= missingAmmo)
+                {
+                    // Subtract missing ammo from total ammo;
+                    totalAmmo -= missingAmmo;
+
+                    // Add missing ammo to current ammo
+                    currentAmmo += missingAmmo;
+                }
+            }
+            else
+            {
                 currentAmmo += missingAmmo;
             }
-        }
-        else
-        {
-            currentAmmo += missingAmmo;
-        }
 
-        isReloading = false;
+            isReloading = false;
+        }
     }
 
     private IEnumerator ReloadSlider(float seconds)

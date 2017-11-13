@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Enemy\SpawnZone.cs" />
     <Compile Include="Assets\Scripts\EscapePoint.cs" />
     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
+    <Compile Include="Assets\Scripts\LockDownScript.cs" />
     <Compile Include="Assets\Scripts\Manager\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SceneManagerScript.cs" />

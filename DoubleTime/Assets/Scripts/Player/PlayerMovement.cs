@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 movement = new Vector3 (horizontal, 0f, vertical);
 
         // Normalized move to prevent faster diagonal movement
-		transform.position += movement.normalized * Time.deltaTime * playerSpeed * 1 / Time.timeScale;
+		transform.position += movement * Time.deltaTime * playerSpeed * 1 / Time.timeScale;
 
         // Turn the player ro face the mouse cursor
         Turning();

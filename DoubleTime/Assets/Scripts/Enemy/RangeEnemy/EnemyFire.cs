@@ -195,9 +195,10 @@ public class EnemyFire : MonoBehaviour {
 
         ThrowGrenadeCheck();
         gTimer = 0;
-        enemyStates.StopAgent(false);
+        
 
         yield return new WaitForSeconds(waitTime);
         throwing = false;
+        enemyStates.StopAgent(false);
     }
 }

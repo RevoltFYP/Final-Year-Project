@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Light))]
-
 // Ensure that the object's parent is Player //
 public class WeaponBase : MonoBehaviour {
 
@@ -21,6 +21,7 @@ public class WeaponBase : MonoBehaviour {
 
     [Header("Ammo Stats")]
     public bool infiniteAmmo;
+    public Slider reloadSlider;
     public int magazineSize;
     public int maxAmmo = 10;
     public int ammoPerShot = 1;
@@ -62,10 +63,15 @@ public class WeaponBase : MonoBehaviour {
 
         totalAmmo = maxAmmo;
         currentAmmo = magazineSize;
+
+        reloadSlider.gameObject.SetActive(false);
     }
 
     private void OnEnable()
     {
+        reloadSlider.maxValue = reloadTime;
+        reloadSlider.value = reloadTime;
+
         isReloading = false;
     }
 
@@ -75,6 +81,7 @@ public class WeaponBase : MonoBehaviour {
 
         if (isReloading)
         {
+            StartCoroutine(ReloadSlider(reloadTime));
             return;
         }
 
@@ -189,4 +196,31 @@ public class WeaponBase : MonoBehaviour {
 
         isReloading = false;
     }
+
+    private IEnumerator ReloadSlider(float seconds)
+    {
+        if(reloadSlider != null)
+        {
+            reloadSlider.gameObject.SetActive(true);
+
+            float reloadTimer = 0f;
+
+            while (reloadTimer < seconds)
+            {
+                reloadTimer += Time.deltaTime;
+                float lerpValue = reloadTimer / seconds;
+                reloadSlider.value = Mathf.Lerp(reloadSlider.maxValue, 0, lerpValue);
+
+                if(reloadTimer >= seconds)
+                {
+                    reloadSlider.value = reloadTime;
+                    reloadSlider.gameObject.SetActive(false);
+                }
+
+                yield return null;
+            }
+
+        }
+    }
+
 }

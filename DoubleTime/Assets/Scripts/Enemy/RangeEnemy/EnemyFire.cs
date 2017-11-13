@@ -175,9 +175,16 @@ public class EnemyFire : MonoBehaviour {
     {
         ThrowGrenadeCheck();
         gTimer = 0;
+<<<<<<< HEAD
+        
+
+        yield return new WaitForSeconds(waitTime);
+        throwing = false;
+=======
 
         yield return new WaitForSeconds(waitTime);
 
+>>>>>>> 617bdc588a81bacb4dff04bb9ed4a6622aa12a92
         enemyStates.StopAgent(false);
     }
 }

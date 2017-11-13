@@ -80,8 +80,13 @@ public class EnemyFire : MonoBehaviour {
 
                 if (gTimer >= timeBetweenGrenade)
                 {
+                    hasThrown = false;
                     prevMode = mode;
                     mode = EnemyFire.Mode.GRENADE;
+                }
+                else
+                {
+                    hasThrown = true;
                 }
             }
         }
@@ -148,56 +153,31 @@ public class EnemyFire : MonoBehaviour {
 
     private void ThrowGrenade()
     {
-        timer += Time.deltaTime;
-        //gTimer += Time.deltaTime;
-        //Debug.Log("Timer " + timer + " - timeBetweenGrenade" + timeBetweenGrenade);
-        //if (gTimer >= timeBetweenGrenade)
-        //{
-        throwing = true;
-        hasThrown = false;
         enemyStates.StopAgent(true);
         StartCoroutine("Throw", waitTime);
-
-        mode = prevMode;
-        Debug.Log(mode);
-        timer = 0;
-
-        //Debug.Log("GRENADE");
-        //}
-        /*if (timer >= timeBetweenBullets && throwing == false)
-        {
-            GameObject projectileFired = Instantiate(projectile, firePoint.transform.position, firePoint.transform.rotation);
-
-            projectileFired.GetComponent<ProjectileBase>().projectileDamage = damage;
-
-            mode = prevMode;
-
-            timer = 0;
-        }*/        
+        //Invoke("Throw", waitTime);
+        mode = prevMode;    
     }
 
     private void ThrowGrenadeCheck()
     {
-        if (hasThrown == false)
+        if (!hasThrown)
         {
+            hasThrown = true;
+            Debug.Log("Spawned");
             GameObject grenade = Instantiate(grenadePrefab, firePoint.transform.position, firePoint.transform.rotation);
             Rigidbody rb = grenade.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
-            hasThrown = true;
         }
     }
 
     IEnumerator Throw()
     {
-        //Stop firing 
-        //throwing = true;
-        yield return new WaitForSeconds(waitTime);
-
         ThrowGrenadeCheck();
         gTimer = 0;
-        enemyStates.StopAgent(false);
 
         yield return new WaitForSeconds(waitTime);
-        throwing = false;
+
+        enemyStates.StopAgent(false);
     }
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 5.6.2f1:3.1.0.0
 StandaloneWindows
 D:/Unity/Editor/Data/Managed/UnityEngine.dll
@@ -24,54 +22,3 @@ D:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll
 D:/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 D:/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
-=======
-5.6.2f1:2.2.0.0
-StandaloneWindows
-E:/Programes/Unity 5.6.2/Editor/Data/Managed/UnityEngine.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
-E:/Programes/Unity 5.6.2/Editor/Data/Managed/UnityEditor.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll
-E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
-E:/Programes/Unity 5.6.2/Editor/Data/Managed/UnityEditor.Graphs.dll
-E:/Programes/Unity 5.6.2/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
-C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
->>>>>>> 8a8fd6dfc2d7e2b261f3dc0609890730b33c7a54
-=======
-5.6.2f1:3.1.0.0
-StandaloneWindows
-C:/Users/Gregory/Unity/Editor/Data/Managed/UnityEngine.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
-C:/Users/Gregory/Unity/Editor/Data/Managed/UnityEditor.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll
-C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
-C:/Users/Gregory/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll
-C:/Users/Gregory/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-C:/Users/Gregory/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
-C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
->>>>>>> 0d81ade312f3c29be032abdce79b9737edb70f14

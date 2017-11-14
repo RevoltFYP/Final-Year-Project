@@ -5976,8 +5976,6 @@ MonoBehaviour:
   bulletSpread: 10
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 1
-  reloadSlider: {fileID: 114030126283776338, guid: fb3ae86f1cf6c5a4aaf92286c6afd758,
-    type: 2}
   magazineSize: 10
   maxAmmo: 999
   ammoPerShot: 1
@@ -6019,9 +6017,9 @@ MonoBehaviour:
   medKitKey: 113
   recoverAmount: 15
   maxMedKit: 3
+  kitImage: {fileID: 114019563014029864, guid: 64c025c994657a74889096c8fa2ebde9, type: 2}
   emptySprite: {fileID: 21300000, guid: a73cb52ce8409dd43ac7decc697b127f, type: 3}
   filledSprite: {fileID: 21300000, guid: 8be3cdcea1448e241940e943cee6b62a, type: 3}
-  medKitImages: []
 --- !u!114 &114373551975183758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6072,8 +6070,6 @@ MonoBehaviour:
   bulletSpread: 0
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 0
-  reloadSlider: {fileID: 114030126283776338, guid: fb3ae86f1cf6c5a4aaf92286c6afd758,
-    type: 2}
   magazineSize: 30
   maxAmmo: 90
   ammoPerShot: 1
@@ -6202,8 +6198,6 @@ MonoBehaviour:
   bulletSpread: 20
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 0
-  reloadSlider: {fileID: 114030126283776338, guid: fb3ae86f1cf6c5a4aaf92286c6afd758,
-    type: 2}
   magazineSize: 6
   maxAmmo: 24
   ammoPerShot: 1

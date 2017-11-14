@@ -10561,7 +10561,9 @@ Transform:
   - {fileID: 401092548}
   - {fileID: 1976499831}
   - {fileID: 517845677}
+<<<<<<< HEAD
   - {fileID: 714178950}
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {fileID: 1773070264}
   - {fileID: 949013111}
@@ -10580,11 +10582,32 @@ Transform:
   - {fileID: 1399589571}
   - {fileID: 695078358}
 >>>>>>> 15b44d2aa76061404693080eda8517993e1b4142
+=======
+=======
+  - {fileID: 1773070264}
+  - {fileID: 949013111}
+  - {fileID: 1275952563}
+  - {fileID: 714178950}
+  - {fileID: 1009807429}
+  - {fileID: 1176191310}
+>>>>>>> 480875ea047a163b5036043d69c8092dac0d52b0
+  - {fileID: 1708239522}
+  - {fileID: 1399589571}
+  - {fileID: 695078358}
+  - {fileID: 1091569420}
+>>>>>>> parent of 15b44d2a... update
   - {fileID: 215333581}
+  - {fileID: 1855285666}
   - {fileID: 318282807}
   - {fileID: 2020377167}
   - {fileID: 1584156483}
+  - {fileID: 1221048719}
+  - {fileID: 2007471273}
   - {fileID: 1820469926}
+<<<<<<< HEAD
+=======
+  - {fileID: 356798950}
+>>>>>>> 480875ea047a163b5036043d69c8092dac0d52b0
   - {fileID: 873367502}
   - {fileID: 1333477674}
   - {fileID: 1364489902}
@@ -13528,7 +13551,11 @@ Transform:
   - {fileID: 103972375}
   - {fileID: 1501298462}
   m_Father: {fileID: 517967026}
+<<<<<<< HEAD
   m_RootOrder: 9
+=======
+  m_RootOrder: 12
+>>>>>>> 480875ea047a163b5036043d69c8092dac0d52b0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &714977936
 Prefab:
@@ -17046,7 +17073,7 @@ Prefab:
     - target: {fileID: 224034687130431460, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -17066,7 +17093,7 @@ Prefab:
     - target: {fileID: 224109148978370620, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224286830997425924, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -17211,7 +17238,7 @@ Prefab:
     - target: {fileID: 224162374978820418, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 224037685210752504, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -17231,7 +17258,7 @@ Prefab:
     - target: {fileID: 224037685210752504, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 224777922824566276, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
@@ -17251,7 +17278,7 @@ Prefab:
     - target: {fileID: 224777922824566276, guid: 42f50ca2e6f899843bb54d4df19c5722,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -97
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42f50ca2e6f899843bb54d4df19c5722, type: 2}
@@ -20752,8 +20779,13 @@ Transform:
 <<<<<<< HEAD
   m_RootOrder: 13
 =======
+<<<<<<< HEAD
   m_RootOrder: 10
 >>>>>>> 15b44d2aa76061404693080eda8517993e1b4142
+=======
+  m_RootOrder: 18
+>>>>>>> 480875ea047a163b5036043d69c8092dac0d52b0
+>>>>>>> parent of 15b44d2a... update
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102045874
 GameObject:
@@ -35471,10 +35503,17 @@ Transform:
   - {fileID: 1818360085}
   m_Father: {fileID: 517967026}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 19
 =======
   m_RootOrder: 11
 >>>>>>> 15b44d2aa76061404693080eda8517993e1b4142
+=======
+  m_RootOrder: 15
+=======
+  m_RootOrder: 20
+>>>>>>> 480875ea047a163b5036043d69c8092dac0d52b0
+>>>>>>> parent of 15b44d2a... update
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1857134402
 Prefab:
@@ -39592,6 +39631,20 @@ Transform:
   - {fileID: 1539470916}
   - {fileID: 395603026}
   - {fileID: 1471714180}
+<<<<<<< HEAD
+=======
+  - {fileID: 926194516}
+  - {fileID: 1149659740}
+  - {fileID: 1330033670}
+  - {fileID: 199512970}
+  - {fileID: 1912612913}
+  - {fileID: 2100223163}
+  - {fileID: 1818558577}
+  - {fileID: 848916610}
+  - {fileID: 405992054}
+  - {fileID: 373355358}
+  - {fileID: 1896211703}
+>>>>>>> 480875ea047a163b5036043d69c8092dac0d52b0
   - {fileID: 1950001136}
   - {fileID: 503746803}
   - {fileID: 709138192}

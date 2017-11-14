@@ -1,5 +1,6 @@
-5.6.2f1:2.2.0.0
+5.6.2f1:3.1.0.0
 StandaloneWindows
+<<<<<<< HEAD
 <<<<<<< HEAD
 C:/Users/Gregory/Unity/Editor/Data/Managed/UnityEngine.dll
 C:/Users/Gregory/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
@@ -46,3 +47,27 @@ E:/Programes/Unity 5.6.2/Editor/Data/Managed/UnityEditor.Graphs.dll
 E:/Programes/Unity 5.6.2/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
 >>>>>>> 15b44d2aa76061404693080eda8517993e1b4142
+=======
+D:/Unity/Editor/Data/Managed/UnityEngine.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
+D:/Unity/Editor/Data/Managed/UnityEditor.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll
+D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
+D:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll
+D:/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+D:/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
+C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+>>>>>>> parent of 15b44d2a... update

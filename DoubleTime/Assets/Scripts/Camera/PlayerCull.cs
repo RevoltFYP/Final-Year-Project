@@ -17,6 +17,9 @@ public class PlayerCull : MonoBehaviour {
     private List<Color> mainChildrenColor = new List<Color>();
     private List<Shader> mainChildrenShader = new List<Shader>();
 
+    private List<Color> mainObjectColor = new List<Color>();
+    private List<Shader> mainObjectShader = new List<Shader>();
+
     private Color rightOldColor;
     private Shader rightOldShader;
     private List<Color> rightChildrenColor = new List<Color>();
@@ -72,7 +75,7 @@ public class PlayerCull : MonoBehaviour {
                     mainRend.material.color = mainOldColor;
 
                     // Reset material for children
-                    ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
+                    //ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
                 }
 
                 // Store reference of target
@@ -80,19 +83,32 @@ public class PlayerCull : MonoBehaviour {
 
                 // Store reference of target Renderer and Color
                 mainRend = mainObj.GetComponent<Renderer>();
-                mainOldShader = mainRend.material.shader;
-                mainOldColor = mainRend.material.color;
+
+                // Store old mat
+                foreach(Material mat in mainRend.materials)
+                {
+                    mainObjectShader.Add(mat.shader);
+                    mainObjectColor.Add(mat.color);
+
+                    Color newColor = mat.color;
+                    newColor.a = chosenAlpha;
+
+                    //mat.material
+                }
+
+                //mainOldShader = mainRend.material.shader;
+                //mainOldColor = mainRend.material.color;
 
                 // Set new Alpha
-                Color newColor = mainOldColor;
-                newColor.a = chosenAlpha;
+                // newColor = mainOldColor;
+                //newColor.a = chosenAlpha;
 
                 // Set target to new Material
                 mainRend.material.shader = transparentShader;
-                mainRend.material.color = newColor;
+                //mainRend.material.color = newColor;
 
                 // Set child objects of targetted object as well
-                SetChildrenTransparent(mainHit, mainChildren, mainChildrenColor, mainChildrenShader);
+                //SetChildrenTransparent(mainHit, mainChildren, mainChildrenColor, mainChildrenShader);
 
                 // Side rays if main ray hits
                 RightRay(mainHit.collider.gameObject);

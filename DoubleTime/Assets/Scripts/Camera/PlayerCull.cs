@@ -12,20 +12,32 @@ public class PlayerCull : MonoBehaviour {
 
     // Materials
     //private Material mainOldMat;
-    private Color mainOldColor;
-    private Shader mainOldShader;
+    //private Color mainOldColor;
+    //private Shader mainOldShader;
     private List<Color> mainChildrenColor = new List<Color>();
     private List<Shader> mainChildrenShader = new List<Shader>();
 
-    private Color rightOldColor;
-    private Shader rightOldShader;
+    private List<Color> mainObjectColor = new List<Color>();
+    private List<Shader> mainObjectShader = new List<Shader>();
+    private bool mainMatStored;
+
+    //private Color rightOldColor;
+    //private Shader rightOldShader;
     private List<Color> rightChildrenColor = new List<Color>();
     private List<Shader> rightChildrenShader = new List<Shader>();
 
-    private Color leftOldColor;
-    private Shader leftOldShader;
+    private List<Color> rightObjectColor = new List<Color>();
+    private List<Shader> rightObjectShader = new List<Shader>();
+    private bool rightMatStored;
+
+    //private Color leftOldColor;
+    //private Shader leftOldShader;
     private List<Color> leftChildrenColor = new List<Color>();
     private List<Shader> leftChildrenShader = new List<Shader>();
+
+    private List<Color> leftObjectColor = new List<Color>();
+    private List<Shader> leftObjectShader = new List<Shader>();
+    private bool leftMatStored;
 
     // Game Objects
     private GameObject mainObj;
@@ -68,11 +80,17 @@ public class PlayerCull : MonoBehaviour {
                 if (mainObj != null)
                 {
                     //Debug.Log("Main " + mainObj.name + " is not null");
-                    mainRend.material.shader = mainOldShader;
-                    mainRend.material.color = mainOldColor;
+
+                    for (int i = 0; i < mainObj.GetComponent<Renderer>().materials.Length; i ++)
+                    {
+                        //Debug.Log(mainObjectShader.Count);
+                        //Debug.Log(mainObjectColor.Count);
+                        mainObj.GetComponent<Renderer>().materials[i].color = mainObjectColor[i];
+                        mainObj.GetComponent<Renderer>().materials[i].shader = mainObjectShader[i];
+                    }
 
                     // Reset material for children
-                    ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
+                    //ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
                 }
 
                 // Store reference of target
@@ -80,19 +98,30 @@ public class PlayerCull : MonoBehaviour {
 
                 // Store reference of target Renderer and Color
                 mainRend = mainObj.GetComponent<Renderer>();
-                mainOldShader = mainRend.material.shader;
-                mainOldColor = mainRend.material.color;
 
-                // Set new Alpha
-                Color newColor = mainOldColor;
-                newColor.a = chosenAlpha;
+                // Store old mat
+                for (int i = 0; i < mainRend.materials.Length; i++)
+                {
+                    if (!mainMatStored)
+                    {
+                        mainObjectShader.Add(mainRend.materials[i].shader);
+                        mainObjectColor.Add(mainRend.materials[i].color);
 
-                // Set target to new Material
-                mainRend.material.shader = transparentShader;
-                mainRend.material.color = newColor;
+                        if(i == mainRend.materials.Length - 1)
+                        {
+                            mainMatStored = true;
+                        }
+                    }
+
+                    Color newColor = mainRend.materials[i].color;
+                    newColor.a = chosenAlpha;
+
+                    mainRend.materials[i].shader = transparentShader;
+                    mainRend.materials[i].color = newColor;
+                }
 
                 // Set child objects of targetted object as well
-                SetChildrenTransparent(mainHit, mainChildren, mainChildrenColor, mainChildrenShader);
+                //SetChildrenTransparent(mainHit, mainChildren, mainChildrenColor, mainChildrenShader);
 
                 // Side rays if main ray hits
                 RightRay(mainHit.collider.gameObject);
@@ -131,12 +160,17 @@ public class PlayerCull : MonoBehaviour {
                 // Reset previous target material 
                 if (rightObj != null)
                 {
-                    //Debug.Log("Right " + rightObj.name + " is not null");
-                    rightRend.material.shader = rightOldShader;
-                    rightRend.material.color = rightOldColor;
+
+                    for (int i = 0; i < rightObj.GetComponent<Renderer>().materials.Length; i++)
+                    {
+                        //Debug.Log(rightObjectColor.Count);
+                        //Debug.Log(rightObjectShader.Count);
+                        rightObj.GetComponent<Renderer>().materials[i].color = rightObjectColor[i];
+                        rightObj.GetComponent<Renderer>().materials[i].shader = rightObjectShader[i];
+                    }
 
                     // Reset material for children
-                    ClearMaterial(rightChildren, rightChildrenColor, rightChildrenShader);
+                    //ClearMaterial(rightChildren, rightChildrenColor, rightChildrenShader);
                 }
 
                 // Store reference of target
@@ -144,19 +178,30 @@ public class PlayerCull : MonoBehaviour {
 
                 // Store reference of target Renderer 
                 rightRend = rightObj.GetComponent<Renderer>();
-                rightOldShader = rightRend.material.shader;
-                rightOldColor = rightRend.material.color;
 
-                // Set new Alpha
-                Color newColor = rightOldColor;
-                newColor.a = chosenAlpha;
+                // Store old mat
+                for (int i = 0; i < rightRend.materials.Length; i++)
+                {
+                    if (!rightMatStored)
+                    {
+                        rightObjectShader.Add(rightRend.materials[i].shader);
+                        rightObjectColor.Add(rightRend.materials[i].color);
 
-                // Set target to new Material
-                rightRend.material.shader = transparentShader;
-                rightRend.material.color = newColor;
+                        if (i == rightRend.materials.Length - 1)
+                        {
+                            rightMatStored = true;
+                        }
+                    }
+
+                    Color newColor = rightRend.materials[i].color;
+                    newColor.a = chosenAlpha;
+
+                    rightRend.materials[i].shader = transparentShader;
+                    rightRend.materials[i].color = newColor;
+                }
 
                 // Set child objects of targetted object as well
-                SetChildrenTransparent(hit, rightChildren, rightChildrenColor, rightChildrenShader);
+                //SetChildrenTransparent(hit, rightChildren, rightChildrenColor, rightChildrenShader);
             }
             else
             {
@@ -185,11 +230,15 @@ public class PlayerCull : MonoBehaviour {
                 // Reset previous target material 
                 if (leftObj != null)
                 {
-                    //Debug.Log("Right " + rightObj.name + " is not null");
-                    leftRend.material.shader = leftOldShader;
-                    leftRend.material.color = leftOldColor;
+                    for (int i = 0; i < leftObj.GetComponent<Renderer>().materials.Length; i++)
+                    {
+                        //Debug.Log(rightObjectColor.Count);
+                        //Debug.Log(rightObjectShader.Count);
+                        leftObj.GetComponent<Renderer>().materials[i].color = leftObjectColor[i];
+                        leftObj.GetComponent<Renderer>().materials[i].shader = leftObjectShader[i];
+                    }
 
-                    ClearMaterial(leftChildren, leftChildrenColor, leftChildrenShader);
+                    //ClearMaterial(leftChildren, leftChildrenColor, leftChildrenShader);
                 }
 
                 // Store reference of target
@@ -197,19 +246,30 @@ public class PlayerCull : MonoBehaviour {
 
                 // Store reference of target Renderer 
                 leftRend = leftObj.GetComponent<Renderer>();
-                leftOldShader = leftRend.material.shader;
-                leftOldColor = leftRend.material.color;
 
-                // Set new Alpha
-                Color newColor = leftOldColor;
-                newColor.a = chosenAlpha;
+                // Store old mat
+                for (int i = 0; i < leftRend.materials.Length; i++)
+                {
+                    if (!leftMatStored)
+                    {
+                        leftObjectShader.Add(leftRend.materials[i].shader);
+                        leftObjectColor.Add(leftRend.materials[i].color);
 
-                // Set target to new Material
-                leftRend.material.shader = transparentShader;
-                leftRend.material.color = newColor;
+                        if (i == leftRend.materials.Length - 1)
+                        {
+                            leftMatStored = true;
+                        }
+                    }
+
+                    Color newColor = leftRend.materials[i].color;
+                    newColor.a = chosenAlpha;
+
+                    leftRend.materials[i].shader = transparentShader;
+                    leftRend.materials[i].color = newColor;
+                }
 
                 // Set child objects of targetted object as well
-                SetChildrenTransparent(hit, leftChildren, leftChildrenColor, leftChildrenShader);
+                //SetChildrenTransparent(hit, leftChildren, leftChildrenColor, leftChildrenShader);
             }
             else
             {
@@ -229,12 +289,16 @@ public class PlayerCull : MonoBehaviour {
         {
             //Debug.Log("Main: " + mainObj.name);
             //Debug.Log("Main Material: " + mainOldMat.name);
-
-            mainRend.material.shader = mainOldShader;
-            mainRend.material.color = mainOldColor;
+            
+            for(int i = 0; i < mainRend.materials.Length; i++)
+            {
+                mainRend.materials[i].shader = mainObjectShader[i];
+                mainRend.materials[i].color = mainObjectColor[i];
+            }
 
             //mainRend.material = mainOldMat; // reset target material
             mainObj = null; // clear reference
+            mainMatStored = false;
 
             ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
         }
@@ -245,20 +309,28 @@ public class PlayerCull : MonoBehaviour {
     {
         if(rightObj != null)
         {
-            rightRend.material.shader = rightOldShader;
-            rightRend.material.color = rightOldColor;
+            for (int i = 0; i < rightRend.materials.Length; i++)
+            {
+                rightRend.materials[i].shader = rightObjectShader[i];
+                rightRend.materials[i].color = rightObjectColor[i];
+            }
 
             rightObj = null;
+            rightMatStored = false;
 
             ClearMaterial(rightChildren, rightChildrenColor, rightChildrenShader);
         }
 
         if (leftObj != null)
         {
-            leftRend.material.shader = leftOldShader;
-            leftRend.material.color = rightOldColor;
+            for (int i = 0; i < leftRend.materials.Length; i++)
+            {
+                leftRend.materials[i].shader = leftObjectShader[i];
+                leftRend.materials[i].color = leftObjectColor[i];
+            }
 
             leftObj = null;
+            leftMatStored = false;
 
             ClearMaterial(leftChildren, leftChildrenColor, leftChildrenShader);
         }
@@ -267,22 +339,25 @@ public class PlayerCull : MonoBehaviour {
     // Sets Children of hit object to transparent shader and store data on previous material
     private void SetChildrenTransparent(RaycastHit hit, List<GameObject> childList, List<Color> childrenOldColor, List<Shader> childrenMaterial)
     {
-        foreach (Transform child in hit.transform)
+        if(hit.transform.childCount > 0)
         {
-            childList.Add(child.gameObject);
+            foreach (Transform child in hit.transform)
+            {
+                childList.Add(child.gameObject);
 
-            Renderer childRend = child.GetComponent<Renderer>();
+                Renderer childRend = child.GetComponent<Renderer>();
 
-            // Store old material
-            childrenMaterial.Add(childRend.material.shader);
-            childrenOldColor.Add(childRend.material.color);
+                // Store old material
+                childrenMaterial.Add(childRend.material.shader);
+                childrenOldColor.Add(childRend.material.color);
 
-            Color newColor = childRend.material.color;
-            newColor.a = chosenAlpha;
+                Color newColor = childRend.material.color;
+                newColor.a = chosenAlpha;
 
-            // set current material to transparent material
-            childRend.material.shader = transparentShader;
-            childRend.material.color = newColor;
+                // set current material to transparent material
+                childRend.material.shader = transparentShader;
+                childRend.material.color = newColor;
+            }
         }
     }
 

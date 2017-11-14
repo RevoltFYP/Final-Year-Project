@@ -11,9 +11,6 @@ public class PlayerCull : MonoBehaviour {
     [Range(0, 1)] public float chosenAlpha = 0.2f;
 
     // Materials
-    //private Material mainOldMat;
-    //private Color mainOldColor;
-    //private Shader mainOldShader;
     private List<Color> mainChildrenColor = new List<Color>();
     private List<Shader> mainChildrenShader = new List<Shader>();
 
@@ -21,8 +18,6 @@ public class PlayerCull : MonoBehaviour {
     private List<Shader> mainObjectShader = new List<Shader>();
     private bool mainMatStored;
 
-    //private Color rightOldColor;
-    //private Shader rightOldShader;
     private List<Color> rightChildrenColor = new List<Color>();
     private List<Shader> rightChildrenShader = new List<Shader>();
 
@@ -30,8 +25,6 @@ public class PlayerCull : MonoBehaviour {
     private List<Shader> rightObjectShader = new List<Shader>();
     private bool rightMatStored;
 
-    //private Color leftOldColor;
-    //private Shader leftOldShader;
     private List<Color> leftChildrenColor = new List<Color>();
     private List<Shader> leftChildrenShader = new List<Shader>();
 
@@ -90,7 +83,7 @@ public class PlayerCull : MonoBehaviour {
                     }
 
                     // Reset material for children
-                    //ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
+                    ClearMaterial(mainChildren, mainChildrenColor, mainChildrenShader);
                 }
 
                 // Store reference of target
@@ -121,7 +114,7 @@ public class PlayerCull : MonoBehaviour {
                 }
 
                 // Set child objects of targetted object as well
-                //SetChildrenTransparent(mainHit, mainChildren, mainChildrenColor, mainChildrenShader);
+                SetChildrenTransparent(mainHit, mainChildren, mainChildrenColor, mainChildrenShader);
 
                 // Side rays if main ray hits
                 RightRay(mainHit.collider.gameObject);
@@ -170,7 +163,7 @@ public class PlayerCull : MonoBehaviour {
                     }
 
                     // Reset material for children
-                    //ClearMaterial(rightChildren, rightChildrenColor, rightChildrenShader);
+                    ClearMaterial(rightChildren, rightChildrenColor, rightChildrenShader);
                 }
 
                 // Store reference of target
@@ -201,7 +194,7 @@ public class PlayerCull : MonoBehaviour {
                 }
 
                 // Set child objects of targetted object as well
-                //SetChildrenTransparent(hit, rightChildren, rightChildrenColor, rightChildrenShader);
+                SetChildrenTransparent(hit, rightChildren, rightChildrenColor, rightChildrenShader);
             }
             else
             {
@@ -238,7 +231,7 @@ public class PlayerCull : MonoBehaviour {
                         leftObj.GetComponent<Renderer>().materials[i].shader = leftObjectShader[i];
                     }
 
-                    //ClearMaterial(leftChildren, leftChildrenColor, leftChildrenShader);
+                    ClearMaterial(leftChildren, leftChildrenColor, leftChildrenShader);
                 }
 
                 // Store reference of target

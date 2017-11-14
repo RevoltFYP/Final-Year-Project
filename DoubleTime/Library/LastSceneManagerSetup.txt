@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Residential_Area_02.unity
+=======
+- path: Assets/Scenes/Residential_Area_01.unity
+>>>>>>> 8a8fd6dfc2d7e2b261f3dc0609890730b33c7a54
   isLoaded: 1
   isActive: 1

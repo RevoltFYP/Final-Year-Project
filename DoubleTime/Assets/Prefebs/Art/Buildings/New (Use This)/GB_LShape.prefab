@@ -22,12 +22,13 @@ GameObject:
   - component: {fileID: 33107516919655670}
   - component: {fileID: 23209126222033838}
   - component: {fileID: 95364489856635410}
-  m_Layer: 0
+  - component: {fileID: 65407325772361602}
+  m_Layer: 11
   m_Name: GB_LShape
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4844608681182448
 Transform:
@@ -82,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1701553678003868}
   m_Mesh: {fileID: 4300000, guid: c30822a871590214da812da4ce6823da, type: 3}
+--- !u!65 &65407325772361602
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1701553678003868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.730493, y: 10.060205, z: 6.7019997}
+  m_Center: {x: 0.0000023841858, y: -0.60566056, z: 3.3509998}
 --- !u!95 &95364489856635410
 Animator:
   serializedVersion: 3

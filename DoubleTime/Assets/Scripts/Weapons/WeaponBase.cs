@@ -21,12 +21,14 @@ public class WeaponBase : MonoBehaviour {
 
     [Header("Ammo Stats")]
     public bool infiniteAmmo;
-    public Slider reloadSlider;
+    public Image reloadImage;
     public int magazineSize;
     public int maxAmmo = 10;
     public int ammoPerShot = 1;
     public float reloadTime = 2;
     private bool isReloading = false;
+    private Image reloadFill;
+    private float reloadTimer = 0;
 
     [Header("Object Polling")]
     public int pooledAmount = 30;
@@ -64,13 +66,14 @@ public class WeaponBase : MonoBehaviour {
         totalAmmo = maxAmmo;
         currentAmmo = magazineSize;
 
-        reloadSlider.gameObject.SetActive(false);
+        reloadImage.gameObject.SetActive(false);
+        reloadFill = reloadImage.transform.GetChild(0).GetComponent<Image>();
+        reloadTimer = reloadTime;
     }
 
     private void OnEnable()
     {
-        reloadSlider.maxValue = reloadTime;
-        reloadSlider.value = reloadTime;
+        reloadImage.fillAmount = 1;
 
         isReloading = false;
     }
@@ -81,7 +84,7 @@ public class WeaponBase : MonoBehaviour {
 
         if (isReloading)
         {
-            StartCoroutine(ReloadSlider(reloadTime));
+            ReloadUI();
             return;
         }
 
@@ -170,7 +173,7 @@ public class WeaponBase : MonoBehaviour {
 
     public IEnumerator Reload()
     {
-        if(currentAmmo < magazineSize)
+        if (currentAmmo < magazineSize)
         {
             isReloading = true;
             //Debug.Log("Reloading");
@@ -200,29 +203,29 @@ public class WeaponBase : MonoBehaviour {
         }
     }
 
-    private IEnumerator ReloadSlider(float seconds)
+    // Reload UI
+    private void ReloadUI()
     {
-        if(reloadSlider != null)
+        if (reloadImage != null && reloadFill != null)
         {
-            reloadSlider.gameObject.SetActive(true);
+            // Show UI
+            reloadImage.gameObject.SetActive(true);
 
-            float reloadTimer = 0f;
-
-            while (reloadTimer < seconds)
+            if (reloadTimer <= reloadTime && reloadTimer != 0)
             {
-                reloadTimer += Time.deltaTime;
-                float lerpValue = reloadTimer / seconds;
-                reloadSlider.value = Mathf.Lerp(reloadSlider.maxValue, 0, lerpValue);
+                // Set Fill amount
+                reloadTimer -= Time.deltaTime;
+                reloadFill.fillAmount = reloadTimer / reloadTime;
 
-                if(reloadTimer >= seconds)
+                // Fill amount finishes
+                if (reloadFill.fillAmount == 0)
                 {
-                    reloadSlider.value = reloadTime;
-                    reloadSlider.gameObject.SetActive(false);
+                    // reset all objects
+                    reloadFill.fillAmount = 1.0f;
+                    reloadImage.gameObject.SetActive(false);
+                    reloadTimer = reloadTime;
                 }
-
-                yield return null;
             }
-
         }
     }
 

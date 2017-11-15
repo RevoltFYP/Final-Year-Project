@@ -21,9 +21,6 @@ public class WeaponPickup : MonoBehaviour {
             player.GetComponent<WeaponInventory>().keyCodes.Add(weaponKeyCode);
         }
 
-        // Update weapon Tool bar UI
-        player.GetComponent<WeaponInventory>().UpdateWeaponToolbar();
-
         // Show and hide tooltip after display time
         GetComponent<ToolTipScript>().DisplayToolTip(displayTime);
     }

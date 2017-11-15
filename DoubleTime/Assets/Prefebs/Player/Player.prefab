@@ -2983,7 +2983,7 @@ Transform:
   - {fileID: 4727147738327854}
   - {fileID: 4204461318752818}
   m_Father: {fileID: 4222954630726128}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4158517568530294
 Transform:
@@ -3101,13 +3101,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671434097925328}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000014603138}
-  m_LocalPosition: {x: 203.1, y: 1.1, z: -122.9}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: -43.75, y: 1.183, z: -27.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4442762209783282}
-  - {fileID: 4157348075365618}
   - {fileID: 4383714591569458}
+  - {fileID: 4157348075365618}
   - {fileID: 4738260032895736}
   - {fileID: 4085166576357486}
   - {fileID: 4220516784511296}
@@ -3379,7 +3379,7 @@ Transform:
   m_Children:
   - {fileID: 4864848553925034}
   m_Father: {fileID: 4222954630726128}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4385671953160596
 Transform:
@@ -5976,6 +5976,7 @@ MonoBehaviour:
   bulletSpread: 10
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 1
+  reloadImage: {fileID: 0}
   magazineSize: 10
   maxAmmo: 999
   ammoPerShot: 1
@@ -6017,9 +6018,12 @@ MonoBehaviour:
   medKitKey: 113
   recoverAmount: 15
   maxMedKit: 3
-  kitImage: {fileID: 114019563014029864, guid: 64c025c994657a74889096c8fa2ebde9, type: 2}
   emptySprite: {fileID: 21300000, guid: a73cb52ce8409dd43ac7decc697b127f, type: 3}
   filledSprite: {fileID: 21300000, guid: 8be3cdcea1448e241940e943cee6b62a, type: 3}
+  medKitImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114373551975183758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6038,7 +6042,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671434097925328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e33de5e165803214e88667d7622a2e2d, type: 3}
   m_Name: 
@@ -6070,6 +6074,7 @@ MonoBehaviour:
   bulletSpread: 0
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 0
+  reloadImage: {fileID: 0}
   magazineSize: 30
   maxAmmo: 90
   ammoPerShot: 1
@@ -6104,7 +6109,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671434097925328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f037d5ca71ec6654594290eed01b4770, type: 3}
   m_Name: 
@@ -6161,20 +6166,10 @@ MonoBehaviour:
   maxAmmoText: {fileID: 0}
   ammoSlider: {fileID: 0}
   currentWeaponImage: {fileID: 0}
-  selectedSprite: {fileID: 21300000, guid: b989e3977da331e4bbcd1250c26c869e, type: 3}
-  unselectedSprite: {fileID: 21300000, guid: c9e685e54e120424d85d51a35f82033e, type: 3}
-  weaponToolBar:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  selectedWeaponSprite:
-  - {fileID: 21300000, guid: dc718b9f8aa17f64489af088d26cb0b1, type: 3}
-  - {fileID: 21300000, guid: 16e5c94aa17593247a24fb16f77b277e, type: 3}
-  - {fileID: 21300000, guid: 7ee9543bfd3a4184eb97e32e911bf90f, type: 3}
-  unselectedWeaponImage:
-  - {fileID: 21300000, guid: 3a2299a2e808e2b4fa353f97e32eab7a, type: 3}
-  - {fileID: 21300000, guid: a338a252508b34446979439d6ccc31db, type: 3}
-  - {fileID: 21300000, guid: 7737bd9fe896e6243a1d6458d18e9de3, type: 3}
+  weaponImages:
+  - {fileID: 21300000, guid: 75435123d129dbf4fb458ccb7a5454cb, type: 3}
+  - {fileID: 21300000, guid: 9002767810a11d64b855e868500a2870, type: 3}
+  - {fileID: 21300000, guid: 98938f89d8da953479066e768d6798b2, type: 3}
   protagonistObj: {fileID: 1126753357859514}
   weaponMeshes:
   - {fileID: 1014289430209016}
@@ -6198,6 +6193,7 @@ MonoBehaviour:
   bulletSpread: 20
   bullet: {fileID: 1786536776366130, guid: 2396e6adfad84a84984c72ec5e794ad9, type: 2}
   infiniteAmmo: 0
+  reloadImage: {fileID: 0}
   magazineSize: 6
   maxAmmo: 24
   ammoPerShot: 1

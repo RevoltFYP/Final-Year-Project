@@ -25,10 +25,6 @@ public class WeaponInventory : MonoBehaviour {
     private ShotGunScript shotGunScript;
     private WeaponBase machineGunScript;*/
 
-    [Header("Boomarang CD")]
-    public float boomarangCD = 5f;
-    private float boomarangCDTimer;
-
     [Header("Ammo UI")]
     public Text currentAmmoText;
     public Text maxAmmoText;
@@ -36,11 +32,7 @@ public class WeaponInventory : MonoBehaviour {
 
     [Header("Weapon UI")]
     public Image currentWeaponImage;
-    public Sprite selectedSprite;
-    public Sprite unselectedSprite;
-    public List<Image> weaponToolBar = new List<Image>();
-    public List<Sprite> selectedWeaponSprite = new List<Sprite>();
-    public List<Sprite> unselectedWeaponImage = new List<Sprite>();
+    public List<Sprite> weaponImages = new List<Sprite>();
 
     [Header("Models")]
     public GameObject protagonistObj;
@@ -65,11 +57,7 @@ public class WeaponInventory : MonoBehaviour {
         currentWeapon = startWeapon;
 
         // UI initialization
-        if (this.enabled)
-        {
-            UpdateWeaponToolbar();
-        }
-        else
+        if (!this.enabled)
         {
             currentAmmoText.gameObject.SetActive(false);
             maxAmmoText.gameObject.SetActive(false);
@@ -103,7 +91,6 @@ public class WeaponInventory : MonoBehaviour {
         {
             if (currentWeapon == weaponInventory[i])
             {
-                SelectedWeapon(i);
                 WeaponSwitch(i);
             }
         }
@@ -118,17 +105,6 @@ public class WeaponInventory : MonoBehaviour {
             //Debug.Log("Weapon Inventory [0]: " + weaponInventory[0]);
             AmmoUI();
 
-            //boomarang CD
-            boomarangCDTimer -= Time.deltaTime * 1 / Time.timeScale;
-            //Debug.Log(boomarangCDTimer+"-");
-
-            if (boomarangCDTimer <= 0)
-            {
-                //Debug.Log("True");
-                GetComponent<ShootBoomarang>().haveBoomarang = true;
-                boomarangCDTimer = boomarangCD;
-            }
-
             for (int i = 0; i < keyCodes.Count; i++)
             {
                 if (Input.GetKeyDown(keyCodes[i]))
@@ -142,12 +118,6 @@ public class WeaponInventory : MonoBehaviour {
                     // Display new current weapon
                     currentWeapon.SetActive(true);
 
-                    // Set new selected sprite
-                    weaponToolBar[i].sprite = selectedSprite;
-
-                    // Set UI for selected Weapon
-                    SelectedWeapon(i);
-
                     // Plays weapon switch animation
                     WeaponSwitch(i);
                 }
@@ -155,13 +125,8 @@ public class WeaponInventory : MonoBehaviour {
         }
     }
 
-    // Updates weapon toolbar UI in case any weapons have been added
-    public void UpdateWeaponToolbar()
+    private void CurrentWeaponImage(int weapNumber)
     {
-        for (int i = 0; i < keyCodes.Count; i++)
-        {
-            weaponToolBar[i].gameObject.SetActive(true);
-        }
     }
 
     private void AmmoUI()
@@ -171,7 +136,7 @@ public class WeaponInventory : MonoBehaviour {
         if (currentWeapon.GetComponent<ShotGunScript>())
         {
             currentAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().currentAmmo.ToString();
-            maxAmmoText.text = "/" + currentWeapon.GetComponent<ShotGunScript>().totalAmmo.ToString();
+            maxAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().totalAmmo.ToString();
 
             ammoSlider.value = currentWeapon.GetComponent<ShotGunScript>().currentAmmo;
             ammoSlider.maxValue = currentWeapon.GetComponent<ShotGunScript>().magazineSize;
@@ -179,27 +144,11 @@ public class WeaponInventory : MonoBehaviour {
         else
         {
             currentAmmoText.text = currentWeapon.GetComponent<WeaponBase>().currentAmmo.ToString();
-            maxAmmoText.text = "/" + currentWeapon.GetComponent<WeaponBase>().totalAmmo.ToString();
+            maxAmmoText.text = currentWeapon.GetComponent<WeaponBase>().totalAmmo.ToString();
 
             ammoSlider.value = currentWeapon.GetComponent<WeaponBase>().currentAmmo;
             ammoSlider.maxValue = currentWeapon.GetComponent<WeaponBase>().magazineSize;
         }
-    }
-
-    private void SelectedWeapon(int number)
-    {
-        // Reset all tool bar UI
-        for(int i = 0; i < weaponToolBar.Count; i++)
-        {
-            weaponToolBar[i].sprite = unselectedSprite;
-            weaponToolBar[i].transform.GetChild(0).GetComponent<Image>().sprite = unselectedWeaponImage[i];
-        }
-
-        weaponToolBar[number].sprite = selectedSprite;
-        weaponToolBar[number].transform.GetChild(0).GetComponent<Image>().sprite = selectedWeaponSprite[number];
-
-        // Set sprite of current weapon
-        currentWeaponImage.sprite = selectedWeaponSprite[number];
     }
 
     private void WeaponSwitch(int weaponNumber)
@@ -213,6 +162,7 @@ public class WeaponInventory : MonoBehaviour {
 
             animator.SetBool("WeaponEquipped", true);
             weaponMeshes[weaponNumber].SetActive(true);
+            currentWeaponImage.sprite = weaponImages[weaponNumber];
         }
     }
 }

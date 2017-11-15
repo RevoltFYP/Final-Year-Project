@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0567e71008eba7f4d91b06a770df931b
+timeCreated: 1510711058
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Octopus_Wide_300
+  fontNames:
+  - Octopus_Wide_300
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 780c7bea09925a1448d27ce1078f9e10
+timeCreated: 1510711059
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Octopus_Wide_500
+  fontNames:
+  - Octopus_Wide_500
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

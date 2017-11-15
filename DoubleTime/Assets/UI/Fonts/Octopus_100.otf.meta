@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8a5547dc483998b4cbaa125f2b52f8f1
+timeCreated: 1510711059
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Octopus_100
+  fontNames:
+  - Octopus_100
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

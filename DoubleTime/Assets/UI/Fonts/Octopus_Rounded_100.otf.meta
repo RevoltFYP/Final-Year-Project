@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 46ba4efc5b069c6489723a8bdac89c1a
+timeCreated: 1510711058
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Octopus_Rounded_100
+  fontNames:
+  - Octopus_Rounded_100
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

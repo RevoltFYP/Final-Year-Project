@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b4be9d442ca12af4692b08d7b349715c
+timeCreated: 1510711059
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Octopus_Narrow_500
+  fontNames:
+  - Octopus_Narrow_500
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

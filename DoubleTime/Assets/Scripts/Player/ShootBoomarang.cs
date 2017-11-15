@@ -11,6 +11,7 @@ public class ShootBoomarang : MonoBehaviour {
     [Header("Boomarang CD")]
     public float boomarangCD = 5f;
     private float boomarangCDTimer;
+    private bool cdBoom;
 
     [Header("Boomarang UI")]
     public Image boomerangImage;
@@ -28,51 +29,48 @@ public class ShootBoomarang : MonoBehaviour {
     {
         ShootBoomarang_();
 
-        //boomarang CD
-        boomarangCDTimer -= Time.deltaTime * 1 / Time.timeScale;
-        //Debug.Log(boomarangCDTimer+"-");
-
-        if (boomarangCDTimer <= 0)
+        if (cdBoom)
         {
-            //Debug.Log("True");
-            GetComponent<ShootBoomarang>().haveBoomarang = true;
-            boomarangCDTimer = boomarangCD;
-        }
+            //boomarang CD
+            boomarangCDTimer -= Time.deltaTime * 1 / Time.timeScale;
 
-        if (boomarangCDTimer != 0)
-        {
             BoomerangUI();
+
+            if (boomarangCDTimer <= 0)
+            {
+                GetComponent<ShootBoomarang>().haveBoomarang = true;
+                boomarangCDTimer = boomarangCD;
+            }
         }
     }
 
     void ShootBoomarang_()
     {
-        if (Input.GetButtonDown("Fire2") && haveBoomarang && !GetComponent<WeaponInventory>().currentWeapon.GetComponent<WeaponBase>().firing)
+        if (Input.GetButtonDown("Fire2") && haveBoomarang && !GetComponent<WeaponInventory>().currentWeapon.GetComponent<WeaponBase>().firing && !cdBoom)
         {
             Instantiate(Boomarang, transform.position + transform.forward, transform.rotation);
             haveBoomarang = false;
+
+            // UI
             boomerangImgChild.fillAmount = 0;
+            cdBoom = true;
         }
     }
 
     private void BoomerangUI()
     {
-        if (boomerangImage != null && boomerangImgChild != null)
+        if (boomerangImgChild != null)
         {
-            // Show UI
-            boomerangImage.gameObject.SetActive(true);
-
             if (boomerangImageTimer <= boomarangCD && boomarangCDTimer != 0)
             {
                 // Set Fill amount
-                boomerangImageTimer += Time.deltaTime;
+                boomerangImageTimer += Time.deltaTime * 1 / Time.timeScale;
                 boomerangImgChild.fillAmount = boomerangImageTimer / boomarangCD;
 
-                // Fill amount finishes
                 if (boomerangImgChild.fillAmount == 1)
                 {
-                    // reset all objects
-                    boomerangImage.gameObject.SetActive(false);
+                    cdBoom = false;
+                    boomerangImageTimer = 0;
                 }
             }
         }

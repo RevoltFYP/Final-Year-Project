@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 550918fb63b1d88160f6582204d9c01830e5bd5a
 5.6.2f1:2.2.0.0
 StandaloneWindows
 E:/Programes/Unity 5.6.2/Editor/Data/Managed/UnityEngine.dll
@@ -22,6 +25,7 @@ E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Edito
 E:/Programes/Unity 5.6.2/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
 E:/Programes/Unity 5.6.2/Editor/Data/Managed/UnityEditor.Graphs.dll
 E:/Programes/Unity 5.6.2/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
+<<<<<<< HEAD
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
 =======
 5.6.2f1:3.3.0.2
@@ -57,3 +61,6 @@ C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/Synta
 =======
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
 >>>>>>> parent of b2e92e38... UI WIP 4
+=======
+C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+>>>>>>> 550918fb63b1d88160f6582204d9c01830e5bd5a

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AssetEnemyZone : EnemyZone {
 
+    [Header("Assets")]
     public List<GameObject> activeAssets = new List<GameObject>();
     public List<GameObject> deactiveAssets = new List<GameObject>();
 
@@ -13,9 +14,11 @@ public class AssetEnemyZone : EnemyZone {
 
     protected override void DestroyAreaZone()
     {
+        ActivateBlockers(false);
         enemies.Clear();
         ActivateAssets();
         DeactivateAssets();
+        RemoveBoundaries();
 
         if (addWeapon)
         {

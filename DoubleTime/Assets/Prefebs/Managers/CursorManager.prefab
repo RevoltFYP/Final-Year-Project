@@ -55,3 +55,6 @@ MonoBehaviour:
   enemyCursor: {fileID: 2800000, guid: adb7a312a11763e4f9e16d833c59a717, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0

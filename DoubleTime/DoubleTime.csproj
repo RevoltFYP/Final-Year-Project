@@ -154,6 +154,7 @@
     <Compile Include="Assets\Scripts\EscapePoint.cs" />
     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\Manager\ButtonManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SceneManagerScript.cs" />
     <Compile Include="Assets\Scripts\Manager\ScoreManager.cs" />
@@ -162,7 +163,6 @@
     <Compile Include="Assets\Scripts\PickUp\AmmoPickUp.cs" />
     <Compile Include="Assets\Scripts\PickUp\HealthPack.cs" />
     <Compile Include="Assets\Scripts\PickUp\WeaponPickup.cs" />
-    <Compile Include="Assets\Scripts\Player\DataManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimControl.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMelee.cs" />

@@ -14,17 +14,20 @@ public class PlayerHealth : MonoBehaviour
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
     [Header("HP Bar")]
-    public Color damageColour;
-    public Image hpFill;
-    private Color originalColour;
+    public GameObject healthFrame;
     public RectTransform healthTransform;
     public RectTransform handleTransform;
+    public Sprite damageSprite;
+    public Sprite damageFrame;
     public Text healthText;
     private float cachedY;
     private float cachedZ;
     private float minX;
     private float maxX;
+    private Sprite originalSprite;
+    private Sprite originalFrame;
 
+    [Header("Death")]
     public GameObject ragDoll;
     public GameObject charac;
 
@@ -42,13 +45,15 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake ()
     {
+        originalSprite = healthTransform.GetComponent<Image>().sprite;
+        originalFrame = healthFrame.GetComponent<Image>().sprite;
+
         cachedY = healthTransform.localPosition.y;
         cachedZ = healthTransform.localPosition.z;
         maxX = healthTransform.localPosition.x;
         minX = healthTransform.localPosition.x - healthTransform.rect.width;
 
         currentHealth = startingHealth;
-        originalColour = hpFill.color;
     }
 
     void Update ()
@@ -63,12 +68,14 @@ public class PlayerHealth : MonoBehaviour
         {
             // Flashes when damaged 
             damageImage.color = flashColour;
-            hpFill.color = damageColour;
+            healthTransform.GetComponent<Image>().sprite = damageSprite;
+            healthFrame.GetComponent<Image>().sprite = damageFrame;
         }
         else
         {
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.unscaledDeltaTime);
-            hpFill.color = Color.Lerp(hpFill.color, originalColour, flashSpeed * Time.unscaledDeltaTime);
+            healthTransform.GetComponent<Image>().sprite = originalSprite;
+            healthFrame.GetComponent<Image>().sprite = originalFrame;
         }
 
         isDamaged = false;

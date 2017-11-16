@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class EnemyZone : MonoBehaviour {
 
+    [Header("Enemies")]
     public List<GameObject> enemies = new List<GameObject>();
 
-    private GameObject player;
-
-    private SpawnZone spawnZone;
-
+    [Header("Boundaries")]
     public List<GameObject> boundaries = new List<GameObject>();
-    public List<GameObject> blockerSticks = new List<GameObject>();
+
+    [Header("Blocker Stick Group")]
+    public GameObject blockStickGroup;
+
+    private List<GameObject> blockerSticks = new List<GameObject>();
+    private GameObject player;
+    private SpawnZone spawnZone;
 
     private void Awake()
     {
+        if(blockStickGroup != null)
+        {
+            foreach (Transform child in blockStickGroup.transform)
+            {
+                blockerSticks.Add(child.gameObject);
+                //child.gameObject.SetActive(false);
+            }
+        }
+
         foreach(GameObject boundary in boundaries)
         {
-            boundary.gameObject.SetActive(false);
+            boundary.SetActive(false);
         }
+
 
         if(GetComponent<SpawnZone>() != null)
         {
@@ -113,7 +127,7 @@ public class EnemyZone : MonoBehaviour {
     }
 
     // Sets all enemies in list to Aggro on Target
-    private void AggroAllEnemies(GameObject target)
+    public void AggroAllEnemies(GameObject target)
     {
         foreach(GameObject enemy in enemies)
         {
@@ -124,7 +138,7 @@ public class EnemyZone : MonoBehaviour {
         }
     }
 
-    private void ActivateBoundaries()
+    public void ActivateBoundaries()
     {
         if (boundaries.Count > 0)
         {
@@ -138,7 +152,7 @@ public class EnemyZone : MonoBehaviour {
         }
     }
 
-    private void RemoveBoundaries()
+    public void RemoveBoundaries()
     {
         if (boundaries.Count > 0)
         {
@@ -153,7 +167,7 @@ public class EnemyZone : MonoBehaviour {
         }
     }
 
-    private void ActivateBlockers(bool activate)
+    public void ActivateBlockers(bool activate)
     {
         foreach(GameObject blocker in blockerSticks)
         {

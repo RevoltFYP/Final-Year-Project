@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 20480914747629932}
   - component: {fileID: 92224561327188646}
   - component: {fileID: 124960117228126132}
-  - component: {fileID: 81873565451871382}
   - component: {fileID: 114541711994518880}
   - component: {fileID: 114257209480895856}
   - component: {fileID: 114853359280271630}
@@ -40,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361784510945018}
   m_LocalRotation: {x: 0.40231892, y: -0, z: -0, w: 0.91549957}
-  m_LocalPosition: {x: -52.73, y: 14.3, z: -39.63}
+  m_LocalPosition: {x: -43.15, y: 14.3, z: -39.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +63,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -82,13 +81,6 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!81 &81873565451871382
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1361784510945018}
-  m_Enabled: 1
 --- !u!92 &92224561327188646
 Behaviour:
   m_ObjectHideFlags: 1
@@ -107,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5057411d2546f244891dfdb440b2a17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1671434097925328, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
+  target: {fileID: 0}
   checktag: Wall
-  newMat: {fileID: 2100000, guid: b19d64eb3099d024ab6c353d7ceaf7b7, type: 2}
+  transparentShader: {fileID: 31, guid: 0000000000000000f000000000000000, type: 0}
+  chosenAlpha: 0.2
 --- !u!114 &114541711994518880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,12 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf51e7e3df4be4db37156d520e55e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4222954630726128, guid: 59177a05f79a2c244a89f99be34a662e, type: 2}
+  target: {fileID: 0}
   smoothing: 3
-  offset: {x: 0, y: 10, z: -10}
-  clamp: 0
-  minClamp: {x: -52.73, y: 0, z: -141.9}
-  maxClamp: {x: 80, y: 0, z: -39.63}
+  offset: {x: 0, y: 20, z: -20}
+  clamp: 1
+  minClamp: {x: -52.73, y: 0, z: -136}
+  maxClamp: {x: 71.3, y: 0, z: -39.63}
 --- !u!114 &114853359280271630
 MonoBehaviour:
   m_ObjectHideFlags: 1

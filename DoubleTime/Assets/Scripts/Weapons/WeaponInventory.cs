@@ -23,13 +23,14 @@ public class WeaponInventory : MonoBehaviour {
     public DataManager dataManager;
     public bool resetWeapons;
     private ShotGunScript shotGunScript;
-    private WeaponBase machineGunScript;*/
+    private WeaponBase machineGunScript;*/    
 
     [Header("Ammo UI")]
     public Text currentAmmoText;
     public Text maxAmmoText;
 
     [Header("Weapon UI")]
+    public GameObject ui;
     public Image currentWeaponImage;
     public List<Sprite> weaponImages = new List<Sprite>();
 
@@ -58,9 +59,7 @@ public class WeaponInventory : MonoBehaviour {
         // UI initialization
         if (!this.enabled)
         {
-            currentAmmoText.gameObject.SetActive(false);
-            maxAmmoText.gameObject.SetActive(false);
-            currentWeaponImage.gameObject.SetActive(false);
+            ui.gameObject.SetActive(false);
         }
 
         // Check whether to load data or reset
@@ -79,10 +78,7 @@ public class WeaponInventory : MonoBehaviour {
 
     private void OnEnable()
     {
-        currentWeapon.SetActive(true);
-        currentWeaponImage.gameObject.SetActive(true);
-        currentAmmoText.gameObject.SetActive(true);
-        maxAmmoText.gameObject.SetActive(true);
+        ui.gameObject.SetActive(true);
 
         for (int i = 0; i < weaponInventory.Count; i++)
         {
@@ -91,6 +87,7 @@ public class WeaponInventory : MonoBehaviour {
                 WeaponSwitch(i);
             }
         }
+        currentWeapon.SetActive(true);
     }
 
     // Update is called once per frame

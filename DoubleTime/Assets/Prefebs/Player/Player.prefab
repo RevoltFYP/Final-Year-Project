@@ -3101,8 +3101,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671434097925328}
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.75, y: 1.183, z: -27.26}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000014603138}
+  m_LocalPosition: {x: 209.7, y: 1.1, z: -277.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4442762209783282}
@@ -6007,19 +6007,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 100
-  healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
   flashSpeed: 5
   flashColour: {r: 0.8455882, g: 0.124351226, b: 0.124351226, a: 0.103}
-  damageColour: {r: 0.8455882, g: 0.16787414, b: 0.16787414, a: 0.122}
-  hpFill: {fileID: 0}
+  healthFrame: {fileID: 0}
+  healthTransform: {fileID: 0}
+  handleTransform: {fileID: 0}
+  damageSprite: {fileID: 21300000, guid: 9cc16ed4a04920a40bdd6e2cbba2008e, type: 3}
+  damageFrame: {fileID: 21300000, guid: a75e7a931735da9498821cb548d8b72f, type: 3}
+  healthText: {fileID: 0}
   ragDoll: {fileID: 1670370590747816}
   charac: {fileID: 1126753357859514}
   medKitKey: 113
   recoverAmount: 15
   maxMedKit: 3
-  emptySprite: {fileID: 21300000, guid: a73cb52ce8409dd43ac7decc697b127f, type: 3}
-  filledSprite: {fileID: 21300000, guid: 8be3cdcea1448e241940e943cee6b62a, type: 3}
   medKitImages:
   - {fileID: 0}
   - {fileID: 0}
@@ -6036,6 +6037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boomarang: {fileID: 1891248918882972, guid: 20928443ca054cd4aadb7c5f9595bfce, type: 2}
+  boomarangCD: 5
+  boomerangImage: {fileID: 0}
 --- !u!114 &114378617526319584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6161,10 +6164,9 @@ MonoBehaviour:
   - {fileID: 1964864817645470}
   startWeapon: {fileID: 1541254342567078}
   keyCodes: 310000003200000033000000
-  boomarangCD: 4
   currentAmmoText: {fileID: 0}
   maxAmmoText: {fileID: 0}
-  ammoSlider: {fileID: 0}
+  ui: {fileID: 0}
   currentWeaponImage: {fileID: 0}
   weaponImages:
   - {fileID: 21300000, guid: 75435123d129dbf4fb458ccb7a5454cb, type: 3}

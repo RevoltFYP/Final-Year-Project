@@ -20,8 +20,18 @@ public class ShootBoomarang : MonoBehaviour {
 
     private void Awake()
     {
+        if (!this.enabled)
+        {
+            boomerangImage.gameObject.SetActive(false);
+        }
+
         haveBoomarang = true;
         boomerangImgChild = boomerangImage.transform.GetChild(0).GetComponent<Image>();
+    }
+
+    private void OnEnable()
+    {
+        boomerangImage.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

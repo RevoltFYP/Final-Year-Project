@@ -157,7 +157,10 @@ public class EnemyZone : MonoBehaviour {
     {
         foreach(GameObject blocker in blockerSticks)
         {
-            blocker.GetComponent<Animator>().SetBool("activated", activate);
+            if(blocker != null)
+            {
+                blocker.GetComponent<Animator>().SetBool("activated", activate);
+            }
         }
     }
 }

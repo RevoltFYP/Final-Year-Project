@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour
 
     public int startingHealth = 100;
     public int currentHealth;
-    public Slider healthSlider;
     public Image damageImage;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
@@ -18,6 +17,13 @@ public class PlayerHealth : MonoBehaviour
     public Color damageColour;
     public Image hpFill;
     private Color originalColour;
+    public RectTransform healthTransform;
+    public RectTransform handleTransform;
+    public Text healthText;
+    private float cachedY;
+    private float cachedZ;
+    private float minX;
+    private float maxX;
 
     public GameObject ragDoll;
     public GameObject charac;
@@ -36,6 +42,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake ()
     {
+        cachedY = healthTransform.localPosition.y;
+        cachedZ = healthTransform.localPosition.z;
+        maxX = healthTransform.localPosition.x;
+        minX = healthTransform.localPosition.x - healthTransform.rect.width;
+
         currentHealth = startingHealth;
         originalColour = hpFill.color;
     }
@@ -45,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
         if (Input.GetKeyDown(medKitKey))
         {
             UseMedKit();
+            UpdateHealthBar();
         }
 
         if(isDamaged)
@@ -62,6 +74,20 @@ public class PlayerHealth : MonoBehaviour
         isDamaged = false;
     }
 
+    private void UpdateHealthBar()
+    {
+        healthText.text = currentHealth.ToString();
+        float currentXValue = MapValues(currentHealth, 0, startingHealth, minX, maxX);
+        healthTransform.localPosition = new Vector3(currentXValue, cachedY, cachedZ);
+        handleTransform.localPosition = new Vector3(currentXValue, cachedY, cachedZ);
+
+        if (isDead)
+        {
+            healthTransform.gameObject.SetActive(false);
+            handleTransform.gameObject.SetActive(false);
+        }
+    }
+
     public void TakeDamage (int amount)
     {
         isDamaged = true;
@@ -69,18 +95,20 @@ public class PlayerHealth : MonoBehaviour
         // Reduces current health 
         currentHealth -= amount;
 
-        // Set slider to same as current health (UI)
-        healthSlider.value = currentHealth;
-
         // When health reaches 0 player is dead 
         if(currentHealth <= 0 && !isDead)
         {
+            currentHealth = 0;
             Death();
         }
+
+        UpdateHealthBar();
     }
 
     void Death ()
     {
+        UpdateHealthBar();
+
         isDead = true;
 
         // Disables character movement 
@@ -126,8 +154,6 @@ public class PlayerHealth : MonoBehaviour
 
                 currentMedKit -= 1;
 
-                // Update UI
-                healthSlider.value = currentHealth;
                 UpdateMedKitUI();
             }
         }
@@ -147,5 +173,10 @@ public class PlayerHealth : MonoBehaviour
                 medKitImages[i].SetActive(true);
             }
         }
+    }
+
+    public float MapValues(float x, float inMin, float inMax, float outMin, float outMax)
+    {
+        return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
     }
 }

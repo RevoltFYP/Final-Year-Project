@@ -28,6 +28,7 @@ public class WeaponInventory : MonoBehaviour {
     [Header("Ammo UI")]
     public Text currentAmmoText;
     public Text maxAmmoText;
+    public Slider ammoSlider;
 
     [Header("Weapon UI")]
     public Image currentWeaponImage;
@@ -61,6 +62,7 @@ public class WeaponInventory : MonoBehaviour {
             currentAmmoText.gameObject.SetActive(false);
             maxAmmoText.gameObject.SetActive(false);
             currentWeaponImage.gameObject.SetActive(false);
+            ammoSlider.gameObject.SetActive(false);
         }
 
         // Check whether to load data or reset
@@ -83,6 +85,7 @@ public class WeaponInventory : MonoBehaviour {
         currentWeaponImage.gameObject.SetActive(true);
         currentAmmoText.gameObject.SetActive(true);
         maxAmmoText.gameObject.SetActive(true);
+        ammoSlider.gameObject.SetActive(true);
 
         for (int i = 0; i < weaponInventory.Count; i++)
         {
@@ -122,22 +125,29 @@ public class WeaponInventory : MonoBehaviour {
         }
     }
 
+    private void CurrentWeaponImage(int weapNumber)
+    {
+    }
+
     private void AmmoUI()
     {
+        ammoSlider.gameObject.SetActive(true);
+
         if (currentWeapon.GetComponent<ShotGunScript>())
         {
             currentAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().currentAmmo.ToString();
             maxAmmoText.text = currentWeapon.GetComponent<ShotGunScript>().totalAmmo.ToString();
+
+            ammoSlider.value = currentWeapon.GetComponent<ShotGunScript>().currentAmmo;
+            ammoSlider.maxValue = currentWeapon.GetComponent<ShotGunScript>().magazineSize;
         }
         else
         {
             currentAmmoText.text = currentWeapon.GetComponent<WeaponBase>().currentAmmo.ToString();
             maxAmmoText.text = currentWeapon.GetComponent<WeaponBase>().totalAmmo.ToString();
-        }
 
-        if(currentWeapon == weaponInventory[0])
-        {
-            maxAmmoText.text = "\u221E";
+            ammoSlider.value = currentWeapon.GetComponent<WeaponBase>().currentAmmo;
+            ammoSlider.maxValue = currentWeapon.GetComponent<WeaponBase>().magazineSize;
         }
     }
 

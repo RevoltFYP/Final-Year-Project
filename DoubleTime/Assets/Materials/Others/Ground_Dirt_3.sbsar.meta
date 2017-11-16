@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 279c8a2ce0c55fe4b89c95b643211ef4
-timeCreated: 1510561495
+timeCreated: 1510809270
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -122,12 +122,12 @@ SubstanceImporter:
     - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 3692378527
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 3636275008
     - shaderProp: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 3631879016
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 3636275008
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -383,15 +383,15 @@ SubstanceImporter:
     - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 4105710764
-    - shaderProp: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 4059007931
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 4027591974
     - shaderProp: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 4040623707
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 4027591974
+    - shaderProp: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 4059007931
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -647,15 +647,15 @@ SubstanceImporter:
     - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 4105710764
-    - shaderProp: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 4059007931
-    - shaderProp: _OcclusionMap
-      material: {instanceID: 0}
-      baseUID: 4027591974
     - shaderProp: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 4040623707
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 4027591974
+    - shaderProp: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 4059007931
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 

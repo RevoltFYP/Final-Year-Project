@@ -40902,6 +40902,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 1992742016}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1995256677
 Prefab:
   m_ObjectHideFlags: 0
@@ -41283,6 +41284,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42f50ca2e6f899843bb54d4df19c5722, type: 2}
   m_IsPrefabParent: 0
+=======
+>>>>>>> parent of b2e92e38... UI WIP 4
 =======
 >>>>>>> parent of b2e92e38... UI WIP 4
 --- !u!1001 &1997425192

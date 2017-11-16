@@ -10,6 +10,7 @@ public class TutorialStartScript : MonoBehaviour {
 
     private void Awake()
     {
+        GetComponent<MeshRenderer>().enabled = false;
         toolTipScript = GetComponent<ToolTipScript>();
     }
 

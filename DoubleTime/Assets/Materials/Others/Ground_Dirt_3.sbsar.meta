@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 279c8a2ce0c55fe4b89c95b643211ef4
-timeCreated: 1510811044
+timeCreated: 1510814284
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -599,7 +599,7 @@ SubstanceImporter:
       - _Cutoff: 0.5
       - _DetailNormalMapScale: 1
       - _DstBlend: 0
-      - _GlossMapScale: 0.768
+      - _GlossMapScale: 0.843
       - _Glossiness: 0.5
       - _GlossyReflections: 1
       - _Metallic: 0

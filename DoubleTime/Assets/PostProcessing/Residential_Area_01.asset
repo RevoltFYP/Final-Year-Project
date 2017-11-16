@@ -282,15 +282,15 @@ MonoBehaviour:
         e_CurveG: 0
         e_CurveB: 0
   userLut:
-    m_Enabled: 1
-    m_Settings:
-      lut: {fileID: 2800000, guid: 81c8e94856b3a754a9b83b378fb9dcf7, type: 3}
-      contribution: 0.003
-  chromaticAberration:
     m_Enabled: 0
     m_Settings:
+      lut: {fileID: 2800000, guid: 88c5ce2e1f7edea45a067b9627b13255, type: 3}
+      contribution: 0.01
+  chromaticAberration:
+    m_Enabled: 1
+    m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 1
+      intensity: 0.1
   grain:
     m_Enabled: 0
     m_Settings:
@@ -304,7 +304,7 @@ MonoBehaviour:
       mode: 0
       color: {r: 0.30147058, g: 0.30147058, b: 0.30147058, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.6
+      intensity: 0.5
       smoothness: 0.5
       roundness: 0.5
       mask: {fileID: 0}

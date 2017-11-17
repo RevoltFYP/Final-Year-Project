@@ -166,7 +166,7 @@ public class WeaponBase : MonoBehaviour {
     }
 
     // Resets Shoot Timer to 0 //
-    protected void ResetTimer()
+    public void ResetTimer()
     {
         timer = 0f;
     }
@@ -185,13 +185,21 @@ public class WeaponBase : MonoBehaviour {
 
             if (!infiniteAmmo)
             {
+                // total ammo has enough ammo for missing
                 if (totalAmmo >= missingAmmo)
                 {
-                    // Subtract missing ammo from total ammo;
-                    totalAmmo -= missingAmmo;
-
                     // Add missing ammo to current ammo
                     currentAmmo += missingAmmo;
+
+                    // Subtract missing ammo from total ammo;
+                    totalAmmo -= missingAmmo;
+                }
+                // total ammo does not have enough
+                else
+                {
+                    // add remainder of ammo to current ammo
+                    currentAmmo += totalAmmo;
+                    totalAmmo = 0;
                 }
             }
             else

@@ -72,6 +72,7 @@ public class EnemyFire : MonoBehaviour {
                     break;
             }
 
+            // Throws grenade
             if (grenadeThrow)
             {
                 gTimer += Time.deltaTime;

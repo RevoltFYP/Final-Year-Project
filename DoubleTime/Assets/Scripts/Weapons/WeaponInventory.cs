@@ -119,10 +119,6 @@ public class WeaponInventory : MonoBehaviour {
         }
     }
 
-    private void CurrentWeaponImage(int weapNumber)
-    {
-    }
-
     private void AmmoUI()
     {
 

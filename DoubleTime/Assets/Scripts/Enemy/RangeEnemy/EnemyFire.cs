@@ -19,7 +19,7 @@ public class EnemyFire : MonoBehaviour {
     public GameObject firePoint;
     public EnemyHealth enemyHealth;
     public int damage = 5;
-    private EnemyStates enemyStates;
+    private RangeEnemyState enemyStates;
 
     [Header("Line of Fire")]
     public bool lineOfFire;
@@ -53,7 +53,7 @@ public class EnemyFire : MonoBehaviour {
 
     private void Awake()
     {
-        enemyStates = transform.parent.GetComponent<EnemyStates>();
+        enemyStates = transform.parent.GetComponent<RangeEnemyState>();
     }
 
     private void OnDrawGizmos()
@@ -77,6 +77,10 @@ public class EnemyFire : MonoBehaviour {
                 {
                     Attack();
                 }
+            }
+            else
+            {
+
             }
         }
         else

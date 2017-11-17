@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 35f9d91382b5eae4c9f6869ab3234fa4
+timeCreated: 1510902601
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Code Slant
+  fontNames:
+  - Code Slant
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

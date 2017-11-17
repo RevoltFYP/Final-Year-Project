@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33561387439775668}
   - component: {fileID: 23426521204047072}
   - component: {fileID: 95657181058112472}
+  - component: {fileID: 65893372974598392}
   m_Layer: 0
   m_Name: Trash_Bin
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1440776941550206}
   m_Mesh: {fileID: 4300000, guid: 04c6611bf262eeb4da1df01324d17e10, type: 3}
+--- !u!65 &65893372974598392
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440776941550206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9682687, y: 1.1015985, z: 1.6216824}
+  m_Center: {x: 0.00000046193597, y: -0.0000002086163, z: 0.8108412}
 --- !u!95 &95657181058112472
 Animator:
   serializedVersion: 3

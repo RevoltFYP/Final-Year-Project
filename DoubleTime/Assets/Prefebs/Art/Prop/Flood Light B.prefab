@@ -22,12 +22,13 @@ GameObject:
   - component: {fileID: 33847024863953074}
   - component: {fileID: 23218023026616888}
   - component: {fileID: 95134215591337996}
+  - component: {fileID: 65535751918644580}
   m_Layer: 0
   m_Name: Flood Light B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4543329880686734
 Transform:
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099704658928030}
   m_Mesh: {fileID: 4300000, guid: 591a3c17f5d51a143b88c2b89cb1036d, type: 3}
+--- !u!65 &65535751918644580
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099704658928030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2381804, y: 1.8620212, z: 1.9862946}
+  m_Center: {x: -0.07158935, y: 0.31707472, z: 0.94864446}
 --- !u!95 &95134215591337996
 Animator:
   serializedVersion: 3

@@ -15,12 +15,15 @@ public class EnemyFire : MonoBehaviour {
     public Mode mode;
     private Mode prevMode;
 
-    public GameObject grenadePrefab;
     public GameObject projectile;
     public GameObject firePoint;
     public EnemyHealth enemyHealth;
     public int damage = 5;
     private EnemyStates enemyStates;
+
+    [Header("Line of Fire")]
+    public bool lineOfFire;
+    public float fireDistance = 8.0f;
 
     [Header("Projectile Stats")]
     public float timeBetweenBullets = 1.0f;
@@ -37,6 +40,7 @@ public class EnemyFire : MonoBehaviour {
 
     [Header("Grenade Settings")]
     public bool grenadeThrow;
+    public GameObject grenadePrefab;
     public float throwForce = 10f;
     public float timeBetweenGrenade = 5f;
     public float waitTime = 1f;
@@ -52,7 +56,36 @@ public class EnemyFire : MonoBehaviour {
         enemyStates = transform.parent.GetComponent<EnemyStates>();
     }
 
+    private void OnDrawGizmos()
+    {
+        if (lineOfFire)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, transform.forward * fireDistance);
+        }
+    }
+
     private void Update()
+    {
+        if (lineOfFire)
+        {
+            RaycastHit hit;
+
+            if(Physics.Raycast(transform.position, transform.forward, out hit, fireDistance))
+            {
+                if(hit.collider.tag == "Player")
+                {
+                    Attack();
+                }
+            }
+        }
+        else
+        {
+            Attack();
+        }
+    }
+
+    public void Attack()
     {
         if (!enemyHealth.isDead && enemyStates.state == EnemyStates.State.AGGRO)
         {

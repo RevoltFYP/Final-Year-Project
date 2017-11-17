@@ -16,6 +16,12 @@ public class PlayerMovement : MonoBehaviour {
     public float horizontal { get; set; }
     public float vertical { get; set; }
 
+    [Header("Slope Properties")]
+    public LayerMask floorLayer;
+    public float height = 0.5f;
+    public float heightPadding = 0.05f;
+    private bool grounded;
+
     void Awake()
     {
         // Create a layer mask for the floor layer.
@@ -38,6 +44,28 @@ public class PlayerMovement : MonoBehaviour {
 
         // Turn the player ro face the mouse cursor
         Turning();
+
+        SlopeMovement();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position, Vector3.down * height);
+    }
+
+    void SlopeMovement()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, height + heightPadding, floorLayer))
+        {
+            return;
+        }
+        else
+        {
+            transform.position += Physics.gravity * Time.unscaledDeltaTime;
+        }
     }
 
     void Turning ()

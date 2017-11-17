@@ -78,7 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyCursor.cs" />
     <Compile Include="Assets\Features\Hair\HairRenderer.cs" />
     <Compile Include="Assets\LetterSpacing.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
